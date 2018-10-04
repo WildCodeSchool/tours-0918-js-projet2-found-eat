@@ -1,0 +1,102 @@
+.nbar
+{
+width: 100%;
+
+background-color: #5c821a;
+}
+
+
+
+.hamberger-sidebar
+{
+  display:none;
+ position: fixed;
+ width: 37%;
+ height: 60%;
+ top:50;
+ left:0;
+ background-color:  #5c821a;
+ transform: translateX(-250%);
+ transition-duration: 1s;
+ border: 5px solid black;
+ border-radius: 5%;
+ box-shadow: 3px 3px 8px gray;
+
+}
+.hamberger-sidebar-header{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  border-radius: 7%;
+  background-image: url(https://i-sam.unimedias.fr/2017/11/22/legumes.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=388&w=690);
+
+}
+
+.hamberger-sidebar-body{
+
+
+  text-align: left;
+  color: #fff;
+}
+.hamberger-sidebar li{
+  display: block;
+  padding-left: 0%;
+}
+
+
+
+@media screen and (max-width: 986px){
+  .hamberger-sidebar{
+    display: block;
+
+  }
+}
+.hamberger-sidebar.collapse.show{
+  transform: translateX(0%);
+  transition-duration: 1s;
+}
+h3{
+  margin-top: 6%;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+@media screen and (max-width: 1024px){
+  .hamberger-sidebar-body{
+
+    padding-top: 40%;
+    font-size: 20px;
+
+  }
+
+
+}
+
+@media screen and (max-width: 900px){
+
+  .hamberger-sidebar{
+    display: block;
+
+
+  }
+
+.hamberger-sidebar.collapse.show{
+  transform: translateX(0%);
+  transition-duration: 1s;
+}
+
+
+h3{
+  margin-top: 6%;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+}
+.hamberger-sidebar-body{
+
+  padding-top:55%;
+  font-size: 15px;
+
+}
+}
+

@@ -1,0 +1,15 @@
+.card{
+	height: 100%;
+}
+
+.col-cards{
+	margin-top: 1em;
+}
+
+.card-img-top{
+	height: 200px;
+}
+
+ngb-pagination{
+	margin-top: 1em;
+}

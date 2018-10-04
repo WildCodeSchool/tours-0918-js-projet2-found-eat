@@ -1,0 +1,22 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{ mediaInput.product_name }}</h4>
+    <button type="button" class="close" (click)="modalInput.dismiss('')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- infos goes here -->
+
+    <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
+
+    <p *ngIf="mediaInput.nutrition_data_prepared_per">Valeur nutritive pour {{ mediaInput.nutrition_data_prepared_per }}</p>
+    <p *ngIf="mediaInput.nutriments.salt" >Sel : {{ mediaInput.nutriments.salt }}</p>
+    <p *ngIf="mediaInput.nutriments.proteins">Protéines : {{ mediaInput.nutriments.proteins }}</p>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss('')">Fermer</button>
+    <button type="button" class="btn btn-primary" (click)="modalInput.close(mediaInput)">Comparer</button>
+  </div>
+</div>

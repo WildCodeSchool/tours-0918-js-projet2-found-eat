@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Found-eat": {
+    "foundEat2": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Found-eat",
+            "outputPath": "dist/foundEat2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Found-eat:build"
+            "browserTarget": "foundEat2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Found-eat:build:production"
+              "browserTarget": "foundEat2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Found-eat:build"
+            "browserTarget": "foundEat2:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "Found-eat-e2e": {
+    "foundEat2-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Found-eat:serve"
+            "devServerTarget": "foundEat2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Found-eat:serve:production"
+              "devServerTarget": "foundEat2:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "Found-eat"
+  "defaultProject": "foundEat2"
 }

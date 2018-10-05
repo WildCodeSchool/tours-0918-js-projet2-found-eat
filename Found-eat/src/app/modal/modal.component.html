@@ -8,6 +8,14 @@
   <div class="modal-body">
     <!-- infos goes here -->
 
+    <div class="text-center">
+      <img *ngIf="mediaInput.images" class="img-fluid" src="https://static.openfoodfacts.org/images/products/{{mediaInput._id}}/1.400.jpg" (click)="openMedia(content)">
+    </div>
+
+    <div class="text-center">
+      <img *ngIf="!mediaInput.images" class="img-fluid" src="https://via.placeholder.com/150x150" (click)="openMedia(content)">
+    </div>
+
     <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
 
     <p *ngIf="mediaInput.nutrition_data_prepared_per">Valeur nutritive pour {{ mediaInput.nutrition_data_prepared_per }}</p>

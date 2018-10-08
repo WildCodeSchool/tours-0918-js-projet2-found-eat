@@ -1,102 +1,96 @@
-.nbar
-{
-width: 100%;
+.nbar {
+  width: 100%;
 
-background-color: #5c821a;
+
+  background-color: #5c821a;
 }
 
 
+.hamberger-sidebar {
+  display: none;
+  position: fixed;
+  width: 280px;
 
-.hamberger-sidebar
-{
-  display:none;
- position: fixed;
- width: 37%;
- height: 60%;
- top:50;
- left:0;
- background-color:  #5c821a;
- transform: translateX(-250%);
- transition-duration: 1s;
- border: 5px solid black;
- border-radius: 5%;
- box-shadow: 3px 3px 8px gray;
+  height: 450px;
+  top: 50;
+  left: 0;
+  background-color: #5c821a;
+  transform: translateX(-250%);
+  transition-duration: 1s;
+  border: 8px solid black;
+  border-radius: 0% 8% 8% 0%;
+  box-shadow: 3px 3px 8px gray;
 
 }
-.hamberger-sidebar-header{
+
+.hamberger-sidebar-header {
   position: fixed;
   height: 80px;
   width: 100%;
-  border-radius: 7%;
+  border-radius: 0% 8% 8% 0%;
   background-image: url(https://i-sam.unimedias.fr/2017/11/22/legumes.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=388&w=690);
 
 }
 
-.hamberger-sidebar-body{
+.hamberger-sidebar-body {
 
-
+  padding-top:5em;
+  padding-left:2em;
   text-align: left;
   color: #fff;
 }
-.hamberger-sidebar li{
+
+.hamberger-sidebar li {
   display: block;
   padding-left: 0%;
 }
 
 
 
-@media screen and (max-width: 986px){
-  .hamberger-sidebar{
-    display: block;
-
-  }
-}
-.hamberger-sidebar.collapse.show{
-  transform: translateX(0%);
-  transition-duration: 1s;
-}
-h3{
-  margin-top: 6%;
-  text-align: center;
-  font-size: 40px;
-  color: #fff;
-}
-@media screen and (max-width: 1024px){
-  .hamberger-sidebar-body{
-
-    padding-top: 40%;
-    font-size: 20px;
-
-  }
-
+@media screen and (max-width: 1024px) {
 
 }
 
-@media screen and (max-width: 900px){
-
-  .hamberger-sidebar{
-    display: block;
-
-
-  }
-
-.hamberger-sidebar.collapse.show{
+.hamberger-sidebar.collapse.show {
   transform: translateX(0%);
   transition-duration: 1s;
 }
 
 
-h3{
-  margin-top: 6%;
-  text-align: center;
-  font-size: 30px;
-  color: #fff;
-}
-.hamberger-sidebar-body{
 
-  padding-top:55%;
-  font-size: 15px;
+
+@media screen and (max-width:1024px) {
+
+  .hamberger-sidebar {
+    display: block;
+
+
+  }
+
+  .hamberger-sidebar.collapse.show {
+    transform: translateX(0%);
+    transition-duration: 1s;
+  }
+
+
+  h3 {
+    margin-top: 6%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .hamberger-sidebar-body {
+
+    padding-top: 55%;
+    font-size: 15px;
+
+  }
+}
+
+@media screen and (max-width: 1111px) {
+  ul {
+    margin-left: -3em;
+  }
 
 }
-}
-

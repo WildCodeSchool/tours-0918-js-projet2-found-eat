@@ -7,6 +7,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ModalComponent } from './modal/modal.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
           
 const appRoutes: Routes = [
 { path: '', redirectTo: '1', pathMatch: 'full' },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
 	GalleryComponent,
 	ModalComponent,
   CarouselComponent,
-  NavBarComponent
+  NavBarComponent,
+  FooterComponent,
 	],
 	imports: [
 	BrowserModule,

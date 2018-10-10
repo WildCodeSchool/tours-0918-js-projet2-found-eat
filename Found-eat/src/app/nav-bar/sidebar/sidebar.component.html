@@ -1,0 +1,91 @@
+<div class="hamberger-sidebar " [ngbCollapse]="isCollapsed ">
+
+
+  <div class="hamberger-sidebar-header ">
+    <h3>Found-eat</h3>
+
+
+  </div>
+  <div class="row w-20 offset-2 p-rigth-100">
+
+    <div class="hamberger-sidebar-body">
+
+      <nav class="navbar  navbar-light  ">
+        <ul class="navbar-nav mr-auto navbar-light" *ngIf="!isAuth">
+          <li class="nav-item active">
+            <a class="nav-link text-white font-weight-bold " href="#"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white font-weight-bold" href="#">
+              <i class="fas fa-balance-scale"></i> Comparateur</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white font-weight-bold " href="#">
+              <i class="fas fa-search-plus"></i>Recherche Avancée</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white font-weight-bold" href="#"><i class="fas fa-envelope-open-text"></i>
+              Contact</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white font-weight-bold" href="#">
+              <form class="form-inline ">
+
+
+                <input class="form-control col-6 " type="search" placeholder="Search" aria-label="Search">
+
+                <button id='loop' class=" btn btn-outline-success  " type="submit"> <i class="fas fa-search"></i></button>
+
+              </form>
+            </a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav mr-auto navbar-light" *ngIf="isAuth">
+
+        <li class="nav-item active">
+            <a class="nav-link text-white font-weight-bold  " href="#"><i class="fas fa-home"></i>Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold  " href="#"><i class="fas fa-balance-scale">comparer</i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold" href="#"><i class="fas fa-folder-plus">ajouter</i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold" href="#"><i class="fas fa-trash-alt">supprimer</i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold " href="#"><i class="fas fa-search-plus"></i>Recherche avancée</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-white font-weight-bold" href="#">
+                  <form class="form-inline ">
+
+
+                    <input class="form-control col-6 " type="search" placeholder="Search" aria-label="Search">
+
+                    <button id='loop' class=" btn btn-outline-success  " type="submit"> <i class="fas fa-search"></i></button>
+
+                  </form>
+                </a>
+              </li>
+
+          </ul>
+
+
+
+
+
+
+
+
+      </nav>
+    </div>
+  </div>
+</div>

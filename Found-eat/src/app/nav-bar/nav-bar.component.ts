@@ -7,15 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class NavBarComponent implements OnInit {
-
-
+  @Input()
+  isAuth: boolean;
 
   constructor() {
 
   }
 
   ngOnInit() {
-
+    this.isAuth = false;
   }
 
 }

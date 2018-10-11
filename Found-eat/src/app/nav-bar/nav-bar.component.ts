@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+	selector: 'app-nav-bar',
+	templateUrl: './nav-bar.component.html',
+	styleUrls: ['./nav-bar.component.css']
 })
 
 export class NavBarComponent implements OnInit {
-  isCollapsed: boolean;
+	isCollapsed: boolean;
 
-  constructor() {
-    this.isCollapsed = true;
-  }
+	constructor(private route: ActivatedRoute, private router: Router) {
+		this.isCollapsed = true;
+	}
 
-  ngOnInit() {
+	ngOnInit() {
 
-  }
+	}
 
 }

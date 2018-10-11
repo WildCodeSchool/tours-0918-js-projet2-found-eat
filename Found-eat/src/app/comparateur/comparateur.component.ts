@@ -36,6 +36,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	}
 
 	resetComparator() {
+		window.scrollTo(0, 0);  // Retour sur le haut de la page
 		// On supprime les produits selectionnés du localStorage
 		localStorage.removeItem('product1');
 		localStorage.removeItem('product2');

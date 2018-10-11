@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductsService } from '../services/products.service';
 
 @Component({
 	selector: 'app-gallery',
@@ -16,7 +15,7 @@ export class GalleryComponent implements OnInit {
 
 	showProducts: any[]; // produits à afficher via la pagination
 
-	constructor(private service: NgbModal, private route: ActivatedRoute, private router: Router, private productsService: ProductsService) { }
+	constructor(private service: NgbModal, private route: ActivatedRoute, private router: Router) { }
 
 	openMedia(content: any) {
 		this.service.open(content).result
@@ -38,7 +37,7 @@ export class GalleryComponent implements OnInit {
 
 	ngOnInit() {
 
-		this.products = this.productsService.products;
+		this.products = JSON.parse(localStorage['products']);
 
 		this.totalPages = (this.products.length / 8) * 10; // Formule peut-être incorrecte si il y a vraiment beaucoup d'articles ?
 

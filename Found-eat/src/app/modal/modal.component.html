@@ -1,0 +1,38 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{ mediaInput.product_name }}</h4>
+    <button type="button" class="close" (click)="modalInput.dismiss('')" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- infos goes here -->
+
+    <div class="text-center">
+      <img *ngIf="mediaInput.images" class="img-fluid" src="https://static.openfoodfacts.org/images/products/{{mediaInput._id}}/1.400.jpg" (click)="openMedia(content)">
+    </div>
+
+    <div class="text-center">
+      <img *ngIf="!mediaInput.images" class="img-fluid" src="https://via.placeholder.com/150x150" (click)="openMedia(content)">
+    </div>
+
+    <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
+
+    <p *ngIf="mediaInput.nutrition_data_prepared_per">Valeur nutritive pour {{ mediaInput.nutrition_data_prepared_per }}</p>
+    <p *ngIf="mediaInput.quantity">Quantité {{ mediaInput.quantity }}</p>
+    <p *ngIf="mediaInput.nutriments.salt" >Sel : {{ mediaInput.nutriments.salt }}</p>
+    <p *ngIf="mediaInput.nutriments.proteins">Protéines : {{ mediaInput.nutriments.proteins }}</p>
+    <p *ngIf="mediaInput.nutriments.energy_100g">energy_100g : {{ mediaInput.nutriments.energy_100g }}</p>
+    <p *ngIf="mediaInput.nutriments.saturated-fat">saturated-fat : {{ mediaInput.nutriments.saturated-fat }}</p>
+    <p *ngIf="mediaInput.nutriments.sugars_value">sugars_value : {{ mediaInput.nutriments.sugars_value }}</p>
+    <p *ngIf="mediaInput.nutriments.proteins_value">proteins_value : {{ mediaInput.nutriments.proteins_value }}</p>
+    <p *ngIf="mediaInput.nutriments.fat_100g">fat_100g : {{ mediaInput.nutriments.fat_100g }}</p>
+    <p *ngIf="mediaInput.nutriments.carbohydrates_value">carbohydrates_value : {{ mediaInput.nutriments.carbohydrates_value }}</p>
+    <p *ngIf="mediaInput.nutriments.fat_value">fat_value : {{ mediaInput.nutriments.fat_value }}</p>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss('')">Fermer</button>
+    <button type="button" class="btn btn-primary" (click)="modalInput.close(mediaInput)">Comparer</button>
+  </div>
+</div>

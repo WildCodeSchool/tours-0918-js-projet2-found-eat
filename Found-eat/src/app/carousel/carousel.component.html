@@ -1,0 +1,17 @@
+
+<!-- Carousel -->
+
+<div class="container">
+<ngb-carousel #carousel="ngbCarousel" [showNavigationIndicators]="false" *ngIf="images">
+    <ng-template ngbSlide *ngFor="let image of images">
+      <img [src]="image.src">
+      <div class="carousel-caption">
+        <div class="jumbotron">
+        <h3>{{image.name}}</h3>
+        <p>{{image.description}}</p>
+        <a class= "btn btn-primary" href="#" role="button">Learn More</a>
+      </div>
+    </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

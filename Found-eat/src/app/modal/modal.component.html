@@ -20,6 +20,8 @@
 
     <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
 
+    <p *ngIf="mediaInput.ingredients_text_with_allergens_fr">Ingrédients : {{ mediaInput.ingredients_text_with_allergens_fr | ingredients }} </p>
+
     <p *ngIf="mediaInput.nutrition_data_prepared_per">Valeur nutritive pour {{ mediaInput.nutrition_data_prepared_per }}</p>
     <p *ngIf="mediaInput.quantity">Quantité {{ mediaInput.quantity }}</p>
     <div *ngIf="mediaInput.nutriments">

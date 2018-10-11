@@ -12,6 +12,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 
+import { Ingredients } from './ingredients.pipe';
+
 import { ProductsService } from './services/products.service';
 import { ImagePreloadDirective } from './image-preload.directive';
 
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
 	FooterComponent,
 	ComparateurComponent,
 	ImagePreloadDirective,
+	Ingredients,
 	],
 	imports: [
 	BrowserModule,

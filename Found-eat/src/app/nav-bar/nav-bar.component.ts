@@ -1,21 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+	selector: 'app-nav-bar',
+	templateUrl: './nav-bar.component.html',
+	styleUrls: ['./nav-bar.component.css']
 })
 
 export class NavBarComponent implements OnInit {
-  @Input()
-  isAuth: boolean;
+	isCollapsed: boolean;
 
-  constructor() {
+	constructor(private route: ActivatedRoute, private router: Router) {
+		this.isCollapsed = true;
+	}
 
-  }
+	ngOnInit() {
 
-  ngOnInit() {
-    this.isAuth = false;
-  }
+	}
 
 }

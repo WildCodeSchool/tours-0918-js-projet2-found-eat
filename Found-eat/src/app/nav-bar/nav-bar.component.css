@@ -13,3 +13,47 @@ padding-right: 2px;
 }
 
 
+
+
+
+@media screen and (max-width:1024px) {
+
+  .hamberger-sidebar {
+    display: block;
+
+
+  }
+
+  .hamberger-sidebar.collapse.show {
+    transform: translateX(0%);
+    transition-duration: 1s;
+  }
+
+
+  h3 {
+    margin-top: 6%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .hamberger-sidebar-body {
+
+    padding-top: 55%;
+    font-size: 15px;
+
+  }
+}
+
+@media screen and (max-width: 1111px) {
+  ul {
+    margin-left: -3em;
+  }
+
+}
+
+
+
+.test{
+  color: #F3AB2A;
+}

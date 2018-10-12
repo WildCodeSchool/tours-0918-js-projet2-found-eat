@@ -14,38 +14,35 @@
 
 
 
-      <ul class="navbar-nav mx-auto w-80 justify-content-center " >
+      <ul class="navbar-nav mx-auto w-80 justify-content-center ">
 
-        <li  *ngIf="!isAuth" class="nav-item active">
-          <a class="nav-link text-white font-weight-bold pr-4 " 
-          routerLink="gallery" 
-          routerLinkActive="text-warning"><i class="icon fas fa-home"></i>Accueil</a>
+        <li *ngIf="!isAuth" class="nav-item active">
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning"><i
+              class="icon fas fa-home"></i>Accueil</a>
         </li>
 
 
         <li *ngIf="!isAuth" class="nav-item ">
-          <a class="nav-link text-white font-weight-bold pr-4 " 
-          routerLink="comparateur"
-          routerLinkActive="text-warning"
-          > <i class="icon fas fa-balance-scale "></i>Comparer</a>
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="comparateur" routerLinkActive="text-warning">
+            <i class="icon fas fa-balance-scale "></i>Comparer</a>
         </li>
 
 
         <li *ngIf="!isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-4" 
-          routerLink="contact"
-          routerLinkActive="text-warning"
-          ><i class="icon fas fa-envelope-open-text"></i>Contact</a>
+          <a class="nav-link text-white font-weight-bold pr-4" routerLink="contact" routerLinkActive="text-warning"><i
+              class="icon fas fa-envelope-open-text"></i>Contact</a>
         </li>
 
 
         <li *ngIf="!isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-search-plus"></i>Recherche avancée</a>
+          <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-search-plus"></i>Recherche
+            avancée</a>
         </li>
 
 
         <li *ngIf="isAuth" class="nav-item ">
-          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-home"></i>Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-home"></i>Accueil <span
+              class="sr-only">(current)</span></a>
         </li>
 
         <li *ngIf="isAuth" class="nav-item">
@@ -61,8 +58,8 @@
         </li>
 
         <li *ngIf="isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-search-plus"></i>Recherche avancée</a>
-        </li>
+          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-search-plus"></i>Recherche
+            avancée</a>
 
       </ul>
 
@@ -83,59 +80,3 @@
   </nav>
 
   <app-sidebar [isCollapsed]="!isCollapsed" [isAuth]="isAuth" (notifyCollapse)="onCollapse($event)"></app-sidebar>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

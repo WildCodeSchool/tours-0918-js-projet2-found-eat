@@ -12,7 +12,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
-
+import { ContactComponent } from './contact/contact.component'
 import { Ingredients } from './ingredients.pipe';
 
 import { ProductsService } from './services/products.service';
@@ -24,6 +24,7 @@ const appRoutes: Routes = [
 	{ path: 'comparateur', component: ComparateurComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: '', redirectTo: 'gallery/1', pathMatch: 'full' },
+	{ path: 'contact', component: ContactComponent},
 	{ path: '**', redirectTo: '' }];
 
 @NgModule({
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
 		ModalComponent,
 		NavBarComponent,
 		FooterComponent,
+		ContactComponent
 	],
 	imports: [
 		BrowserModule,
@@ -50,5 +52,6 @@ const appRoutes: Routes = [
 		ProductsService,
 	],
 	bootstrap: [AppComponent]
+	
 })
 export class AppModule { }

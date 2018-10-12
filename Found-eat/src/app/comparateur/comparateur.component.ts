@@ -55,6 +55,9 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 
 	// Fonction pour le compte à rebourd et la redirection
 	rebourd() {
+		if (this.timer === 5) {
+			window.scrollTo(0, 0);
+		}
 		if (this.timer >= 0) {
 			this.timeOut = setTimeout( () => {
 				(() => {

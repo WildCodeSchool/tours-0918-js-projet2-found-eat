@@ -45,6 +45,7 @@ export class GalleryComponent implements OnInit {
 			this.page = this.route.snapshot.params['id'];
 		} else {
 			this.page = 1;
+			this.router.navigate([`gallery/${ this.page }`]);
 		}
 
 		// Si le paramètre est incorrect, retour vers la page 1

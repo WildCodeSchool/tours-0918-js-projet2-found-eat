@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ModalComponent } from './modal/modal.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -23,20 +24,20 @@ const appRoutes: Routes = [
 	{ path: 'comparateur', component: ComparateurComponent },
 	{ path: '', redirectTo: 'gallery/1', pathMatch: 'full' },
 	{ path: '**', redirectTo: '' },
-];
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		GalleryComponent,
-		ModalComponent,
 		CarouselComponent,
 		SidebarComponent,
-		FooterComponent,
-		NavBarComponent,
 		ComparateurComponent,
 		ImagePreloadDirective,
 		Ingredients,
+		LoginComponent,
+		GalleryComponent,
+		ModalComponent,
+		NavBarComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,

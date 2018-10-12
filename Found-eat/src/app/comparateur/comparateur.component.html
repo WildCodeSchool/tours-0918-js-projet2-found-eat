@@ -11,43 +11,50 @@
 		<!-- Product 1 -->
 		<div class="col-6" id="product1">
 
-			
-			<!-- <p *ngIf="product1.nutrition_data_prepared_per">Valeur nutritive pour {{ product1.nutrition_data_prepared_per }}</p> -->
-			<!-- <p *ngIf="product1.quantity">Quantité {{ product1.quantity }}</p> -->
+			<img 
+			src="{{product1.image}}"
+			default="https://via.placeholder.com/150x150" 
+			class="img img-fluid mb-4"
+			>
 
-			<img *ngIf="product1.images" class="img-fluid mb-4" src="https://static.openfoodfacts.org/images/products/{{product1._id}}/1.400.jpg">
+			<p *ngIf="product1.quantity">Quantité {{ product1.quantity }}</p>
+			<h6>Valeurs Nutritives pour 100g / 100ml</h6>
 
-			<img *ngIf="!product1.images" class="img-fluid mb-4" src="https://via.placeholder.com/150x150">
+			<p *ngIf="product1.nutritional_value.energy"
+			[ngClass]="product1.nutritional_value.energy < product2.nutritional_value.energy? 'text-danger' : 'text-success'"
+			>Énergie : {{ product1.nutritional_value.energy }}kcal</p>
 
+			<p *ngIf="product1.nutritional_value.lipides"
+			[ngClass]="product1.nutritional_value.lipides > product2.nutritional_value.lipides? 'text-danger' : 'text-success'"
+			>lipides : {{ product1.nutritional_value.lipides }}g</p>
 
-			<p *ngIf="product1.nutriments.salt" 
-			[ngClass]="product1.nutriments.salt > product2.nutriments.salt? 'text-danger' : 'text-success'">Sel : {{ product1.nutriments.salt }}</p>
+			<p *ngIf="product1.nutritional_value.saturated_fat"
+			[ngClass]="product1.nutritional_value.saturated_fat > product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
+			>Acide gras saturé : {{ product1.nutritional_value.saturated_fat }}g</p>
 
-			<p *ngIf="product1.nutriments.proteins"
-			[ngClass]="product1.nutriments.proteins < product2.nutriments.proteins? 'text-danger' : 'text-success'"
-			>Protéines : {{ product1.nutriments.proteins }}</p>
+			<p *ngIf="product1.nutritional_value.glucides"
+			[ngClass]="product1.nutritional_value.glucides > product2.nutritional_value.glucides? 'text-danger' : 'text-success'"
+			>glucides : {{ product1.nutritional_value.glucides }}g</p>
 
-			<p *ngIf="product1.nutriments.energy_100g" 
-			[ngClass]="product1.nutriments.energy_100g < product2.nutriments.energy_100g? 'text-danger' : 'text-success'"
-			>Énergie : {{ product1.nutriments.energy_100g }}</p>
+			<p *ngIf="product1.nutritional_value.sugar"
+			[ngClass]="product1.nutritional_value.sugar > product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
+			>sugar : {{ product1.nutritional_value.sugar }}g</p>
 
-			<p *ngIf="product1.nutriments.saturated-fat"
-			[ngClass]="product1.nutriments.saturated-fat < product2.nutriments.saturated-fat? 'text-danger' : 'text-success'"
-			>saturated-fat : {{ product1.nutriments.saturated-fat }}</p>
+			<p *ngIf="product1.nutritional_value.fibres_alimentaires"
+			[ngClass]="product1.nutritional_value.fibres_alimentaires < product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'"
+			>fibres_alimentaires : {{ product1.nutritional_value.fibres_alimentaires }}g</p>
 
-			<p *ngIf="product1.nutriments.sugars_value"
-			[ngClass]="product1.nutriments.sugars_value > product2.nutriments.sugars_value? 'text-danger' : 'text-success'"
-			>Sucre : {{ product1.nutriments.sugars_value }}</p>
+			<p *ngIf="product1.nutritional_value.proteines"
+			[ngClass]="product1.nutritional_value.proteines < product2.nutritional_value.proteines? 'text-danger' : 'text-success'"
+			>Protéines : {{ product1.nutritional_value.proteines }}g</p>
 
-			<p *ngIf="product1.nutriments.fat_100g"
-			[ngClass]="product1.nutriments.fat_100g > product2.nutriments.fat_100g? 'text-danger' : 'text-success'"
-			>Lipides : {{ product1.nutriments.fat_100g }}</p>
+			<p *ngIf="product1.nutritional_value.salt"
+			[ngClass]="product1.nutritional_value.salt > product2.nutritional_value.salt? 'text-danger' : 'text-success'"
+			>Sel : {{ product1.nutritional_value.salt }}g</p>
 
-			<p *ngIf="product1.nutriments.carbohydrates_value"
-			[ngClass]="product1.nutriments.carbohydrates_value < product2.nutriments.carbohydrates_value? 'text-danger' : 'text-success'"
-			>Glucides : {{ product1.nutriments.carbohydrates_value }}</p>
-
-
+			<p *ngIf="product1.nutritional_value.sodium"
+			[ngClass]="product1.nutritional_value.sodium > product2.nutritional_value.sodium? 'text-danger' : 'text-success'"
+			>sodium : {{ product1.nutritional_value.sodium }}g</p>
 		</div>
 
 		<!-- Product 2 -->
@@ -55,43 +62,56 @@
 
 
 			
-			<img *ngIf="product2.images" class="img-fluid mb-4" src="https://static.openfoodfacts.org/images/products/{{product2._id}}/1.400.jpg">
-
-			<img *ngIf="!product2.images" class="img-fluid mb-4" src="https://via.placeholder.com/150x150">
+			<img 
+			src="{{product2.image}}"
+			default="https://via.placeholder.com/150x150" 
+			class="img img-fluid mb-4"
+			>
 			
-			<!-- <p *ngIf="product2.nutrition_data_prepared_per">Valeur nutritive pour {{ product2.nutrition_data_prepared_per }}</p> -->
-			<!-- <p *ngIf="product2.quantity">Quantité {{ product2.quantity }}</p> -->
-			<p *ngIf="product2.nutriments.salt" 
-			[ngClass]="product1.nutriments.salt < product2.nutriments.salt? 'text-danger' : 'text-success'"
-			>Sel : {{ product2.nutriments.salt }}</p>
 
-			<p *ngIf="product2.nutriments.proteins" 
-			[ngClass]="product1.nutriments.proteins > product2.nutriments.proteins? 'text-danger' : 'text-success'"
-			>Protéines : {{ product2.nutriments.proteins }}</p>
+			<p *ngIf="product2.quantity">Quantité {{ product2.quantity }}</p>
+			<h6>Valeurs Nutritives pour 100g / 100ml</h6>
 
-			<p *ngIf="product2.nutriments.energy_100g" 
-			[ngClass]="product1.nutriments.energy_100g > product2.nutriments.energy_100g? 'text-danger' : 'text-success'"
-			>Énergie : {{ product2.nutriments.energy_100g }}</p>
+			<p *ngIf="product2.nutritional_value.energy"
+			[ngClass]="product1.nutritional_value.energy > product2.nutritional_value.energy? 'text-danger' : 'text-success'"
+			>Énergie : {{ product2.nutritional_value.energy }}kcal</p>
 
-			<p *ngIf="product2.nutriments.saturated-fat"
-			[ngClass]="product1.nutriments.saturated-fat > product2.nutriments.saturated-fat? 'text-danger' : 'text-success'"
-			>saturated-fat : {{ product2.nutriments.saturated-fat }}</p>
+			<p *ngIf="product2.nutritional_value.lipides"
+			[ngClass]="product1.nutritional_value.lipides < product2.nutritional_value.lipides? 'text-danger' : 'text-success'"
+			>lipides : {{ product2.nutritional_value.lipides }}g</p>
 
-			<p *ngIf="product2.nutriments.sugars_value"
-			[ngClass]="product1.nutriments.sugars_value < product2.nutriments.sugars_value? 'text-danger' : 'text-success'"
-			>Sucre : {{ product2.nutriments.sugars_value }}</p>
+			<p *ngIf="product2.nutritional_value.saturated_fat"
+			[ngClass]="product1.nutritional_value.saturated_fat < product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
+			>Acide gras saturé : {{ product2.nutritional_value.saturated_fat }}g</p>
 
-			<p *ngIf="product2.nutriments.fat_100g"
-			[ngClass]="product1.nutriments.fat_100g < product2.nutriments.fat_100g? 'text-danger' : 'text-success'"
-			>Lipides : {{ product2.nutriments.fat_100g }}</p>
+			<p *ngIf="product2.nutritional_value.glucides"
+			[ngClass]="product1.nutritional_value.glucides < product2.nutritional_value.glucides? 'text-danger' : 'text-success'"
+			>glucides : {{ product2.nutritional_value.glucides }}g</p>
 
-			<p *ngIf="product2.nutriments.carbohydrates_value"
-			[ngClass]="product1.nutriments.carbohydrates_value > product2.nutriments.carbohydrates_value? 'text-danger' : 'text-success'"
-			>Glucides : {{ product2.nutriments.carbohydrates_value }}</p>
+			<p *ngIf="product2.nutritional_value.sugar"
+			[ngClass]="product1.nutritional_value.sugar < product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
+			>sugar : {{ product2.nutritional_value.sugar }}g</p>
 
+			<p *ngIf="product2.nutritional_value.fibres_alimentaires"
+			[ngClass]="product1.nutritional_value.fibres_alimentaires > product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'"
+			>fibres_alimentaires : {{ product2.nutritional_value.fibres_alimentaires }}g</p>
+
+			<p *ngIf="product2.nutritional_value.proteines"
+			[ngClass]="product1.nutritional_value.proteines > product2.nutritional_value.proteines? 'text-danger' : 'text-success'"
+			>Protéines : {{ product2.nutritional_value.proteines }}g</p>
+
+			<p *ngIf="product2.nutritional_value.salt"
+			[ngClass]="product1.nutritional_value.salt < product2.nutritional_value.salt? 'text-danger' : 'text-success'"
+			>Sel : {{ product2.nutritional_value.salt }}g</p>
+
+			<p *ngIf="product2.nutritional_value.sodium"
+			[ngClass]="product1.nutritional_value.sodium < product2.nutritional_value.sodium? 'text-danger' : 'text-success'"
+			>sodium : {{ product2.nutritional_value.sodium }}g</p>
 
 
 		</div>
+
+
 		
 		<div class="text-center col-12 pt-3">
 			<button class="btn btn-warning" (click)="resetComparator()">Reset</button>

@@ -16,6 +16,5 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		this.products = this.productsService.products;
 		localStorage.setItem('products', JSON.stringify(this.products));
-		console.log(localStorage.getItem('products'));
 	}
 }

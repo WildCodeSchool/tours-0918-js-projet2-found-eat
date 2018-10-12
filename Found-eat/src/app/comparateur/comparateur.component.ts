@@ -13,9 +13,15 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	timer: number;
 	timeOut: any;
 
+	product1Cpt: number;
+	product2Cpt: number;
+
 	constructor(private route: ActivatedRoute, private router: Router) { }
 
 	ngOnInit() {
+
+		this.product1Cpt = 7;
+		this.product2Cpt = 7;
 
 		this.timer = 5; // durée avant redirection en secondes
 

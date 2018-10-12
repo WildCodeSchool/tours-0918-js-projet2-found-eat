@@ -10,8 +10,8 @@
 
     <div class="text-center">
       <img 
-      src="https://static.openfoodfacts.org/images/products/{{mediaInput._id}}/1.400.jpg"
-      default="https://via.placeholder.com/150x150" 
+      src="{{mediaInput.image}}"
+      default="https://via.placeholder.com/150x150"
       class="img"
       >
     </div>
@@ -20,20 +20,32 @@
 
     <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
 
-    <p *ngIf="mediaInput.ingredients_text_with_allergens_fr">Ingrédients : {{ mediaInput.ingredients_text_with_allergens_fr | ingredients }} </p>
-
-    <p *ngIf="mediaInput.nutrition_data_prepared_per">Valeur nutritive pour {{ mediaInput.nutrition_data_prepared_per }}</p>
     <p *ngIf="mediaInput.quantity">Quantité {{ mediaInput.quantity }}</p>
-    <div *ngIf="mediaInput.nutriments">
-      <p *ngIf="mediaInput.nutriments.salt" >Sel : {{ mediaInput.nutriments.salt }}</p>
-      <p *ngIf="mediaInput.nutriments.proteins">Protéines : {{ mediaInput.nutriments.proteins }}</p>
-      <p *ngIf="mediaInput.nutriments.energy_100g">energy_100g : {{ mediaInput.nutriments.energy_100g }}</p>
-      <p *ngIf="mediaInput.nutriments.saturated-fat">saturated-fat : {{ mediaInput.nutriments.saturated-fat }}</p>
-      <p *ngIf="mediaInput.nutriments.sugars_value">sugars_value : {{ mediaInput.nutriments.sugars_value }}</p>
-      <p *ngIf="mediaInput.nutriments.proteins_value">proteins_value : {{ mediaInput.nutriments.proteins_value }}</p>
-      <p *ngIf="mediaInput.nutriments.fat_100g">fat_100g : {{ mediaInput.nutriments.fat_100g }}</p>
-      <p *ngIf="mediaInput.nutriments.carbohydrates_value">carbohydrates_value : {{ mediaInput.nutriments.carbohydrates_value }}</p>
-      <p *ngIf="mediaInput.nutriments.fat_value">fat_value : {{ mediaInput.nutriments.fat_value }}</p>
+
+    <p *ngIf="mediaInput.ingredients">ingredients {{ mediaInput.ingredients }}</p>
+
+    <h6>Valeurs Nutritives pour 100g / 100ml</h6>
+
+    <p *ngIf="mediaInput.nutritional_value.energy">energy : {{ mediaInput.nutritional_value.energy }}kcal</p>
+
+    <p *ngIf="mediaInput.nutritional_value.lipides">lipides : {{ mediaInput.nutritional_value.lipides }}g</p>
+    <p *ngIf="mediaInput.nutritional_value.saturated_fat">Acide gras saturé : {{ mediaInput.nutritional_value.saturated_fat }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.glucides">glucides : {{ mediaInput.nutritional_value.glucides }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.sugar">sugar : {{ mediaInput.nutritional_value.sugar }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.fibres_alimentaires">fibres_alimentaires : {{ mediaInput.nutritional_value.fibres_alimentaires }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.proteines">Protéines : {{ mediaInput.nutritional_value.proteines }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.salt" >Sel : {{ mediaInput.nutritional_value.salt }}g</p>
+
+    <p *ngIf="mediaInput.nutritional_value.sodium" >sodium : {{ mediaInput.nutritional_value.sodium }}g</p>
+
+
+    <div *ngIf="!mediaInput.nutritional_value">
+      <p class="text-center">Valeurs nutritives non renseigné</p>
     </div>
 
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NavBarComponent implements OnInit {
-  isCollapsed: boolean;
+  @Input()
+  isAuth: boolean;
 
   constructor() {
-    this.isCollapsed = true;
+
   }
 
   ngOnInit() {
-
+    this.isAuth = false;
   }
 
 }

@@ -17,8 +17,13 @@
       <ul class="navbar-nav mx-auto w-80 justify-content-center ">
 
         <li *ngIf="!isAuth" class="nav-item active">
-          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning"><i
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="acceuil" routerLinkActive="text-warning"><i
               class="icon fas fa-home"></i>Accueil</a>
+        </li>
+
+        <li *ngIf="!isAuth" class="nav-item active">
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning"><i
+              class=""></i>Produits</a>
         </li>
 
 

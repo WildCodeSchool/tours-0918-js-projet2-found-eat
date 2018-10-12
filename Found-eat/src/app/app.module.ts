@@ -12,18 +12,20 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
-import { ContactComponent } from './contact/contact.component'
+import { ContactComponent } from './contact/contact.component';
 import { Ingredients } from './ingredients.pipe';
 
 import { ProductsService } from './services/products.service';
 import { ImagePreloadDirective } from './image-preload.directive';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 const appRoutes: Routes = [
+	{ path: 'acceuil', component: AcceuilComponent },
 	{ path: 'gallery', component: GalleryComponent },
 	{ path: 'gallery/:id', component: GalleryComponent },
 	{ path: 'comparateur', component: ComparateurComponent },
 	{ path: 'login', component: LoginComponent },
-	{ path: '', redirectTo: 'gallery/1', pathMatch: 'full' },
+	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
 	{ path: '**', redirectTo: '' }];
 
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
 		ModalComponent,
 		NavBarComponent,
 		FooterComponent,
-		ContactComponent
+		ContactComponent,
+		AcceuilComponent
 	],
 	imports: [
 		BrowserModule,

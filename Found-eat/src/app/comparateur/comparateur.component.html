@@ -26,7 +26,7 @@
 
 			<p *ngIf="product1.nutritional_value.lipides"
 			[ngClass]="product1.nutritional_value.lipides > product2.nutritional_value.lipides? 'text-danger' : 'text-success'"
-			>lipides : {{ product1.nutritional_value.lipides }}g</p>
+			>Lipides : {{ product1.nutritional_value.lipides }}g</p>
 
 			<p *ngIf="product1.nutritional_value.saturated_fat"
 			[ngClass]="product1.nutritional_value.saturated_fat > product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
@@ -34,15 +34,15 @@
 
 			<p *ngIf="product1.nutritional_value.glucides"
 			[ngClass]="product1.nutritional_value.glucides > product2.nutritional_value.glucides? 'text-danger' : 'text-success'"
-			>glucides : {{ product1.nutritional_value.glucides }}g</p>
+			>Glucides : {{ product1.nutritional_value.glucides }}g</p>
 
 			<p *ngIf="product1.nutritional_value.sugar"
 			[ngClass]="product1.nutritional_value.sugar > product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
-			>sugar : {{ product1.nutritional_value.sugar }}g</p>
+			>Sugar : {{ product1.nutritional_value.sugar }}g</p>
 
 			<p *ngIf="product1.nutritional_value.fibres_alimentaires"
 			[ngClass]="product1.nutritional_value.fibres_alimentaires < product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'"
-			>fibres_alimentaires : {{ product1.nutritional_value.fibres_alimentaires }}g</p>
+			>Fibres alimentaires : {{ product1.nutritional_value.fibres_alimentaires }}g</p>
 
 			<p *ngIf="product1.nutritional_value.proteines"
 			[ngClass]="product1.nutritional_value.proteines < product2.nutritional_value.proteines? 'text-danger' : 'text-success'"
@@ -54,7 +54,7 @@
 
 			<p *ngIf="product1.nutritional_value.sodium"
 			[ngClass]="product1.nutritional_value.sodium > product2.nutritional_value.sodium? 'text-danger' : 'text-success'"
-			>sodium : {{ product1.nutritional_value.sodium }}g</p>
+			>Sodium : {{ product1.nutritional_value.sodium }}g</p>
 		</div>
 
 		<!-- Product 2 -->
@@ -78,7 +78,7 @@
 
 			<p *ngIf="product2.nutritional_value.lipides"
 			[ngClass]="product1.nutritional_value.lipides < product2.nutritional_value.lipides? 'text-danger' : 'text-success'"
-			>lipides : {{ product2.nutritional_value.lipides }}g</p>
+			>Lipides : {{ product2.nutritional_value.lipides }}g</p>
 
 			<p *ngIf="product2.nutritional_value.saturated_fat"
 			[ngClass]="product1.nutritional_value.saturated_fat < product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
@@ -86,15 +86,15 @@
 
 			<p *ngIf="product2.nutritional_value.glucides"
 			[ngClass]="product1.nutritional_value.glucides < product2.nutritional_value.glucides? 'text-danger' : 'text-success'"
-			>glucides : {{ product2.nutritional_value.glucides }}g</p>
+			>Glucides : {{ product2.nutritional_value.glucides }}g</p>
 
 			<p *ngIf="product2.nutritional_value.sugar"
 			[ngClass]="product1.nutritional_value.sugar < product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
-			>sugar : {{ product2.nutritional_value.sugar }}g</p>
+			>Sucre : {{ product2.nutritional_value.sugar }}g</p>
 
 			<p *ngIf="product2.nutritional_value.fibres_alimentaires"
 			[ngClass]="product1.nutritional_value.fibres_alimentaires > product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'"
-			>fibres_alimentaires : {{ product2.nutritional_value.fibres_alimentaires }}g</p>
+			>Fibres alimentaires : {{ product2.nutritional_value.fibres_alimentaires }}g</p>
 
 			<p *ngIf="product2.nutritional_value.proteines"
 			[ngClass]="product1.nutritional_value.proteines > product2.nutritional_value.proteines? 'text-danger' : 'text-success'"
@@ -106,7 +106,7 @@
 
 			<p *ngIf="product2.nutritional_value.sodium"
 			[ngClass]="product1.nutritional_value.sodium < product2.nutritional_value.sodium? 'text-danger' : 'text-success'"
-			>sodium : {{ product2.nutritional_value.sodium }}g</p>
+			>Sodium : {{ product2.nutritional_value.sodium }}g</p>
 
 
 		</div>

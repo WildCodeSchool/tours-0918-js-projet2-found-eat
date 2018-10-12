@@ -37,7 +37,7 @@
 			>Glucides : {{ product1.nutritional_value.glucides }}g</p>
 
 			<p *ngIf="product1.nutritional_value.sugar"
-			[ngClass]="product1.nutritional_value.sugar < product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
+			[ngClass]="product1.nutritional_value.sugar > product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
 			>Sugar : {{ product1.nutritional_value.sugar }}g</p>
 
 			<p *ngIf="product1.nutritional_value.fibres_alimentaires"
@@ -89,7 +89,7 @@
 			>Glucides : {{ product2.nutritional_value.glucides }}g</p>
 
 			<p *ngIf="product2.nutritional_value.sugar"
-			[ngClass]="product1.nutritional_value.sugar > product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
+			[ngClass]="product1.nutritional_value.sugar < product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
 			>Sucre : {{ product2.nutritional_value.sugar }}g</p>
 
 			<p *ngIf="product2.nutritional_value.fibres_alimentaires"

@@ -22,8 +22,9 @@ const appRoutes: Routes = [
 	{ path: 'gallery', component: GalleryComponent },
 	{ path: 'gallery/:id', component: GalleryComponent },
 	{ path: 'comparateur', component: ComparateurComponent },
+	{ path: 'login', component: LoginComponent },
 	{ path: '', redirectTo: 'gallery/1', pathMatch: 'full' },
-	{ path: '**', redirectTo: '' },
+	{ path: '**', redirectTo: '' }];
 
 @NgModule({
 	declarations: [

@@ -1,51 +1,50 @@
+/* Background Image */
+
 .container-fluid{
     background: url("https://en.zopix.net/image_upload/203814-agriculture-blur-carrots-close.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-
     height: 100%
-
 }
 
-.form-heading{
-    font-size:23px;
+/* Top Panel Styling */
+
+.panel i{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
 }
+
 .panel h2{
     color:#444444;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0 0 8px 0;
+    text-align: center;
+    letter-spacing: 1px;
 }
+
 .panel p{
     font-size: 14px;
     margin-bottom:30px;
     line-height:24px;
 }
 
-.login-form .form-control{
-    background:  #f7f7f7 none repeat scroll 0 0;
-    border: 1px solid #d4d4d4;
-    border-radius: 4px;
-    font-size: 14px;
-    width:50%;
-    height: 50px;
-    line-height: 50px;
-}
+/* Main form styling */
 
 .main {
     background: #ffffff none repeat scroll 0 0;
-    border-radius: 2px;
-    max-width:20%;
+    border-radius: 10px;
+    max-width:100%;
     padding: 50px 70px 70px 71px;
 }
 
-.login-form .form-group{
-    margin-bottom:10px;
-}
+/* Bottom Panel Styling */
 
-.login-form{
-    text-align:center;
+.forgot{
+    text-align: left;
+    margin-bottom: 30px;
 }
 
 .forgot a{
@@ -54,20 +53,26 @@
     text-decoration: underline;
 }
 
-.login-form .btn.btn-primary{
+.btn.btn-primary{
     background: #f0ad4e none repeat scroll 0 0;
     border-color: #f0ad4e;
+    opacity: 0.8 ;
     color: #ffffff;
-    font-size:14px;
+    font-size:16px;
+    font-weight: 600;
+    letter-spacing: 1px;
     width: 100%;
     height: 50px;
     line-height:50px;
     padding: 0;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.btn.btn-primary:hover{
+    opacity:1;
 }
 
-.forgot{
-    text-align: left;
-    margin-bottom: 30px;
-}
 
 

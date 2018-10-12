@@ -1,5 +1,5 @@
 <div class="nbar ">
-  <nav class=" navbar navbar-expand-lg navbar-light navbar-fixed-top shadow-lg p-3 mb-5 bg-#5c821a rounded">
+  <nav class=" navbar navbar-expand-lg navbar-light p-3 mb-5 fixed-top">
 
 
     <a class="navbar-brand d-flex pr-5 mr-auto ">logo</a><!-- utilisation de flex taille et margin pour que le logo soit toute droite -->
@@ -17,16 +17,28 @@
       <ul class="navbar-nav mx-auto w-80 justify-content-center " >
 
         <li  *ngIf="!isAuth" class="nav-item active">
-          <a class="nav-link text-white font-weight-bold pr-4 " href="#"><i class="icon fas fa-home"></i>Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white font-weight-bold pr-4 " 
+          routerLink="gallery" 
+          routerLinkActive="text-warning"><i class="icon fas fa-home"></i>Accueil</a>
         </li>
+
+
         <li *ngIf="!isAuth" class="nav-item ">
-          <a class="nav-link text-white font-weight-bold pr-4 " href="#"> <i class="icon fas fa-balance-scale "></i>Comparer</a>
+          <a class="nav-link text-white font-weight-bold pr-4 " 
+          routerLink="comparateur"
+          routerLinkActive="text-warning"
+          > <i class="icon fas fa-balance-scale "></i>Comparer</a>
         </li>
 
 
         <li *ngIf="!isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-envelope-open-text"></i>Contact</a>
+          <a class="nav-link text-white font-weight-bold pr-4" 
+          routerLink="contact"
+          routerLinkActive="text-warning"
+          ><i class="icon fas fa-envelope-open-text"></i>Contact</a>
         </li>
+
+
         <li *ngIf="!isAuth" class="nav-item">
           <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-search-plus"></i>Recherche avancée</a>
         </li>
@@ -58,19 +70,19 @@
 
 
 
-          <form class="d-flex form-inline d-sm-none d-none d-lg-block justify-content-end">
+      <form class="d-flex form-inline d-sm-none d-none d-lg-block justify-content-end">
 
-            <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success " type="submit"> <i class="fas fa-search"></i></button>
+        <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success " type="submit"> <i class="fas fa-search"></i></button>
 
-          </form>
+      </form>
 
-        </div>
+    </div>
 
 
   </nav>
 
-  <app-sidebar [isCollapsed]="!isCollapsed" [isAuth]="isAuth"></app-sidebar>
+  <app-sidebar [isCollapsed]="!isCollapsed" [isAuth]="isAuth" (notifyCollapse)="onCollapse($event)"></app-sidebar>
 
 
 

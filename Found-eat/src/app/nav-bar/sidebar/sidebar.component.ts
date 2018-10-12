@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,14 +12,21 @@ export class SidebarComponent implements OnInit {
   @Input()
   isAuth: boolean;
 
+  @Output()
+  notifyCollapse: EventEmitter<boolean> = new EventEmitter();
 
-  constructor() {
+
+  constructor(private route: ActivatedRoute, private router: Router) {
 
     this.isCollapsed = true;
   }
 
   ngOnInit() {
     this.isAuth = false;
+  }
+
+  collapse() {
+    this.notifyCollapse.emit(false);
   }
 
 

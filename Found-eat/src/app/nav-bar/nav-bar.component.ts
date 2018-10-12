@@ -11,11 +11,15 @@ export class NavBarComponent implements OnInit {
 	isCollapsed: boolean;
 
 	constructor(private route: ActivatedRoute, private router: Router) {
-		this.isCollapsed = true;
+		this.isCollapsed = false;
 	}
 
 	ngOnInit() {
 
+	}
+
+	onCollapse($event) {
+		this.isCollapsed = $event;
 	}
 
 }

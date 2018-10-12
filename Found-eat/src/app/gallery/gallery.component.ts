@@ -31,7 +31,7 @@ export class GalleryComponent implements OnInit {
 
 	changePage() {
 		this.showProducts = this.products.slice((this.page - 1) * 8, 8 * this.page);
-		this.router.navigate([`/${ this.page }`]);
+		this.router.navigate([`gallery/${ this.page }`]);
 	}
 
 	ngOnInit() {
@@ -1945,7 +1945,7 @@ export class GalleryComponent implements OnInit {
 		// Si le paramètre est incorrect, retour vers la page 1
 		if (this.totalPages < this.page || isNaN(this.page)) {
 			this.page = 1;
-			this.router.navigate([`/${ this.page }`]);
+			this.router.navigate([`gallery/${ this.page }`]);
 		}
 
 		this.showProducts = this.products.slice((this.page - 1) * 8, 8 * this.page);

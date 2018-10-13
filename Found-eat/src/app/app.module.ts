@@ -18,6 +18,7 @@ import { Ingredients } from './ingredients.pipe';
 import { ProductsService } from './services/products.service';
 import { ImagePreloadDirective } from './image-preload.directive';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
 	{ path: 'acceuil', component: AcceuilComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
-	{ path: '**', redirectTo: '' }];
+	{ path: '404', component: NotFoundComponent },
+	{ path: '**', redirectTo: '404' }];
 
 @NgModule({
 	declarations: [
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
 		NavBarComponent,
 		FooterComponent,
 		ContactComponent,
-		AcceuilComponent
+		AcceuilComponent,
+		NotFoundComponent
 	],
 	imports: [
 		BrowserModule,

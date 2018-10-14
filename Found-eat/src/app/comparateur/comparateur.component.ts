@@ -20,6 +20,8 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 
+		window.scrollTo(0, 0);  // Retour sur le haut de la page
+
 		this.product1Cpt = 7;
 		this.product2Cpt = 7;
 

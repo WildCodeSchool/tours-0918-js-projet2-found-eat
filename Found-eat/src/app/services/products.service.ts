@@ -1,7 +1,14 @@
 export class ProductsService {
-  products = [
+
+
+  setLocalStorage() {
+    localStorage.setItem('products', JSON.stringify(this.products));
+  }
+
 
   // Produit 1
+
+  products = [
 
   {
     "id": '1',

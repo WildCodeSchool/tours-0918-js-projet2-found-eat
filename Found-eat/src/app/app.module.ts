@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Ingredients } from './ingredients.pipe';
 
 import { ProductsService } from './services/products.service';
+import { LoginService } from './services/login.service';
 import { ImagePreloadDirective } from './image-preload.directive';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
 	],
 	providers: [
 		ProductsService,
+		LoginService,
 	],
 	bootstrap: [AppComponent]
 	

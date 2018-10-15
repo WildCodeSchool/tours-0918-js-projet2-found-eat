@@ -3,7 +3,7 @@
   display: none;
   position: fixed;
   width: 280px;
-  height: 450px;
+  min-height: 450px;
   top: 0;
   left: 0;
   background-color: #0D4E37;

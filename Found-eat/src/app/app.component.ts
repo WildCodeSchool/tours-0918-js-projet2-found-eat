@@ -9,12 +9,10 @@ import { ProductsService } from './services/products.service';
 export class AppComponent implements OnInit {
 
 	title = 'Found-eat';
-	products: any;
 
 	constructor(public productsService: ProductsService) {}
 
 	ngOnInit() {
-		this.products = this.productsService.products;
-		localStorage.setItem('products', JSON.stringify(this.products));
+		this.productsService.setLocalStorage();
 	}
 }

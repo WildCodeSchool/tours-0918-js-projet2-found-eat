@@ -52,5 +52,6 @@
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss()">Fermer</button>
     <button type="button" class="btn btn-primary" (click)="modalInput.close(mediaInput.product_name); getItem()">Comparer</button>
+    <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.dismiss()">Supprimer</button>
   </div>
 </div>

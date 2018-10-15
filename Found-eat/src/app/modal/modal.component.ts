@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LoginService } from '../services/login.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ModalComponent implements OnInit {
 	@Input()
 	modalInput: any;
 
-	constructor() { }
+	constructor(private loginService: LoginService) { }
 
 	ngOnInit() {
 	}

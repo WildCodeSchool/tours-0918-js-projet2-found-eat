@@ -1,22 +1,17 @@
-/* Center container */
-
-.container {
-    margin: 5em auto;
-    padding: 0;
-    }
-
 /* Jumbotron specs */
 
 .jumbotron{
     background-color: #2125295c;
     margin-bottom: -2rem;
     padding: 0.5em 0.6em ;
-
 }
 
 /* Image specificaions ** Note all images are the same size!! ** recheck if images different size */
 
 img{
-    max-width: 100%;
-    height: auto;
-    } 
+    width: 100%;
+}
+
+#img-ctn{
+	max-height: 350px;
+}

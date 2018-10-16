@@ -51,7 +51,7 @@
 					<tr>
 						<td>Acide gras saturé :</td>
 						<td *ngIf="product1.nutritional_value.saturated_fat"
-						[ngClass]="+product1.nutritional_value.lipides > +product2.nutritional_value.lipides? 'text-danger' : 'text-success'"
+						[ngClass]="+product1.nutritional_value.saturated_fat > +product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
 						>{{ product1.nutritional_value.saturated_fat }}g</td>
 						<td *ngIf="!product1.nutritional_value.saturated_fat">Valeur non renseignée</td>
 					</tr>

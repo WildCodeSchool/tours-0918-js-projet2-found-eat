@@ -14,7 +14,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component';
-import { Ingredients } from './ingredients.pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 

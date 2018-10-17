@@ -2,23 +2,21 @@
 <h1> Ajout et Modification de produits. </h1>
 
 
-<div class="contaigner">
+<div class="container">
 
   <div class="row">
-    <div class="présentation">
+    <div class="présentation col-6">
       <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
+<p>Valeur nutritive: {{ val }}</p>
+<p>Energie: {{ ene }}</p>
+<p>Lipide: {{ lip }}</p>
+<p>Acide gras saturé: {{ ac }}</p>
 
     </div>
 
-    <div class="formulaire">
+    <div class="formulaire col-6">
 
-      <form>
-        <!-- Bouton pour rechercher un produit afin de le modfifier  -->
-        <div class="form-group">
-          <label for="exampleFormControlFile1">Modifier un produit</label>
-          <input type="file" class="form-control-file" id="Modif">
-        </div>
-      </form>
+
 
 
       <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
@@ -51,6 +49,9 @@
             </select>
           </div>
 
+          <label for="exampleFormControlInput1">Quantité</label> <!-- nom du produit -->
+          <input type="email" class="form-control" id="Qua" placeholder="kilogramme ou litre">
+
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Ingrédient</label><!-- ingrédient -->
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -60,19 +61,19 @@
           <div class="row">
             <!-- Information du produit -->
             <div class="col">
-              <input type="text" class="form-control" placeholder="Valeur nutritive">
+              <input type="text" class="form-control" placeholder="Valeur nutritive" [(ngModel)]="val" name="valeur_nutritive">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Energie">
+              <input type="text" class="form-control" placeholder="Energie" [(ngModel)]="ene" name="energie">
             </div>
           </div>
 
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Lipide">
+              <input type="text" class="form-control" placeholder="Lipide" [(ngModel)]="lip" name="Lipide">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Acide gras saturé">
+              <input type="text" class="form-control" placeholder="Acide gras saturé" [(ngModel)]="ac" name="Acide">
             </div>
           </div>
 
@@ -87,7 +88,7 @@
           <div class="row">
             <div class="col">
               <input type="text" class="form-control" placeholder="Fibre alimentaire">
-            </div>>
+            </div>
             <div class="col">
               <input type="text" class="form-control" placeholder="protéine">
             </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 
 @Component({
@@ -7,15 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./ajout.component.css']
 })
 export class AjoutComponent implements OnInit {
-  @Input()
-  mediaInput: any;
-
-  @Input()
-  modalInput: any;
-
+  val: string;
+  ene: string;
+  lip: string;
+  ac: string;
   constructor() { }
 
   ngOnInit() {
+    this.val = '';
   }
 
 }

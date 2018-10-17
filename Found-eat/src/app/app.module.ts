@@ -29,7 +29,6 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 		SidebarComponent,
 		ComparateurComponent,
 		ImagePreloadDirective,
-		Ingredients,
 		LoginComponent,
 		GalleryComponent,
 		ModalComponent,

@@ -1,14 +1,14 @@
 
-
+<h1 class=" text-alingn-center "> Ajout et Modification </h1>
 
 
 
   <div class="row">
     <div class="présentation col-6 ">
-      <h1>Vue du produit</h1>
+      <h2>Vue du produit</h2>
       <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
       <h2>{{ nom }}</h2>
-
+      <img [src]="url" height="200"><br/>
 
       <p>Quantité : {{ kil }}</p>
       <p>Ingrédient : {{ inge }}</p>
@@ -25,7 +25,14 @@
     </div>
 
     <div class="formulaire col-6">
-        <h1> Ajout et Modification de produits. </h1>
+        <h2> tableau de bord </h2>
+
+        <form>
+            <div class="form-group">
+
+              <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="onSelecfile($event)" [(ngModel)]="img" name="image" >
+            </div>
+          </form>
 
 
 
@@ -67,7 +74,7 @@
 
             <!-- Information du produit -->
             <div class="col">
-              <input type="text" class="form-control" placeholder="Valeur nutritive" [(ngModel)]="val" name="valeur_nutritive">
+              <input type="text" class="form-control" placeholder="Valeur nutritive (kcal)" [(ngModel)]="val" name="valeur_nutritive">
             </div>
             <div class="col">
               <input type="text" class="form-control" placeholder="Energie" [(ngModel)]="ene" name="energie">
@@ -121,4 +128,4 @@
 
       </div>
 
-   
+

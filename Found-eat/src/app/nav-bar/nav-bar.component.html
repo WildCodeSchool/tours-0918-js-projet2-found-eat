@@ -1,8 +1,8 @@
 <div class="nbar ">
-  <nav class=" navbar navbar-expand-lg navbar-light navbar-fixed-top ">
+  <nav class=" navbar navbar-expand-lg navbar-light p-3 mb-5 fixed-top">
 
 
-    <a class="navbar-brand d-flex w-50 mr-auto">logo</a><!-- utilisation de flex taille et margin pour que le logo soit toute droite -->
+    <a class="navbar-brand d-flex pr-5 mr-auto ">logo</a><!-- utilisation de flex taille et margin pour que le logo soit toute droite -->
 
 
 
@@ -10,88 +10,64 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse w-100 d-none d-lg-block" id="navbarSupportedContent">
+    <div class="navbar-collapse w-100 mx-auto d-none d-lg-block" id="navbarSupportedContent">
 
-      <ul class="navbar-nav mr-auto w-50 justify-content-center">
+
+
+      <ul class="navbar-nav mx-auto w-80 justify-content-center ">
 
         <li class="nav-item active">
-          <a class="nav-link text-white font-weight-bold  " href="#">Accueil <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="acceuil" routerLinkActive="text-warning"><i
+              class="icon fas fa-home"></i>Accueil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white font-weight-bold  " href="#">Comparateur</a>
+
+        <li class="nav-item active">
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning"><i
+              class=""></i>Produits</a>
+        </li>
+
+
+        <li *ngIf="!loginService.isAuth" class="nav-item ">
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="comparateur" routerLinkActive="text-warning">
+            <i class="icon fas fa-balance-scale "></i>Comparer</a>
+        </li>
+
+
+        <li *ngIf="!loginService.isAuth" class="nav-item">
+          <a class="nav-link text-white font-weight-bold pr-4" routerLink="contact" routerLinkActive="text-warning"><i
+              class="icon fas fa-envelope-open-text"></i>Contact</a>
         </li>
 
 
         <li class="nav-item">
-          <a class="nav-link text-white font-weight-bold" href="#">Contact</a>
+          <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-search-plus"></i>Recherche
+            avancée</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-white font-weight-bold " href="#">Recherche avancée</a>
-          </li>
+
+        <li *ngIf="loginService.isAuth" class="nav-item">
+          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-folder-plus"></i>Ajouter</a>
+        </li>
+
+        <li *ngIf="loginService.isAuth" class="nav-item">
+          <button class="btn btn-warning" (click)="logout()">Déconnexion</button>
+        </li>
 
       </ul>
 
+
+
+
+
       <form class="d-flex form-inline d-sm-none d-none d-lg-block justify-content-end">
 
-          <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success " type="submit"> <i class="fas fa-search"></i></button>
+        <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success " type="submit"> <i class="fas fa-search"></i></button>
 
       </form>
 
     </div>
 
+
   </nav>
 
-
-
-
-
-
-
-
-<div class="hamberger-sidebar " [ngbCollapse]="isCollapsed ">
-
-
-
-
-  <div class="hamberger-sidebar-header ">
-    <h3>Found-eat</h3>
-
-
-  </div>
-  <div class="row w-20 offset-2 p-rigth-100">
-
-    <div class="hamberger-sidebar-body">
-
-      <nav class="navbar  navbar-light  ">
-        <ul class="navbar-nav mr-auto navbar-light ">
-          <li class="nav-item active">
-            <a class="nav-link text-white font-weight-bold " href="#"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link text-white font-weight-bold" href="#">
-              <i class="fas fa-balance-scale"></i> Comparateur</a>
-          </li>
-
-          <li class="nav-item ">
-            <a class="nav-link text-white font-weight-bold " href="#">
-              <i class="fas fa-sliders-h"></i> Recherche avancée</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link text-white font-weight-bold" href="#"><i class="fas fa-envelope-open-text"></i> Contact</a>
-          </li>
-
-        </ul>
-        <form class="form-inline ">
-
-
-          <input class="form-control col-6 " type="search" placeholder="Search" aria-label="Search">
-
-          <button id='loop' class=" btn btn-outline-success  " type="submit"> <i class="fas fa-search"></i></button>
-
-        </form>
-
-      </nav>
-    </div>
-  </div>
-</div>
+  <app-sidebar [isCollapsed]="!isCollapsed" [isAuth]="isAuth" (notifyCollapse)="onCollapse($event)"></app-sidebar>

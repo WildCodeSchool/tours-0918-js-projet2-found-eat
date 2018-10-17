@@ -1,10 +1,17 @@
-<div class="container">
+<app-carousel></app-carousel>
 
-	<h1 class="text-center p-3">Tous les produits</h1>
+<div class="container text-center">
+	<h1 class="text-center pt-5">Found Eat !</h1>
+	<p>Bienvenue ! Ce site vous permet de comparer les apports nutritifs des différents produits qui y sont référencés. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas molestiae cum ducimus repellat nemo est excepturi modi pariatur iure necessitatibus explicabo ut dolor eveniet, expedita? Aliquam quisquam delectus ab voluptates.</p>
+</div>
 
+
+<h3 class="text-center pt-4">Derniers produits ajoutés :</h3>
+
+<div class="container pb-5 pt-2">
 	<div class="row">
 
-		<div *ngFor="let product of showProducts" class="col-12 col-sm-6 col-md-4 col-lg-3 col-cards">
+		<div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 col-lg-3 col-cards">
 
 			<div class="card">
 
@@ -35,13 +42,4 @@
 
 	</div> <!-- #end row -->
 
-	<ngb-pagination class="d-flex justify-content-center" 
-	[collectionSize]="totalPages"
-	[(page)]="page"
-	[maxSize]="5" 
-	[rotate]="true" 
-	[boundaryLinks]="true"
-	(pageChange)="changePage()">
-</ngb-pagination> 
-
-</div> <!-- #end container-fluid -->
+</div>

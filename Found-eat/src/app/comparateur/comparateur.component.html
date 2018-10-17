@@ -1,0 +1,218 @@
+<div class="container-fluid  p-3">
+
+	<h2 class="text-center">Comparateur de produits :</h2>
+
+	<div *ngIf="product1 && product2" class="row pb-3 text-center">
+		<h4 class="col-6">{{ product1.product_name }}</h4>
+		<h4 class="col-6">{{ product2.product_name }}</h4>
+	</div>
+
+	<div *ngIf="product1 && product2" class="row">
+		<!-- Product 1 -->
+		<div class="col-6" id="product1">
+
+			<div class="text-center">
+				<img 
+				src="{{product1.image}}"
+				default="https://via.placeholder.com/150x150" 
+				class="img img-fluid mb-4 "
+				>
+			</div>
+
+			<div class="text-center">
+				<p *ngIf="product1.quantity">Quantité {{ product1.quantity }}</p>
+				<h6>Valeurs Nutritives pour 100g / 100ml</h6>
+			</div>
+
+			<table class="table table-striped table-inverse table-hover">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Énergie :</td>
+						<td 
+						*ngIf="product1.nutritional_value.energy"
+						[ngClass]="+product1.nutritional_value.energy < +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product1.nutritional_value.energy }}kcal</td>
+						<td *ngIf="!product1.nutritional_value.energy">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Lipides :</td>
+						<td 
+						*ngIf="product1.nutritional_value.lipides"
+						[ngClass]="+product1.nutritional_value.lipides > +product2.nutritional_value.lipides? 'text-danger' : 'text-success'">{{ product1.nutritional_value.lipides }}g</td>
+						<td *ngIf="!product1.nutritional_value.lipides">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Acide gras saturé :</td>
+						<td *ngIf="product1.nutritional_value.saturated_fat"
+						[ngClass]="+product1.nutritional_value.saturated_fat > +product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'"
+						>{{ product1.nutritional_value.saturated_fat }}g</td>
+						<td *ngIf="!product1.nutritional_value.saturated_fat">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Glucides :</td>
+						<td *ngIf="product1.nutritional_value.glucides"
+						[ngClass]="+product1.nutritional_value.glucides > +product2.nutritional_value.glucides? 'text-danger' : 'text-success'"
+						>{{ product1.nutritional_value.glucides }}g</td>
+						<td *ngIf="!product1.nutritional_value.glucides">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sucre :</td>
+						<td *ngIf="product1.nutritional_value.sugar"
+						[ngClass]="+product1.nutritional_value.sugar > +product2.nutritional_value.sugar? 'text-danger' : 'text-success'"
+						>{{ product1.nutritional_value.sugar }}g</td>
+						<td *ngIf="!product1.nutritional_value.sugar">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Fibres alimentaires :</td>
+						<td *ngIf="product1.nutritional_value.fibres_alimentaires"
+						[ngClass]="+product1.nutritional_value.fibres_alimentaires < +product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'"
+						>{{ product1.nutritional_value.fibres_alimentaires }}g</td>
+						<td *ngIf="!product1.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Protéines :</td>
+						<td *ngIf="product1.nutritional_value.proteines"
+						[ngClass]="+product1.nutritional_value.proteines < +product2.nutritional_value.proteines? 'text-danger' : 'text-success'">{{ product1.nutritional_value.proteines }}g</td>
+						<td *ngIf="!product1.nutritional_value.proteines">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sel :</td>
+						<td *ngIf="product1.nutritional_value.salt"
+						[ngClass]="+product1.nutritional_value.salt > +product2.nutritional_value.salt? 'text-danger' : 'text-success'">{{ product1.nutritional_value.salt }}g</td>
+						<td *ngIf="!product1.nutritional_value.salt">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sodium :</td>
+						<td *ngIf="product1.nutritional_value.sodium"
+						[ngClass]="+product1.nutritional_value.sodium > +product2.nutritional_value.sodium? 'text-danger' : 'text-success'">{{ product1.nutritional_value.sodium }}g</td>
+						<td *ngIf="!product1.nutritional_value.sodium">Valeur nutritive non renseginée</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<!-- Product 2 -->
+		<div class="col-6" id="product2">
+
+
+			<div class="text-center">
+				<img 
+				src="{{product2.image}}"
+				default="https://via.placeholder.com/150x150" 
+				class="img img-fluid mb-4"
+				>
+			</div>
+			
+			<div class="text-center">
+				<p *ngIf="product2.quantity">Quantité {{ product2.quantity }}</p>
+				<h6>Valeurs Nutritives pour 100g / 100ml</h6>
+			</div>
+
+			<table class="table table-striped table-inverse table-hover">
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Énergie :</td>
+						<td *ngIf="product2.nutritional_value.energy"
+						[ngClass]="+product1.nutritional_value.energy > +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product2.nutritional_value.energy }}kcal</td>
+						<td *ngIf="!product2.nutritional_value.energy">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Lipides :</td>
+						<td *ngIf="product2.nutritional_value.lipides"
+						[ngClass]="+product1.nutritional_value.lipides < +product2.nutritional_value.lipides? 'text-danger' : 'text-success'">{{ product2.nutritional_value.lipides }}g</td>
+						<td *ngIf="!product2.nutritional_value.lipides">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Acide gras saturé :</td>
+						<td *ngIf="product2.nutritional_value.saturated_fat"
+						[ngClass]="+product1.nutritional_value.saturated_fat < +product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'">{{ product2.nutritional_value.saturated_fat }}g</td>
+						<td *ngIf="!product2.nutritional_value.saturated_fat">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Glucides :</td>
+						<td *ngIf="product2.nutritional_value.glucides"
+						[ngClass]="+product1.nutritional_value.glucides < +product2.nutritional_value.glucides? 'text-danger' : 'text-success'">{{ product2.nutritional_value.glucides }}g</td>
+						<td *ngIf="!product2.nutritional_value.glucides">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sucre :</td>
+						<td *ngIf="product2.nutritional_value.sugar"
+						[ngClass]="+product1.nutritional_value.sugar < +product2.nutritional_value.sugar? 'text-danger' : 'text-success'">{{ product2.nutritional_value.sugar }}g</td>
+						<td *ngIf="!product2.nutritional_value.sugar">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Fibres alimentaires :</td>
+						<td *ngIf="product2.nutritional_value.fibres_alimentaires"
+						[ngClass]="+product1.nutritional_value.fibres_alimentaires > +product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'">{{ product2.nutritional_value.fibres_alimentaires }}g</td>
+						<td *ngIf="!product2.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Protéines :</td>
+						<td *ngIf="product2.nutritional_value.proteines"
+						[ngClass]="+product1.nutritional_value.proteines > +product2.nutritional_value.proteines? 'text-danger' : 'text-success'">{{ product2.nutritional_value.proteines }}g</td>
+						<td *ngIf="!product2.nutritional_value.proteines">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sel :</td>
+						<td *ngIf="product2.nutritional_value.salt"
+						[ngClass]="+product1.nutritional_value.salt < +product2.nutritional_value.salt? 'text-danger' : 'text-success'"> {{ product2.nutritional_value.salt }}g</td>
+						<td *ngIf="!product2.nutritional_value.salt">Valeur non renseignée</td>
+					</tr>
+
+					<tr>
+						<td>Sodium :</td>
+						<td *ngIf="product2.nutritional_value.sodium"
+						[ngClass]="+product1.nutritional_value.sodium < +product2.nutritional_value.sodium? 'text-danger' : 'text-success'"> {{ product2.nutritional_value.sodium }}g</td>
+						<td *ngIf="!product2.nutritional_value.sodium">Valeur non renseignée</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+
+
+		</div>
+
+
+		
+		<div class=" col-12 pt-3 text-center">
+			<button class="btn btn-warning" (click)="resetComparator()">Reset</button>
+		</div>
+
+	</div>
+
+	<div id="redirectDiv" *ngIf="!product1 && !product2" class="text-center">
+		<p class=" text-danger">Veuillez ajouter des produits au comparateur</p>
+		<p *ngIf="timer > 0">Redirection dans {{ timer }} secondes</p>
+		<p *ngIf='timer <= 0' >Redirection...</p>
+	</div>
+
+
+</div>

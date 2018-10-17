@@ -14,19 +14,13 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	timer: number;
 	timerSubscription: Subscription;
 
-	product1Cpt: number;
-	product2Cpt: number;
-
 	constructor(private route: ActivatedRoute, private router: Router) { }
 
 	ngOnInit() {
 
 		window.scrollTo(0, 0);  // Retour sur le haut de la page
 
-		this.product1Cpt = 7;
-		this.product2Cpt = 7;
-
-		this.timer = 5; // durée avant redirection en secondes
+		this.timer = 5; // durée du timer avant la redirection en secondes
 
 		// Si les produits existent on les convertit en objet et on les assigne a leurs variables respective
 		if (localStorage['product1'] && localStorage['product2']) {

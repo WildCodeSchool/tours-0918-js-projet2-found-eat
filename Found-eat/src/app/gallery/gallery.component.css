@@ -10,6 +10,11 @@
 	height: 200px;
 }
 
+.card img{
+	max-height: 200px;
+	max-width: 85%;
+}
+
 ngb-pagination{
 	margin-top: 1em;
 }

@@ -1,18 +1,117 @@
-<ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Ajouter un produit</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <!--img choisit par l'administrateur-->
-<button class='btn '>ajouter une image</button><!--a coté de l'image-->
-<!-- formulaire avec différent champs a enregistrer -->
-<!--symbole pour indiquer la qualité du produit-->
-  </div>
-  <div class="modal-footer">
-    <!-- <button type="button" class="btn btn-outline-dark" (click)= "afaire"> close</button> -->
-    <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">sauvegarder le produit</button>
-  </div>
-</ng-template>
+
+<h1> Ajout et Modification de produits. </h1>
+
+
+<div class="contaigner-fuild">
+
+  <div class="row">
+    <div class="présentation">
+      <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
+
+    </div>
+
+    <div class="formulaire">
+
+      <form>
+        <!-- Bouton pour rechercher un produit afin de le modfifier  -->
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Modifier un produit</label>
+          <input type="file" class="form-control-file" id="Modif">
+        </div>
+      </form>
+
+
+      <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
+      <div class="form-group">
+        <form>
+          <div class="form-group">
+            <!-- bouton pour rechercher une image de produit ( le bouton ouvre une modal pour donner le choix d'exporter plusieurs images) -->
+            <label for="exampleFormControlFile1">rechercher une image de produit</label>
+            <input type="file" class="form-control-file" id="image">
+          </div>
+
+
+          <label for="exampleFormControlInput1">Nom du produit</label> <!-- nom du produit -->
+          <input type="email" class="form-control" id="NProd" placeholder="name">
+
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Catégorie de produits </label> <!-- catégorie -->
+            <select class="form-control" id="SelecCatégorie">
+              <option>Plat préparer</option>
+              <option>Conserve</option>
+              <option>Produit laitié</option>
+              <option>Boisson</option>
+              <option>Confiserie</option>
+              <option>Chips</option>
+              <option>Céréale</option>
+              <option>Petit déjeuner</option>
+              <option>snacks sucrés</option>
+              <option>Viandes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Ingrédient</label><!-- ingrédient -->
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+
+          <div class="row">
+            <!-- Information du produit -->
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Valeur nutritive">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Energie">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Lipide">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Acide gras saturé">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Glucide">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sugar">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Fibre alimentaire">
+            </div>>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="protéine">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sel">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sodium">
+            </div>
+          </div>
+
+        </form>
+
+
+
+        <div class="symbole">
+          <!-- Symbole de qualité -->
+
+
+        </div>
+
+      </div>
+
+    </div>

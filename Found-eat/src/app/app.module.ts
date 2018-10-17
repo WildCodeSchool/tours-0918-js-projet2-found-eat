@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -15,20 +16,12 @@ import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component';
 import { Ingredients } from './ingredients.pipe';
 
+import { AppRoutingModule } from './app-routing.module';
+
 import { ProductsService } from './services/products.service';
 import { LoginService } from './services/login.service';
 import { ImagePreloadDirective } from './image-preload.directive';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-
-const appRoutes: Routes = [
-	{ path: 'acceuil', component: AcceuilComponent },
-	{ path: 'gallery', component: GalleryComponent },
-	{ path: 'gallery/:id', component: GalleryComponent },
-	{ path: 'comparateur', component: ComparateurComponent },
-	{ path: 'login', component: LoginComponent },
-	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
-	{ path: 'contact', component: ContactComponent},
-	{ path: '**', redirectTo: '' }];
 
 @NgModule({
 	declarations: [
@@ -50,13 +43,13 @@ const appRoutes: Routes = [
 		BrowserModule,
 		NgbModule,
 		FormsModule,
-		RouterModule.forRoot(appRoutes),
+		AppRoutingModule,
 	],
 	providers: [
 		ProductsService,
 		LoginService,
 	],
 	bootstrap: [AppComponent]
-	
+
 })
 export class AppModule { }

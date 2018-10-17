@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-comparateur',
@@ -11,7 +12,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	product1: any;
 	product2: any;
 	timer: number;
-	timeOut: any;
+	timerSubscription: Subscription;
 
 	product1Cpt: number;
 	product2Cpt: number;
@@ -39,8 +40,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		// Pour éviter que le setTimeout continue lorsque l'on change de view
-		clearTimeout(this.timeOut);
+		this.timerSubscription.unsubscribe();
 	}
 
 	resetComparator() {
@@ -57,22 +57,21 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 
 	// Fonction pour le compte à rebourd et la redirection
 	rebourd() {
-		if (this.timer === 5) {
-			window.scrollTo(0, 0);
-		}
-		if (this.timer >= 0) {
-			this.timeOut = setTimeout( () => {
-				(() => {
-					this.timer--;
-					this.rebourd();
-				})();
-			}, 1000);
-		} else {
-			this.router.navigate([`gallery`]);
-		}
+		const counter = interval(1000);
+		this.timerSubscription = counter.subscribe(
+			() => {
+				this.timer = this.timer - 1;
+				if (this.timer < 0) {
+					this.router.navigate(['gallery/1']);
+				}
+			},
+			(error) => {
+				console.error('Error :' + error);
+			},
+			() => {
+				console.log('Timer complete');
+			}
+		);
 	}
-	// Tant que timer n'est pas égal à 0 on lance un setTimeout de 1sec
-	// Toutes les secondes on décrémente timer et on relance la fonction rebourd
-	// Lorsque le timer tombe à zéro, on est redirigé vers la vue 'gallery'
 
 }

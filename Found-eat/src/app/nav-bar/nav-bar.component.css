@@ -62,3 +62,9 @@ nav{
 .test{
   color: #F3AB2A;
 }
+
+.logo{
+  position: fixed;
+  width: 70px;
+
+}

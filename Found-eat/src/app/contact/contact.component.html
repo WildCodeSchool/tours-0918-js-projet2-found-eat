@@ -3,12 +3,12 @@
     
     <form #form="ngForm" (ngSubmit)="onSubmit(form)">
         <div>
-            <h1 class="label">Something is bothering you?</h1> 
-            <h4 class="label">Send us a message!</h4> 
+            <h1 class="label">Vous avez une question?</h1> 
+            <h4 class="label">Contactez-nous!</h4> 
         </div>
         <div>
             <label for="name">
-                <span>Name: *</span> 
+                <span>Nom: *</span> 
                 <input [ngClass]="{'has-error': n.invalid && form.submitted}" required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Your Name" autofocus="autofocus"/>
             </label> 
         </div>
@@ -20,11 +20,11 @@
         </div>
         <div>		          
             <label for="subject">
-                <span>Subject: </span>
+                <span>Objet: </span>
                 <select id="subject" name="subject">   
-                    <option>Product Review</option>
-                    <option>Nutritional Matter</option>  
-                    <option>Website improvement</option>
+                    <option>Fiche Produit</option>
+                    <option>Valeurs Nutritionnelles</option>  
+                    <option>Suggestion Site</option>
                 </select>
             </label>
         </div>
@@ -35,7 +35,7 @@
             </label>  
         </div>
         <div>		           
-            <button name="submit" type="submit" id="submit" >SEND</button> 
+            <button name="submit" type="submit" id="submit" >Envoyer</button> 
         </div>
     </form>
     

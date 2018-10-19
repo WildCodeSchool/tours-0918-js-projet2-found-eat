@@ -9,13 +9,13 @@
         <div>
             <label for="name">
                 <span>Nom: *</span> 
-                <input [ngClass]="{'has-error': n.invalid && form.submitted}" required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Your Name" autofocus="autofocus"/>
+                <input required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Votre Nom" autofocus="autofocus"/>
             </label> 
         </div>
         <div>
             <label for="email">
                 <span>Email: *</span>
-                <input type="email" id="email" name="email" value="" placeholder="Your Email" />
+                <input type="email" id="email" name="email" value="" placeholder="Votre Email" />
             </label>  
         </div>
         <div>		          
@@ -31,7 +31,7 @@
         <div>		          
             <label for="message">
                 <span>Message: *</span> 
-                <textarea id="message" name="message" placeholder="Please write your message here."></textarea> 
+                <textarea id="message" name="message" placeholder="Écrivez votre message..."></textarea> 
             </label>  
         </div>
         <div>		           

@@ -1,4 +1,63 @@
+.container{
+    margin-top:70px;
+}
+
 .row
 {
 width: 100%
+}
+
+
+
+h1{
+    color:#444444;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom:20px; 
+}
+
+h2{
+    color:#444444;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top:20px; 
+}
+
+
+.formulaire{
+    background-color: #0D4E37;
+    color: white;
+    font-weight:600;
+}
+
+.présentation{
+    background-color: white;
+    
+}
+
+.btn.btn-primary{
+    background: #f0ad4e none repeat scroll 0 0;
+    border-color: #f0ad4e;
+    opacity: 0.8 ;
+    color: #ffffff;
+    font-size:16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 25%;
+    height: 50px;
+    line-height:50px;
+    padding: 0;
+    margin:10px;
+    
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.btn.btn-primary:hover{
+    opacity:1;
 }

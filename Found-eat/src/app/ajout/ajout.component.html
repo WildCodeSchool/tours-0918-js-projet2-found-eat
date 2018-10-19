@@ -1,131 +1,116 @@
+<div class="container">
+  <h1 class="text-align center "> Gestion des Article : Ajout et Modification </h1>
 
-<h1 class=" text-alingn-center "> Ajout et Modification </h1>
+    <div class="row">
+      <div class="présentation col-6 ">
+        <h2>Aperçu</h2>
+        <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
+        <h4>{{ nom }}</h4>
+        <img [src]="url" height="200"><br />
+        <p>Quantité : {{ kil }}</p>
+        <p>Ingrédient : {{ inge }}</p>
+        <p>Valeur nutritive: {{ val }}</p>
+        <p>Energie: {{ ene }}</p>
+        <p>Lipide: {{ lip }}</p>
+        <p>Acide gras saturé: {{ ac }}</p>
+        <p>Glucide: {{ glu }}</p>
+        <p>Sucre : {{ sug }}</p>
+        <p>Fibre alimentaire: {{ fa }}</p>
+        <p>Protéine: {{ pr }}</p>
+        <p> Sel: {{ se }}</p>
+        <p>Sodium : {{ so }}</p>
+      </div>
 
-
-
-  <div class="row">
-    <div class="présentation col-6 ">
-      <h2>Vue du produit</h2>
-      <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
-      <h2>{{ nom }}</h2>
-      <img [src]="url" height="200"><br/>
-
-      <p>Quantité : {{ kil }}</p>
-      <p>Ingrédient : {{ inge }}</p>
-      <p>Valeur nutritive: {{ val }}</p>
-      <p>Energie: {{ ene }}</p>
-      <p>Lipide: {{ lip }}</p>
-      <p>Acide gras saturé: {{ ac }}</p>
-      <p>Glucide: {{ glu }}</p>
-      <p>Sucre : {{ sug }}</p>
-      <p>Fibre alimentaire: {{ fa }}</p>
-      <p>Protéine: {{ pr }}</p>
-      <p> Sel: {{ se }}</p>
-      <p>Sodium : {{ so }}</p>
-    </div>
-
-    <div class="formulaire col-6">
-        <h2> tableau de bord </h2>
-
-        <form>
+      <div class="formulaire col-6">
+        <h2>Tableau de bord </h2>
+        <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
+        <div class="form-group">
+          <form>
+            <!-- nom du produit -->
+            <label for="exampleFormControlInput1">Nom du produit</label>
+            <input type="text" class="form-control" id="NProd" placeholder="name" [(ngModel)]="nom" name="nom">
+            <!-- importation produit -->
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="onSelecfile($event)"
+              [(ngModel)]="img" name="image">
+            <!-- catégorie -->
             <div class="form-group">
+              <label for="exampleFormControlSelect1">Catégorie de produits </label>
+              <select class="form-control" id="SelecCatégorie">
+                <option>Plat préparer</option>
+                <option>Conserve</option>
+                <option>Produit laitié</option>
+                <option>Boisson</option>
+                <option>Confiserie</option>
+                <option>Chips</option>
+                <option>Céréale</option>
+                <option>Petit déjeuner</option>
+                <option>snacks sucrés</option>
+                <option>Viandes</option>
+              </select>
+            </div>
 
-              <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="onSelecfile($event)" [(ngModel)]="img" name="image" >
+            <label for="exampleFormControlInput1">Quantité</label> <!-- nom du produit -->
+            <input type="email" class="form-control" id="Qua" placeholder="kilogramme ou litre" [(ngModel)]="kil" name="qua">
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Ingrédient</label><!-- ingrédient -->
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="inge" name="ingrédient"></textarea>
+            </div>
+
+            <div class="row">
+
+              <!-- Information du produit -->
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valeur nutritive (kcal)" [(ngModel)]="val" name="valeur_nutritive">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Energie (g)" [(ngModel)]="ene" name="energie">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Lipide (g)" [(ngModel)]="lip" name="lipide">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Acide gras saturé (g)" [(ngModel)]="ac" name="acide">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Glucide (g)" [(ngModel)]="glu" name="glucide">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Sugar (g)" [(ngModel)]="sug" name="sugar">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Fibre alimentaire (g)" [(ngModel)]="fa" name="fibre">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="protéine (g)" [(ngModel)]="pr" name="protéine">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Sel (g)" [(ngModel)]="se" name="sel">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Sodium (g)" [(ngModel)]="so" name="sodium">
+              </div>
             </div>
           </form>
 
-
-
-
-      <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
-      <div class="form-group">
-        <form>
-
-          <label for="exampleFormControlInput1">Nom du produit</label> <!-- nom du produit -->
-          <input type="email" class="form-control" id="NProd" placeholder="name" [(ngModel)]="nom" name="nom">
-
-
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Catégorie de produits </label> <!-- catégorie -->
-            <select class="form-control" id="SelecCatégorie">
-              <option>Plat préparer</option>
-              <option>Conserve</option>
-              <option>Produit laitié</option>
-              <option>Boisson</option>
-              <option>Confiserie</option>
-              <option>Chips</option>
-              <option>Céréale</option>
-              <option>Petit déjeuner</option>
-              <option>snacks sucrés</option>
-              <option>Viandes</option>
-            </select>
-          </div>
-
-          <label for="exampleFormControlInput1">Quantité</label> <!-- nom du produit -->
-          <input type="email" class="form-control" id="Qua" placeholder="kilogramme ou litre" [(ngModel)]="kil" name="qua">
-
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Ingrédient</label><!-- ingrédient -->
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="inge" name="ingrédient"></textarea>
-          </div>
-
-
-          <div class="row">
-
-            <!-- Information du produit -->
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Valeur nutritive (kcal)" [(ngModel)]="val" name="valeur_nutritive">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Energie" [(ngModel)]="ene" name="energie">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Lipide" [(ngModel)]="lip" name="lipide">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Acide gras saturé" [(ngModel)]="ac" name="acide">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Glucide" [(ngModel)]="glu" name="glucide">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Sugar" [(ngModel)]="sug" name="sugar">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Fibre alimentaire" [(ngModel)]="fa" name="fibre">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="protéine" [(ngModel)]="pr" name="protéine">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Sel" [(ngModel)]="se" name="sel">
-            </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Sodium" [(ngModel)]="so" name="sodium">
-            </div>
-          </div>
-
-        </form>
-
-
-
-        <div class="symbole">
+          <div class="symbole">
           <!-- Symbole de qualité -->
-
-
-        </div>
+          </div>
 
       </div>
+    </div>
 
+    <button type="submit" class="btn btn-primary">Sauvegarder</button>
 
+  </div>
+</div>

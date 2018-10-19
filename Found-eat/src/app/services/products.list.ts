@@ -1,4 +1,4 @@
-export class ProductsService {
+export class Productlist {
   products = [
 
   // Produit 1
@@ -13,8 +13,8 @@ export class ProductsService {
     "surgelé"
     ],
     "categories": [
-    "Plats préparés", 
-    "Plats à base de viande", 
+    "Plats préparés",
+    "Plats à base de viande",
     "Plats à base de viande bovine",
     "Hachis parmentier",
     "Gamme famille picard",
@@ -63,7 +63,7 @@ export class ProductsService {
     "conserve",
     ],
     "categories": [
-    "Conserves", 
+    "Conserves",
     "Produits de la mer",
     "Poissons",
     "Poissons en conserve",
@@ -89,7 +89,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "12.3",
       "salt":  "0.5",
-      "sodium": "0.197"  
+      "sodium": "0.197"
     },
     "image": "https://static.openfoodfacts.org/images/products/366/008/813/8643/front_fr.14.400.jpg",
     "keywords": [
@@ -131,7 +131,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "12.4",
       "salt":  "0.3",
-      "sodium": "0.118"  
+      "sodium": "0.118"
     },
     "image": "https://static.openfoodfacts.org/images/products/366/008/813/6748/front_fr.10.400.jpg",
     "keywords": [
@@ -156,16 +156,16 @@ export class ProductsService {
     "plastique"
     ],
     "categories": [
-    "Produits laitiers", 
-    "Laits", 
-    "Laits homogénéisés", 
-    "Laits UHT", 
+    "Produits laitiers",
+    "Laits",
+    "Laits homogénéisés",
+    "Laits UHT",
     "Laits demi-écrémés"
     ],
     "labels": [
-    "Point Vert", 
-    "Garantie IPLC", 
-    "Eco-Emballages", 
+    "Point Vert",
+    "Garantie IPLC",
+    "Eco-Emballages",
     "Elaboré en France"
     ],
     "country": "France",
@@ -184,7 +184,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "3.2",
       "salt":  "0.1",
-      "sodium": "0.0394"  
+      "sodium": "0.0394"
     },
     "image": "https://static.openfoodfacts.org/images/products/326/385/509/3697/front_fr.7.400.jpg",
     "keywords": [
@@ -214,12 +214,12 @@ export class ProductsService {
     "bonbons gélifiés"
     ],
     "labels": [
-    "Peu ou pas de sucre", 
-    "Peu de sucre", 
-    "Allégé en sucre", 
-    "Moins 40% de sucre", 
-    "Sans gluten", 
-    "Colorants naturels", 
+    "Peu ou pas de sucre",
+    "Peu de sucre",
+    "Allégé en sucre",
+    "Moins 40% de sucre",
+    "Sans gluten",
+    "Colorants naturels",
     "Sans édulcorants"
     ],
     "country": "France",
@@ -244,7 +244,7 @@ export class ProductsService {
       "fibres_alimentaires" : "10",
       "proteines": "6",
       "salt":  "0.3",
-      "sodium": "0.118"  
+      "sodium": "0.118"
     },
     "image": "https://static.openfoodfacts.org/images/products/311/674/003/4728/front_fr.4.400.jpg",
     "keywords": [
@@ -265,10 +265,10 @@ export class ProductsService {
     "plastique"
     ],
     "categories": [
-    "Boissons", 
-    "Boissons gazeuses", 
-    "Sodas", 
-    "Sodas au cola", 
+    "Boissons",
+    "Boissons gazeuses",
+    "Sodas",
+    "Sodas au cola",
     "Boissons sucrées"
     ],
     "labels": [],
@@ -289,7 +289,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "0",
       "salt":  "0",
-      "sodium": "0"  
+      "sodium": "0"
     },
     "image": "https://static.openfoodfacts.org/images/products/54491472/front_fr.81.400.jpg",
     "keywords": [
@@ -311,7 +311,7 @@ export class ProductsService {
     "sachet",
     ],
     "categories": [
-    "chips", 
+    "chips",
     ],
     "labels": [
     "Éco-Emballages"
@@ -328,7 +328,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "5.6",
       "salt":  "1.5",
-      "sodium": "0.591"  
+      "sodium": "0.591"
     },
     "image": "https://static.openfoodfacts.org/images/products/26017082/front_fr.6.400.jpg",
     "keywords": [
@@ -371,7 +371,7 @@ export class ProductsService {
       "fibres_alimentaires" : "7",
       "proteines": "7",
       "salt":  "0.03",
-      "sodium": "0.0118"  
+      "sodium": "0.0118"
     },
     "image": "https://static.openfoodfacts.org/images/products/068/745/622/2011/front_fr.3.400.jpg",
     "keywords": [
@@ -389,27 +389,27 @@ export class ProductsService {
     "brand": "Ferrero",
     "quantity": "600g",
     "packaging": [
-    "Verre", 
-    "Bocal", 
+    "Verre",
+    "Bocal",
     "Plastique"
     ],
     "categories": [
-    "Petit-déjeuners", 
-    "Produits à tartiner", 
+    "Petit-déjeuners",
+    "Produits à tartiner",
     "Produits à tartiner sucrés",
-    "Pâtes à tartiner, Pâtes à tartiner au chocolat", 
-    "Pâtes à tartiner aux noisettes", 
+    "Pâtes à tartiner, Pâtes à tartiner au chocolat",
+    "Pâtes à tartiner aux noisettes",
     "Pâtes à tartiner aux noisettes et au cacao"
     ],
     "labels": [
-    "Sans gluten", 
+    "Sans gluten",
     "Point Vert"
     ],
     "country": "France",
     "ingredients": "Sucre, huile de palme, NOISETTES 13%, cacao maigre LAIT écrémé en poudre 6,6%, LACTOSERUM en poudre, émulsifiants : lécithines (soja), vanilline.",
     "allergenes": [
-    "Lait", 
-    "Fruits à coque", 
+    "Lait",
+    "Fruits à coque",
     "Soja",
     ],
     "additifs": [
@@ -426,7 +426,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "6",
       "salt":  "0.114",
-      "sodium": "0.0449"  
+      "sodium": "0.0449"
     },
     "image": "https://static.openfoodfacts.org/images/products/301/762/040/6003/front_fr.83.400.jpg",
     "keywords": [
@@ -467,7 +467,7 @@ export class ProductsService {
       "fibres_alimentaires" : "12",
       "proteines": "3.33",
       "salt":  "0.0667",
-      "sodium": "0.0262"  
+      "sodium": "0.0262"
     },
     "image": "https://static.openfoodfacts.org/images/products/377/000/123/0047/front_fr.24.400.jpg",
     "keywords": [
@@ -490,21 +490,21 @@ export class ProductsService {
     "plastique"
     ],
     "categories": [
-    "Viandes", 
-    "Charcuteries", 
-    "Jambons", 
+    "Viandes",
+    "Charcuteries",
+    "Jambons",
     "Jambons blancs"
     ],
     "labels": [
-    "Bio", 
-    "Bio européen", 
-    "Viande Française", 
-    "FR-BIO-10", 
-    "Porc Français", 
-    "Point Vert", 
-    "Fabriqué en France", 
-    "AB Agriculture Biologique", 
-    "Fabrication artisanale", 
+    "Bio",
+    "Bio européen",
+    "Viande Française",
+    "FR-BIO-10",
+    "Porc Français",
+    "Point Vert",
+    "Fabriqué en France",
+    "AB Agriculture Biologique",
+    "Fabrication artisanale",
     "Agriculture France"
     ],
     "country": "France",
@@ -524,7 +524,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "21",
       "salt":  "1.8",
-      "sodium": "0.709"  
+      "sodium": "0.709"
     },
     "image": "https://static.openfoodfacts.org/images/products/376/009/953/4141/front_fr.5.400.jpg",
     "keywords": [
@@ -546,22 +546,22 @@ export class ProductsService {
     "carton"
     ],
     "categories": [
-    "Plats préparés", 
+    "Plats préparés",
     "Salades composées"
     ],
     "labels": [
-    "Fourchette incluse", 
-    "Même saveur", 
-    "Nouveau look", 
+    "Fourchette incluse",
+    "Même saveur",
+    "Nouveau look",
     "Sauce incluse"
     ],
     "country": "UE",
     "ingredients": "106,5 g de Penne cuisinées (33,3%) : Pâtes alimentaires aux oeufs cuites 20.7% (eau, semoule de blé dur, oeuf), tomates 10.6%, basilic, huile d’olive vierge extra, sel, poivre blanc. 70 g d’Ingrédients Savoureux (21,9%) : Emincés de filet de poulet traités en salaison cuits rôtis 12.4% (filet de poulet 11,9% (origine: UE), dextrose, proteines de pois, sel, arômes naturels, ferments), tomates cerise 6.2%, copeaux de fromage italien 3.1% (lait de vache cru, sel, présure, conservateur : lysozyme (oeuf)), basilic. 50 g de Salades mélangées (15,6%) Laitue, chicorée et roquette. 50 g de Mélange de tomates fraîches et tomates mi-séchées marinées, assaisonné (15,6%) : Tomates fraîches 12%, sauce [double concentré de tomates 0.5%, huile de colza, eau, sel, vinaigre d’alcool, moutarde de Dijon (eau, graines de moutarde, vinaigre d’alcool, sel), amidon modifié de pomme de terre, épaississant : gomme xanthane, jus de citron concentré, poivre blanc], tomates mi-séchées marinées 0.7% (tomates, huile de tournesol, sel, plantes aromatiques), huile d’olive vierge extra, plantes aromatiques, sucre, acidifiant : acide citrique, conservateur : sorbate de potassium. 30 g de Sauce au Parmigiano Reggiano (9,4%):Eau, huile de colza, huile d’olive vierge extra, Parmigiano Reggiano 0.4%, moutarde de Dijon (eau, graines de moutarde, vinaigre, sel, antioxydant : disulfite de potassium, acidifiant : acide citrique), jus concentré de citron, sel, jaune d’oeuf, ail, amidon modifié de pomme de terre, basilic, acidifiant : acide lactique, épaississant : gomme xanthane, conservateur : sorbate de potassium. 13,5 g de Petits Blinis nature (4,2%) : Eau, farine de blé, huile de tournesol, lactose, proteines de lait, lait écrémé en poudre, lactosérum en poudre, oeuf entier et blanc d’oeuf déshydratés, poudre à lever : carbonates de sodium et diphosphates, sel, antioxydant : acide ascorbique.",
     "allergenes": [
-    "Œufs", 
-    "Gluten", 
-    "Lait", 
-    "Moutarde", 
+    "Œufs",
+    "Gluten",
+    "Lait",
+    "Moutarde",
     "Parmigiano Reggiano"
     ],
     "additifs": [
@@ -569,7 +569,7 @@ export class ProductsService {
     "E14XX - Amidons modifiés",
     "E415 - Gomme xanthane",
     "E330 - Acide citrique",
-    "E202 - Sorbate de potassium",  
+    "E202 - Sorbate de potassium",
     "E224 - Disulfite de potassium",
     "E270 - Acide lactique",
     "E500 - Carbonates de sodium",
@@ -587,7 +587,7 @@ export class ProductsService {
       "fibres_alimentaires" : "1.8",
       "proteines": "6.1",
       "salt":  "0.8",
-      "sodium": "0.315"  
+      "sodium": "0.315"
     },
     "image": "https://static.openfoodfacts.org/images/products/370/000/925/7906/front_fr.17.400.jpg",
     "keywords": [
@@ -612,13 +612,13 @@ export class ProductsService {
     "plastique"
     ],
     "categories": [
-    "Boissons", 
-    "Eaux", 
-    "Boissons gazeuses", 
-    "Eaux de sources", 
-    "Eaux minérales", 
-    "Eaux gazeuses", 
-    "Eaux minérales naturelles", 
+    "Boissons",
+    "Eaux",
+    "Boissons gazeuses",
+    "Eaux de sources",
+    "Eaux minérales",
+    "Eaux gazeuses",
+    "Eaux minérales naturelles",
     "Boissons non sucrées"
     ],
     "labels": [],
@@ -636,7 +636,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0",
       "proteines": "0",
       "salt":  "0.4",
-      "sodium": "0.157"  
+      "sodium": "0.157"
     },
     "image": "https://static.openfoodfacts.org/images/products/306/832/009/9613/front_fr.3.400.jpg",
     "keywords": [
@@ -660,18 +660,18 @@ export class ProductsService {
     "bouteille plastique"
     ],
     "categories": [
-    "Aliments et boissons à base de végétaux", 
-    "Boissons", 
-    "Boissons à base de végétaux", 
-    "Boissons aux fruits", 
-    "Jus et nectars", 
-    "Jus et nectars de fruits", 
-    "Jus de fruits", 
-    "Jus multifruits", 
+    "Aliments et boissons à base de végétaux",
+    "Boissons",
+    "Boissons à base de végétaux",
+    "Boissons aux fruits",
+    "Jus et nectars",
+    "Jus et nectars de fruits",
+    "Jus de fruits",
+    "Jus multifruits",
     "Jus de fruits 100% pur jus"
     ],
     "labels": [
-    "Peu ou pas de sucre", 
+    "Peu ou pas de sucre",
     "Sans sucre ajouté"
     ],
     "country": "France",
@@ -691,7 +691,7 @@ export class ProductsService {
       "fibres_alimentaires" : "0.8",
       "proteines": "0.6",
       "salt":  "0",
-      "sodium": "0"  
+      "sodium": "0"
     },
     "image": "https://static.openfoodfacts.org/images/products/541/018/801/3085/front_fr.75.400.jpg",
     "keywords": [
@@ -714,12 +714,12 @@ export class ProductsService {
     "boîte",
     ],
     "categories": [
-    "Aliments et boissons à base de végétaux", 
-    "Aliments d'origine végétale", 
-    "Petit-déjeuners", 
-    "Céréales et pommes de terre", 
-    "Céréales et dérivés", 
-    "Céréales pour petit-déjeuner", 
+    "Aliments et boissons à base de végétaux",
+    "Aliments d'origine végétale",
+    "Petit-déjeuners",
+    "Céréales et pommes de terre",
+    "Céréales et dérivés",
+    "Céréales pour petit-déjeuner",
     "Céréales au miel"
     ],
     "labels": [],
@@ -740,7 +740,7 @@ export class ProductsService {
       "fibres_alimentaires" : "2.1",
       "proteines": "6.2",
       "salt":  "0.5",
-      "sodium": "0.197"  
+      "sodium": "0.197"
     },
     "image": "https://static.openfoodfacts.org/images/products/325/456/004/0489/front_fr.16.400.jpg",
     "keywords": [
@@ -762,12 +762,12 @@ export class ProductsService {
     "sachet plastique",
     ],
     "categories": [
-    "Aliments et boissons à base de végétaux", 
-    "Aliments d'origine végétale", 
-    "Petit-déjeuners", 
-    "Céréales et pommes de terre", 
-    "Céréales et dérivés", 
-    "Céréales pour petit-déjeuner", 
+    "Aliments et boissons à base de végétaux",
+    "Aliments d'origine végétale",
+    "Petit-déjeuners",
+    "Céréales et pommes de terre",
+    "Céréales et dérivés",
+    "Céréales pour petit-déjeuner",
     "Céréales au miel"
     ],
     "labels": [],
@@ -789,7 +789,7 @@ export class ProductsService {
       "fibres_alimentaires" : "1",
       "proteines": "5",
       "salt":  "0.8382",
-      "sodium": "0.33"  
+      "sodium": "0.33"
     },
     "image": "https://static.openfoodfacts.org/images/products/315/947/000/1011/front_fr.6.400.jpg",
     "keywords": [
@@ -811,16 +811,16 @@ export class ProductsService {
     "metal",
     ],
     "categories": [
-    "Aliments et boissons à base de végétaux", 
-    "Aliments d'origine végétale", 
-    "Légumineuses et dérivés", 
-    "Conserves", 
-    "Aliments à base de plantes en conserve", 
-    "Plats préparés", 
-    "Légumineuses en conserve", 
-    "Légumes préparés", 
-    "Haricots en conserve", 
-    "Haricots à la tomate", 
+    "Aliments et boissons à base de végétaux",
+    "Aliments d'origine végétale",
+    "Légumineuses et dérivés",
+    "Conserves",
+    "Aliments à base de plantes en conserve",
+    "Plats préparés",
+    "Légumineuses en conserve",
+    "Légumes préparés",
+    "Haricots en conserve",
+    "Haricots à la tomate",
     "Haricots blancs en conserve"
     ],
     "labels": [
@@ -841,7 +841,7 @@ export class ProductsService {
       "fibres_alimentaires" : "6",
       "proteines": "6",
       "salt":  "0.91",
-      "sodium": "0.358"  
+      "sodium": "0.358"
     },
     "image": "https://static.openfoodfacts.org/images/products/356/470/073/8009/front_fr.7.400.jpg",
     "keywords": [
@@ -865,13 +865,13 @@ export class ProductsService {
     "frais"
     ],
     "categories": [
-    "Viandes", 
-    "Bœuf", 
+    "Viandes",
+    "Bœuf",
     "Viandes fraîches"
     ],
     "labels": [
-    "Viande Française", 
-    "100% muscle", 
+    "Viande Française",
+    "100% muscle",
     "Viande Bovine Française"
     ],
     "country": "France",
@@ -910,15 +910,15 @@ export class ProductsService {
     "plastique"
     ],
     "categories": [
-    "Snacks sucrés", 
-    "Confiseries", 
-    "Confiseries chocolatées", 
-    "Barres", 
+    "Snacks sucrés",
+    "Confiseries",
+    "Confiseries chocolatées",
+    "Barres",
     "Barres chocolatées"
     ],
     "labels": [
-    "Agriculture durable", 
-    "UTZ Certified", 
+    "Agriculture durable",
+    "UTZ Certified",
     "Cacao certifié UTZ"
     ],
     "country": "Allemagne",
@@ -930,9 +930,9 @@ export class ProductsService {
     "E500i - Carbonate de sodium"
     ],
     "allergenes": [
-    "Gluten", 
-    "Lait", 
-    "Fruits à coque", 
+    "Gluten",
+    "Lait",
+    "Fruits à coque",
     "Soja"
     ],
     "nova": 4,
@@ -971,20 +971,20 @@ export class ProductsService {
     "barquette"
     ],
     "categories": [
-    "Viandes", 
-    "Charcuteries", 
-    "Jambons", 
-    "Produits à teneur réduite en sel", 
-    "Charcuteries à teneur réduite en sel", 
-    "Jambons blancs", 
-    "Jambons blancs à teneur réduite en sel", 
+    "Viandes",
+    "Charcuteries",
+    "Jambons",
+    "Produits à teneur réduite en sel",
+    "Charcuteries à teneur réduite en sel",
+    "Jambons blancs",
+    "Jambons blancs à teneur réduite en sel",
     ],
     "labels": [
-    "Peu ou pas de sel", 
-    "Peu de sel", 
-    "Allégé en sel", 
-    "Viande Française", 
-    "Moins 25% de sel", 
+    "Peu ou pas de sel",
+    "Peu de sel",
+    "Allégé en sel",
+    "Viande Française",
+    "Moins 25% de sel",
     "Porc Français"
     ],
     "country": "France",
@@ -1067,11 +1067,11 @@ export class ProductsService {
     "papier"
     ],
     "categories": [
-    "Dairies", 
-    "Fermented foods", 
-    "Fermented milk products", 
-    "Cheeses", 
-    "Pasteurized cheeses", 
+    "Dairies",
+    "Fermented foods",
+    "Fermented milk products",
+    "Cheeses",
+    "Pasteurized cheeses",
     "Goat cheeses"
     ],
     "labels": [],
@@ -1107,23 +1107,23 @@ export class ProductsService {
     "brand": "May Tea",
     "quantity": "1L",
     "packaging": [
-    "Bouteille", 
-    "Plastique", 
+    "Bouteille",
+    "Plastique",
     "bouteille et bouchon plastique à recycler"
     ],
     "categories": [
-    "boissons", 
-    "thé glacé", 
-    "boissons sucrées", 
+    "boissons",
+    "thé glacé",
+    "boissons sucrées",
     "Thés glacés saveur mûre"
     ],
     "labels": [
-    "No colorings", 
-    "No preservatives", 
-    "Green Dot", 
-    "New", 
-    "No artificial flavors", 
-    "Without sweeteners", 
+    "No colorings",
+    "No preservatives",
+    "Green Dot",
+    "New",
+    "No artificial flavors",
+    "Without sweeteners",
     "Tidy man"
     ],
     "country": "France",
@@ -1163,33 +1163,33 @@ export class ProductsService {
     "brand": "Vico",
     "quantity": "120g",
     "packaging": [
-    "sachet", 
+    "sachet",
     "Plastique"
     ],
     "categories": [
-    "Plant-based foods and beverages", 
-    "Plant-based foods", 
-    "Cereals and potatoes", 
-    "Salty snacks", 
-    "Appetizers", 
-    "Chips and fries", 
-    "Crisps", 
-    "Potato crisps", 
-    "Flavoured potato crisps", 
+    "Plant-based foods and beverages",
+    "Plant-based foods",
+    "Cereals and potatoes",
+    "Salty snacks",
+    "Appetizers",
+    "Chips and fries",
+    "Crisps",
+    "Potato crisps",
+    "Flavoured potato crisps",
     "Potato crisps in sunflower oil"
     ],
     "labels": [
-    "No colorings", 
-    "No preservatives", 
-    "Made in France", 
+    "No colorings",
+    "No preservatives",
+    "Made in France",
     "Pommes de terres Françaises"
     ],
     "country": "France",
     "ingredients": "Pommes de terre, huile de tournesol, arôme naturel (contient PRODUITS LAITIERS), sel, poivre, FROMAGE de chèvre, herbes aromatiques.",
     "additifs": [],
     "allergenes": [
-    "Gluten", 
-    "Mustard", 
+    "Gluten",
+    "Mustard",
     "Peanuts"
     ],
     "nutriscore": "D",
@@ -1220,14 +1220,14 @@ export class ProductsService {
     "brand": "épi d'or",
     "quantity": "500g",
     "packaging": [
-    "sachet", 
+    "sachet",
     "Plastique"
     ],
     "categories": [
-    "Plant-based foods and beverages", 
-    "Plant-based foods", 
-    "Cereals and potatoes", 
-    "Breads", 
+    "Plant-based foods and beverages",
+    "Plant-based foods",
+    "Cereals and potatoes",
+    "Breads",
     "Sliced breads"
     ],
     "labels": [],

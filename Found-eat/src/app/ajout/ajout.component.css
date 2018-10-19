@@ -29,9 +29,10 @@ h2{
 
 
 .formulaire{
-    background-color: #0D4E37;
-    color: white;
+    background-color: black;
     font-weight:600;
+    opacity:0.2;
+    color:white;
 }
 
 .présentation{
@@ -60,4 +61,17 @@ h2{
 }
 .btn.btn-primary:hover{
     opacity:1;
+}
+
+.bg-light{
+    width:50%;
+    height:200px;
+}
+
+p{
+    margin-top:10px;
+}
+
+input{
+    margin:2px;
 }

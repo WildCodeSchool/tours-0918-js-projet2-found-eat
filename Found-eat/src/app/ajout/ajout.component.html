@@ -6,7 +6,9 @@
         <h2>Aperçu</h2>
         <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
         <h4>{{ nom }}</h4>
+        <div class ="bg-light mx-auto">
         <img [src]="url" height="200"><br />
+        </div>  
         <p>Quantité : {{ kil }}</p>
         <p>Ingrédient : {{ inge }}</p>
         <p>Valeur nutritive: {{ val }}</p>
@@ -57,47 +59,37 @@
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="inge" name="ingrédient"></textarea>
             </div>
 
-            <div class="row">
+            <div class="row mx-auto">
 
               <!-- Information du produit -->
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Valeur nutritive (kcal)" [(ngModel)]="val" name="valeur_nutritive">
               </div>
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Energie (g)" [(ngModel)]="ene" name="energie">
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Lipide (g)" [(ngModel)]="lip" name="lipide">
               </div>
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Acide gras saturé (g)" [(ngModel)]="ac" name="acide">
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Glucide (g)" [(ngModel)]="glu" name="glucide">
               </div>
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Sugar (g)" [(ngModel)]="sug" name="sugar">
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Fibre alimentaire (g)" [(ngModel)]="fa" name="fibre">
               </div>
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="protéine (g)" [(ngModel)]="pr" name="protéine">
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Sel (g)" [(ngModel)]="se" name="sel">
               </div>
-              <div class="col">
+              <div class="col-xs-12 col-md-6">
                 <input type="text" class="form-control" placeholder="Sodium (g)" [(ngModel)]="so" name="sodium">
               </div>
             </div>
@@ -110,7 +102,7 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+    <button type="submit" class="btn btn-primary mx-auto">Sauvegarder</button>
 
   </div>
 </div>

@@ -21,6 +21,8 @@ import { ProductsService } from './services/products.service';
 import { LoginService } from './services/login.service';
 import { ImagePreloadDirective } from './image-preload.directive';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { TypeheadComponent } from './typehead/typehead.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
 	declarations: [
@@ -35,7 +37,9 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 		NavBarComponent,
 		FooterComponent,
 		ContactComponent,
-		AcceuilComponent
+		AcceuilComponent,
+		TypeheadComponent,
+		ProductPageComponent
 	],
 	imports: [
 		BrowserModule,

@@ -5,6 +5,28 @@ export class ProductsService {
     localStorage.setItem('products', JSON.stringify(this.products));
   }
 
+  getProductsNames() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list.push(this.products[i].product_name);
+    }
+    return list;
+  }
+
+  getCategories() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list = list.concat(list, this.products[i].categories);
+      list = Array.from(new Set(list));
+    }
+
+    return list;
+  }
+
+  getProduct() {
+
+  }
+
 
   // Produit 1
 

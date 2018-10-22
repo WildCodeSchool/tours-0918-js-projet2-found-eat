@@ -36,7 +36,7 @@
 						<td>Énergie :</td>
 						<td 
 						*ngIf="product1.nutritional_value.energy"
-						[ngClass]="+product1.nutritional_value.energy < +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product1.nutritional_value.energy }}kcal</td>
+						[ngClass]="+product1.nutritional_value.energy > +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product1.nutritional_value.energy }}kcal</td>
 						<td *ngIf="!product1.nutritional_value.energy">Valeur non renseignée</td>
 					</tr>
 
@@ -133,7 +133,7 @@
 					<tr>
 						<td>Énergie :</td>
 						<td *ngIf="product2.nutritional_value.energy"
-						[ngClass]="+product1.nutritional_value.energy > +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product2.nutritional_value.energy }}kcal</td>
+						[ngClass]="+product1.nutritional_value.energy < +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product2.nutritional_value.energy }}kcal</td>
 						<td *ngIf="!product2.nutritional_value.energy">Valeur non renseignée</td>
 					</tr>
 

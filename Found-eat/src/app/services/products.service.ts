@@ -23,8 +23,33 @@ export class ProductsService {
     return list;
   }
 
-  getProduct() {
+  getItem(value) {
 
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      alert('Same product selected');
+    } else if (!localStorage['product1']) {
+      localStorage.setItem('product1', JSON.stringify(value));
+    } else if (localStorage['product1'] && localStorage['product2']) {
+      alert('Comparator already set');
+    } else if (!localStorage['product2']) {
+      localStorage.setItem('product2', JSON.stringify(value));
+    }
+  }
+
+  isSet(value) {
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isComparatorSet() {
+    if (localStorage['product1'] && localStorage['product2']) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 

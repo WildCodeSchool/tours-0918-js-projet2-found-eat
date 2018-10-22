@@ -18,40 +18,88 @@
 
 
 
-    <h5 *ngIf="mediaInput.brands">Marque : {{ mediaInput.brands }}</h5>
+      <table class="table table-striped table-inverse table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Énergie :</td>
+        <td 
+        *ngIf="mediaInput.nutritional_value.energy">{{ mediaInput.nutritional_value.energy }}kcal</td>
+        <td *ngIf="!mediaInput.nutritional_value.energy">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.quantity">Quantité {{ mediaInput.quantity }}</p>
+      <tr>
+        <td>Lipides :</td>
+        <td 
+        *ngIf="mediaInput.nutritional_value.lipides">{{ mediaInput.nutritional_value.lipides }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.lipides">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.ingredients">Ingrédients : {{ mediaInput.ingredients }}</p>
+      <tr>
+        <td>Acide gras saturé :</td>
+        <td *ngIf="mediaInput.nutritional_value.saturated_fat">{{ mediaInput.nutritional_value.saturated_fat }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.saturated_fat">Valeur non renseignée</td>
+      </tr>
 
-    <h6>Valeurs Nutritives pour 100g / 100ml</h6>
+      <tr>
+        <td>Glucides :</td>
+        <td *ngIf="mediaInput.nutritional_value.glucides">{{ mediaInput.nutritional_value.glucides }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.glucides">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.nutritional_value.energy">energy : {{ mediaInput.nutritional_value.energy }}kcal</p>
+      <tr>
+        <td>Sucre :</td>
+        <td *ngIf="mediaInput.nutritional_value.sugar">{{ mediaInput.nutritional_value.sugar }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.sugar">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.nutritional_value.lipides">lipides : {{ mediaInput.nutritional_value.lipides }}g</p>
-    <p *ngIf="mediaInput.nutritional_value.saturated_fat">Acide gras saturé : {{ mediaInput.nutritional_value.saturated_fat }}g</p>
+      <tr>
+        <td>Fibres alimentaires :</td>
+        <td *ngIf="mediaInput.nutritional_value.fibres_alimentaires">{{ mediaInput.nutritional_value.fibres_alimentaires }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.nutritional_value.glucides">glucides : {{ mediaInput.nutritional_value.glucides }}g</p>
+      <tr>
+        <td>Protéines :</td>
+        <td *ngIf="mediaInput.nutritional_value.proteines">{{ mediaInput.nutritional_value.proteines }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.proteines">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.nutritional_value.sugar">sugar : {{ mediaInput.nutritional_value.sugar }}g</p>
+      <tr>
+        <td>Sel :</td>
+        <td *ngIf="mediaInput.nutritional_value.salt">{{ mediaInput.nutritional_value.salt }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.salt">Valeur non renseignée</td>
+      </tr>
 
-    <p *ngIf="mediaInput.nutritional_value.fibres_alimentaires">fibres_alimentaires : {{ mediaInput.nutritional_value.fibres_alimentaires }}g</p>
-
-    <p *ngIf="mediaInput.nutritional_value.proteines">Protéines : {{ mediaInput.nutritional_value.proteines }}g</p>
-
-    <p *ngIf="mediaInput.nutritional_value.salt" >Sel : {{ mediaInput.nutritional_value.salt }}g</p>
-
-    <p *ngIf="mediaInput.nutritional_value.sodium" >sodium : {{ mediaInput.nutritional_value.sodium }}g</p>
-
-
-    <div *ngIf="!mediaInput.nutritional_value">
-      <p class="text-center">Valeurs nutritives non renseigné</p>
-    </div>
+      <tr>
+        <td>Sodium :</td>
+        <td *ngIf="mediaInput.nutritional_value.sodium">{{ mediaInput.nutritional_value.sodium }}g</td>
+        <td *ngIf="!mediaInput.nutritional_value.sodium">Valeur nutritive non renseginée</td>
+      </tr>
+    </tbody>
+  </table>
 
   </div>
+  <p *ngIf='!productsService.isSet(mediaInput) && productsService.isComparatorSet()'
+  class="text-danger text-center">Le comparateur est déjà complet</p>
+
+
+  <p *ngIf='productsService.isSet(mediaInput)'
+  class="text-danger text-center">Ce produit à déjà été ajouté au comparateur</p>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss()">Fermer</button>
-    <button type="button" class="btn btn-primary" (click)="modalInput.close(mediaInput.product_name); getItem()">Comparer</button>
+    <button *ngIf="!productsService.isSet(mediaInput) && !productsService.isComparatorSet()"
+    type="button" 
+    class="btn btn-comparer text-center" 
+    [disabled]="this.productsService.isSet(mediaInput)" 
+    (click)="this.productsService.getItem(mediaInput)"
+    >Comparer</button>
+
     <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.dismiss()">Supprimer</button>
   </div>
 </div>

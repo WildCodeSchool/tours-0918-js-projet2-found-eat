@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from '../services/login.service';
+import { ProductsService } from '../services/products.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class ModalComponent implements OnInit {
 	@Input()
 	modalInput: any;
 
-	constructor(private loginService: LoginService) { }
+	constructor(private loginService: LoginService, private productsService: ProductsService) { }
 
 	ngOnInit() {
 	}

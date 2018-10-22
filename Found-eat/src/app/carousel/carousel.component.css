@@ -15,3 +15,8 @@ img{
 #img-ctn{
 	max-height: 350px;
 }
+
+.btn {
+	background-color: #145A24;
+	border: none;
+}

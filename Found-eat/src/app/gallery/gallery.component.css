@@ -18,3 +18,21 @@
 ngb-pagination{
 	margin-top: 1em;
 }
+
+.btn {
+	background-color: #145A24;
+}
+
+ngb-pagination ::ng-deep ul > li > a {
+	color: #145A24 !important;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+	background-color: #145A24 !important;
+	color: white !important;
+	border: none !important;
+}
+
+ngb-pagination ::ng-deep a span {
+	color: #145A24 !important;
+}

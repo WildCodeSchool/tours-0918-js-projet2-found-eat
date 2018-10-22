@@ -13,6 +13,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	product2: any;
 	timer: number;
 	timerSubscription: Subscription;
+	message: string;
 
 	constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -26,8 +27,12 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 		if (localStorage['product1'] && localStorage['product2']) {
 			this.product1 = JSON.parse(localStorage['product1']);
 			this.product2 = JSON.parse(localStorage['product2']);
+		} else if (!localStorage['product1'] && localStorage['product2'] || !localStorage['product2'] && localStorage['product1']) {
+			this.message = 'Veuillez ajouter encore un produit au comparateur';
+			this.rebourd();
 		} else if (!localStorage['product1'] || !localStorage['product2']) {
 			// Sinon si il manque un produit (donc pas de comparaison possible), redirection
+			this.message = 'Veuillez ajouter des produit au comparateur';
 			this.rebourd();
 		}
 
@@ -45,6 +50,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 		// On réinitialise les variables de produits
 		this.product1 = '';
 		this.product2 = '';
+		this.message = 'Vous allez être redirigé';
 		// redirection
 		this.rebourd();
 	}
@@ -65,7 +71,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 			() => {
 				console.log('Timer complete');
 			}
-		);
+			);
 	}
 
 }

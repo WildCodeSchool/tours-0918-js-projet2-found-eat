@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,7 +17,7 @@ export class SidebarComponent implements OnInit {
   notifyCollapse: EventEmitter<boolean> = new EventEmitter();
 
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private loginService: LoginService) {
 
     this.isCollapsed = true;
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Productlist } from './services/products.list';
+import { ProductsService } from './services/products.list';
 
 @Component({
 	selector: 'app-root',
@@ -9,12 +9,10 @@ import { Productlist } from './services/products.list';
 export class AppComponent implements OnInit {
 
 	title = 'Found-eat';
-	products: any;
 
-	constructor(public productliste: Productlist) {}
+	constructor(public productliste: ProductsService) {}
 
 	ngOnInit() {
-		this.products = this.productliste.products;
-		localStorage.setItem('products', JSON.stringify(this.products));
+		this.productliste.setLocalStorage();
 	}
 }

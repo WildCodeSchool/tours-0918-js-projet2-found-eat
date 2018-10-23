@@ -5,6 +5,7 @@ import { AjoutComponent } from './ajout/ajout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -13,46 +14,39 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
-import { ContactComponent } from './contact/contact.component'
-import { Ingredients } from './ingredients.pipe';
-import { Productlist } from './services/products.list';
-import { ImagePreloadDirective } from './image-preload.directive';
-import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
+import { ContactComponent } from './contact/contact.component';
 
-const appRoutes: Routes = [
-	{ path: 'gallery', component: GalleryComponent },
-	{ path: 'gallery/:id', component: GalleryComponent },
-	{ path: 'comparateur', component: ComparateurComponent },
-	{ path: 'login', component: LoginComponent },
-	{ path: '', redirectTo: 'gallery/1', pathMatch: 'full' },
-	{ path: 'contact', component: ContactComponent},
-	{ path: '**', redirectTo: '' }];
+import { AppRoutingModule } from './app-routing.module';
+import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
+import { LoginService } from './services/login.service';
+import { ImagePreloadDirective } from './image-preload.directive';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		CarouselComponent,
-    SidebarComponent,
-    AjoutComponent,
+		SidebarComponent,
+		AjoutComponent,
 		ComparateurComponent,
 		ImagePreloadDirective,
-		Ingredients,
 		LoginComponent,
 		GalleryComponent,
 		ModalComponent,
 		NavBarComponent,
 		FooterComponent,
 		ContactComponent,
-		SlideshowUpdateComponent
+		SlideshowUpdateComponent,
+		AcceuilComponent
 	],
 	imports: [
 		BrowserModule,
 		NgbModule,
 		FormsModule,
-		RouterModule.forRoot(appRoutes),
+		AppRoutingModule,
 	],
 	providers: [
-		Productlist,
+		LoginService,
 	],
 	bootstrap: [AppComponent]
 

@@ -1,7 +1,14 @@
-export class Productlist {
-  products = [
+export class ProductsService {
+
+
+  setLocalStorage() {
+    localStorage.setItem('products', JSON.stringify(this.products));
+  }
+
 
   // Produit 1
+
+  products = [
 
   {
     "id": '1',

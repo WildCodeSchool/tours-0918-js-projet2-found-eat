@@ -8,7 +8,7 @@
   <div class="modal-body">
     <!-- infos goes here -->
 
-    <div class="text-center">
+    <div class="text-center pb-4">
       <img 
       src="{{mediaInput.image}}"
       default="https://via.placeholder.com/150x150"
@@ -22,7 +22,7 @@
 
     <p *ngIf="mediaInput.quantity">Quantité {{ mediaInput.quantity }}</p>
 
-    <p *ngIf="mediaInput.ingredients">ingredients {{ mediaInput.ingredients }}</p>
+    <p *ngIf="mediaInput.ingredients">Ingrédients : {{ mediaInput.ingredients }}</p>
 
     <h6>Valeurs Nutritives pour 100g / 100ml</h6>
 
@@ -52,5 +52,6 @@
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss()">Fermer</button>
     <button type="button" class="btn btn-primary" (click)="modalInput.close(mediaInput.product_name); getItem()">Comparer</button>
+    <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.dismiss()">Supprimer</button>
   </div>
 </div>

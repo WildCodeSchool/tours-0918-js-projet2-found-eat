@@ -32,7 +32,7 @@ export class GalleryComponent implements OnInit {
 	changePage() {
 		this.showProducts = this.products.slice((this.page - 1) * 8, 8 * this.page);
 		this.router.navigate([`gallery/${ this.page }`]);
-		// window.scrollTo(0, 0);
+		window.scrollTo(0, 0);
 	}
 
 	ngOnInit() {
@@ -45,6 +45,7 @@ export class GalleryComponent implements OnInit {
 			this.page = this.route.snapshot.params['id'];
 		} else {
 			this.page = 1;
+			this.router.navigate([`gallery/${ this.page }`]);
 		}
 
 		// Si le paramètre est incorrect, retour vers la page 1

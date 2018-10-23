@@ -17,6 +17,7 @@ import { ContactComponent } from './contact/contact.component'
 import { Ingredients } from './ingredients.pipe';
 import { Productlist } from './services/products.list';
 import { ImagePreloadDirective } from './image-preload.directive';
+import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
 
 const appRoutes: Routes = [
 	{ path: 'gallery', component: GalleryComponent },
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
 		ModalComponent,
 		NavBarComponent,
 		FooterComponent,
-		ContactComponent
+		ContactComponent,
+		SlideshowUpdateComponent
 	],
 	imports: [
 		BrowserModule,

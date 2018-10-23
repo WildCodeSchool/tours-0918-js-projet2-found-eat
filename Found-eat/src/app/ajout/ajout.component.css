@@ -8,7 +8,6 @@ width: 100%
 }
 
 
-
 h1{
     color:#444444;
     font-size: 20px;
@@ -18,14 +17,28 @@ h1{
     margin-bottom:20px; 
 }
 
-h2{
+/* Style of header for formula */
+.subOne{
+    color:white;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top:20px;
+    font-weight:600; 
+}
+
+/* Style of header for presentation */
+.subTwo{
     color:#444444;
     font-size: 18px;
     margin: 0 0 8px 0;
     text-align: center;
     letter-spacing: 1px;
     margin-top:20px; 
+    font-weight: 600;
 }
+
 
 
 .formulaire{

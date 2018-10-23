@@ -1,0 +1,64 @@
+.bg-light{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 88.88%;
+    border-radius: 3px;
+}
+
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.row{
+    margin-top:20px;
+}
+
+.card-body{
+    padding: 0;
+    margin: 0;
+}
+
+.buttonPanel{
+    margin: 20px;
+}
+
+.btn.btn-primary{
+    background: #f0ad4e none repeat scroll 0 0;
+    border-color: #f0ad4e;
+    opacity: 0.8 ;
+    color: #ffffff;
+    font-size:16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width:100%;
+    height: 50px;
+    line-height:50px;
+    padding: 0;
+    margin:10px;
+    
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.btn.btn-primary:hover{
+    opacity:1;
+}
+
+.choice1, .choice2, .choice3  {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.card {
+    margin-top:20px;
+    
+}

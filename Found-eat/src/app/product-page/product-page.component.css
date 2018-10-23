@@ -1,0 +1,10 @@
+img{
+	max-height: 350px;
+	max-width: 85%;
+	padding-bottom: 2em;
+}
+
+.btn {
+	background-color: #145A24;
+	color: white;
+}

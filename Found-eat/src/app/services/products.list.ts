@@ -5,6 +5,53 @@ export class ProductsService {
     localStorage.setItem('products', JSON.stringify(this.products));
   }
 
+  getProductsNames() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list.push(this.products[i].product_name);
+    }
+    return list;
+  }
+
+  getCategories() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list = list.concat(list, this.products[i].categories);
+      list = Array.from(new Set(list));
+    }
+
+    return list;
+  }
+
+  getItem(value) {
+
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      alert('Same product selected');
+    } else if (!localStorage['product1']) {
+      localStorage.setItem('product1', JSON.stringify(value));
+    } else if (localStorage['product1'] && localStorage['product2']) {
+      alert('Comparator already set');
+    } else if (!localStorage['product2']) {
+      localStorage.setItem('product2', JSON.stringify(value));
+    }
+  }
+
+  isSet(value) {
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isComparatorSet() {
+    if (localStorage['product1'] && localStorage['product2']) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 
   // Produit 1
 

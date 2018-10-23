@@ -36,7 +36,7 @@
 						<td>Énergie :</td>
 						<td 
 						*ngIf="product1.nutritional_value.energy"
-						[ngClass]="+product1.nutritional_value.energy < +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product1.nutritional_value.energy }}kcal</td>
+						[ngClass]="+product1.nutritional_value.energy > +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product1.nutritional_value.energy }}kcal</td>
 						<td *ngIf="!product1.nutritional_value.energy">Valeur non renseignée</td>
 					</tr>
 
@@ -133,7 +133,7 @@
 					<tr>
 						<td>Énergie :</td>
 						<td *ngIf="product2.nutritional_value.energy"
-						[ngClass]="+product1.nutritional_value.energy > +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product2.nutritional_value.energy }}kcal</td>
+						[ngClass]="+product1.nutritional_value.energy < +product2.nutritional_value.energy? 'text-danger' : 'text-success'">{{ product2.nutritional_value.energy }}kcal</td>
 						<td *ngIf="!product2.nutritional_value.energy">Valeur non renseignée</td>
 					</tr>
 
@@ -208,8 +208,8 @@
 
 	</div>
 
-	<div id="redirectDiv" *ngIf="!product1 && !product2" class="text-center">
-		<p class=" text-danger">Veuillez ajouter des produits au comparateur</p>
+	<div id="redirectDiv" *ngIf="!product1 || !product2" class="text-center">
+		<p class=" text-danger">{{ message }}</p>
 		<p *ngIf="timer > 0">Redirection dans {{ timer }} secondes</p>
 		<p *ngIf='timer <= 0' >Redirection...</p>
 	</div>

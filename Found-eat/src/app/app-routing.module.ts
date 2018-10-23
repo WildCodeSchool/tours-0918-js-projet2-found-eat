@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 const appRoutes: Routes = [
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
+	{ path: 'produit/:name', component: ProductPageComponent },
 	{ path: '**', redirectTo: '' }];
 
 @NgModule({

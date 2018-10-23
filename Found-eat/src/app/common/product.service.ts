@@ -1,7 +1,10 @@
+import { NutritionalValue } from './nutritional-value';
 
 import { Product } from './product';
-import { Productlist } from '../services/products.list';
+import productsStub from '../services/products.list';
 import { Injectable } from '@angular/core';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,56 +16,52 @@ export class ProductService {
   constructor() {
 
 
-    if (!localStorage.Productlist) {
-      console.log('if');
 
-      // this.products = Product.map(x => {
+    if (!localStorage.products) {
 
-      //   const product = new Product();
-      //   product.id = x.id;
-      //   product.valeur = x.valeur;
-      //   product.energie = x.energie;
-      //   product.acide = x.acide;
-      //   product.sucre = x.sucre;
-      //   product.fibre = x.fibre;
-      //   product.proteine = x.proteine;
-      //   product.sel = x.sel;
-      //   product.sodium = x.sodium;
-      //   product.quantite = x.quantite;
-      //   product.ingredient = x.ingredient;
-      //   product.nom = x.nom;
-      //   product.catégorie = x.catégorie;
-      //   product.keywords = x.keywords;
-
-      //   return product;
-      // });
+      this.products = productsStub;
       this.saveToLocalStorage(this.products);
-      this.products = [];
 
     } else {
-      console.log('else');
 
-      const data = JSON.parse(localStorage.product);
+      const data = JSON.parse(localStorage.products);
       // this.products = data;
 
       this.products = data.map(x => {
 
         const product = new Product();
+
+
+        // product.Nutritionalvalue = x.Nutritionalvalue;
         product.id = x.id;
-        product.valeur = x.valeur;
-        product.energie = x.energie;
-        product.acide = x.acide;
-        product.sucre = x.sucre;
-        product.fibre = x.fibre;
-        product.proteine = x.proteine;
-        product.sel = x.sel;
-        product.sodium = x.sodium;
-        product.quantite = x.quantite;
+        product.productName = x.product_name;
+        product.brand = x.brand;
+        product.quantity = x.quantity;
+        product.packaging = x.packaging;
+        product.categorie = x.catégorie;
+        product.labels = x.labels;
+        product.country = x.country;
         product.ingredient = x.ingredient;
-        product.nom = x.nom;
-        product.catégorie = x.catégorie;
+        product.allergenes = x.allergenes;
+        product.nova = x.nova;
+        product.nutriscore = x.nutriscore;
         product.keywords = x.keywords;
 
+        const nutr = new NutritionalValue();
+
+
+        nutr.energy = x.energy;
+        nutr.lipides = x.lipides;
+        nutr.saturatedFat = x.saturated_fat;
+        nutr.glucides = x.glucides;
+        nutr.sugar = x.sugar;
+        nutr.fibresAlimentaires = x.fibres_alimentaires;
+        nutr.proteines = x.proteines;
+        nutr.salt = x.salt;
+        nutr.sodium = x.sodium;
+
+        product.nutritional_value = nutr;
+        product.image = x.image;
         return product;
       });
 
@@ -74,11 +73,10 @@ export class ProductService {
     return this.products;
   }
 
-  add (product: Product) {
+  add(product: Product) {
     console.log('b');
     product.id = this.products.length.toString();
     this.products.push(product);
-    // localStorage.products.push(product);
     this.saveToLocalStorage(this.products);
 
   }

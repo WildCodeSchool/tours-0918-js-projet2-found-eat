@@ -15,7 +15,6 @@ import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component'
 import { Ingredients } from './ingredients.pipe';
-import { Productlist } from './services/products.list';
 import { ImagePreloadDirective } from './image-preload.directive';
 
 const appRoutes: Routes = [
@@ -50,7 +49,6 @@ const appRoutes: Routes = [
 		RouterModule.forRoot(appRoutes),
 	],
 	providers: [
-		Productlist,
 	],
 	bootstrap: [AppComponent]
 

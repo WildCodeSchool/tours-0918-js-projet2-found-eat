@@ -1,20 +1,21 @@
+import { NutritionalValue } from './nutritional-value';
+
 export class Product {
 
   id: string;
-  valeur: string;
-  energie: string;
-  lipide: string;
-  acide: string;
-  glucide: string;
-  sucre: string;
-  fibre: string;
-  proteine: string;
-  sel: string;
-  sodium: string;
-  quantite: string;
+  productName: string;
+  brand: string;
+  quantity: string;
+  nutritional_value: NutritionalValue;
+  packaging: string[];
+  categorie: string[];
+  labels: string[];
+  country: string;
   ingredient: string;
-  nom: string;
-  catégorie: string;
-  keywords: string;
+  allergenes: string[];
+  nova: number;
+  nutriscore: string;
+  image: string;
+  keywords: string[];
 
 }

@@ -14,7 +14,9 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact.component'
+import { Ingredients } from './ingredients.pipe';
+import { ImagePreloadDirective } from './image-preload.directive';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
@@ -50,7 +52,6 @@ import { ProductPageComponent } from './product-page/product-page.component';
 		AppRoutingModule,
 	],
 	providers: [
-		LoginService,
 	],
 	bootstrap: [AppComponent]
 

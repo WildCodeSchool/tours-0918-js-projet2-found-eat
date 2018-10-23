@@ -1,7 +1,8 @@
 
 import { ProductService } from './../common/product.service';
 import { Product } from './../common/product';
-import { Component, OnInit,} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { NutritionalValue } from '../common/nutritional-value';
 
 
 @Component({
@@ -19,19 +20,20 @@ export class AjoutComponent implements OnInit {
 
   ngOnInit() {
     this.product = new Product();
+    this.product.nutritional_value = new NutritionalValue();
   }
 
-  onSelecfile(event) {
-    if (event.target.files && event.target.files[0]) {
-      const reader = new FileReader();
-      reader.readAsDataURL(event.target.files[0]);
+  // onSelecfile(event) {
+  //   if (event.target.files && event.target.files[0]) {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(event.target.files[0]);
 
-      reader.onload = (event) => {
-        this.url = event.target.result;
+  //     reader.onload = (event) => {
+  //       this.url = event.target.result;
 
-      }
-    }
-  }
+  //     };
+  //   }
+  // }
 
   add() {
     console.log('a');

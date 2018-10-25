@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LoginService } from '../../services/login.service';
+import { LoginService } from '../../common/login.service';
 
 @Component({
   selector: 'app-sidebar',

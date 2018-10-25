@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -15,7 +15,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
   timerSubscription: Subscription;
   message: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 

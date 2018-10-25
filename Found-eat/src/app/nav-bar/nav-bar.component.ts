@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
+import { LoginService } from '../common/login.service';
 
 @Component({
 	selector: 'app-nav-bar',
@@ -11,7 +11,7 @@ import { LoginService } from '../services/login.service';
 export class NavBarComponent implements OnInit {
 	isCollapsed: boolean;
 
-	constructor(private route: ActivatedRoute, private router: Router, private loginService: LoginService) {
+	constructor(private router: Router, private loginService: LoginService) {
 		this.isCollapsed = false;
 	}
 

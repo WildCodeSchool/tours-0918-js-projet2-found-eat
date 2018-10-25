@@ -1,6 +1,6 @@
 import { NutritionalValue } from './nutritional-value';
 import { Product } from './product';
-import productsStub from '../services/products.list';
+import productsStub from '../common/products.list';
 import { Injectable } from '@angular/core';
 
 @Injectable({

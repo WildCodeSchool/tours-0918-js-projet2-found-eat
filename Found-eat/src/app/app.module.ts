@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AjoutComponent } from './ajout/ajout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';	
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +19,7 @@ import { ImagePreloadDirective } from './image-preload.directive';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
-import { LoginService } from './services/login.service';
+import { LoginService } from './common/login.service';
 ;
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { TypeheadComponent } from './typehead/typehead.component';

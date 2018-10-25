@@ -12,6 +12,8 @@ import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AjoutComponent } from './ajout/ajout.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
 	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
 	{ path: 'produit/:name', component: ProductPageComponent },
-	{ path: '**', redirectTo: '' }];
+	{ path: '404', component: NotFoundComponent },
+	{ path: 'ajouter', component: AjoutComponent },
+	{ path: '**', redirectTo: '404' }];
 
 @NgModule({
   imports: [ RouterModule.forRoot(appRoutes) ],

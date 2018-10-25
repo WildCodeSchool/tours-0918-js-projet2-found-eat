@@ -39,7 +39,9 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		this.timerSubscription.unsubscribe();
+		if (this.timerSubscription) {
+			this.timerSubscription.unsubscribe();
+		}
 	}
 
 	resetComparator() {

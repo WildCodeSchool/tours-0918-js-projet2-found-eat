@@ -1,7 +1,7 @@
 import { NutritionalValue } from './nutritional-value';
 
 import { Product } from './product';
-import productsStub from '../services/products.list';
+import  productsStub  from '../services/products.list';
 import { Injectable } from '@angular/core';
 
 
@@ -41,7 +41,7 @@ export class ProductService {
         product.categorie = x.catégorie;
         product.labels = x.labels;
         product.country = x.country;
-        product.ingredient = x.ingredient;
+        product.ingredients = x.ingredients;
         product.allergenes = x.allergenes;
         product.nova = x.nova;
         product.nutriscore = x.nutriscore;
@@ -52,10 +52,10 @@ export class ProductService {
 
         nutr.energy = x.energy;
         nutr.lipides = x.lipides;
-        nutr.saturatedFat = x.saturated_fat;
+        nutr.saturated_fat = x.saturated_fat;
         nutr.glucides = x.glucides;
         nutr.sugar = x.sugar;
-        nutr.fibresAlimentaires = x.fibres_alimentaires;
+        nutr.fibres_alimentaires = x.fibres_alimentaires;
         nutr.proteines = x.proteines;
         nutr.salt = x.salt;
         nutr.sodium = x.sodium;
@@ -81,6 +81,52 @@ export class ProductService {
 
   }
 
+  getProductsNames() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list.push(this.products[i].productName);
+    }
+    return list;
+  }
+
+  getCategories() {
+    let list = [];
+    for (let i = 0; i < this.products.length; i++) {
+      list = list.concat(list, this.products[i].categorie);
+      list = Array.from(new Set(list));
+    }
+
+    return list;
+  }
+
+  getItem(value) {
+
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      alert('Same product selected');
+    } else if (!localStorage['product1']) {
+      localStorage.setItem('product1', JSON.stringify(value));
+    } else if (localStorage['product1'] && localStorage['product2']) {
+      alert('Comparator already set');
+    } else if (!localStorage['product2']) {
+      localStorage.setItem('product2', JSON.stringify(value));
+    }
+  }
+
+  isSet(value) {
+    if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  isComparatorSet() {
+    if (localStorage['product1'] && localStorage['product2']) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
 

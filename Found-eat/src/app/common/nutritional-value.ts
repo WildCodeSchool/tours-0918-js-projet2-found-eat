@@ -2,10 +2,10 @@ export class NutritionalValue {
 
   energy: number;
   lipides: number;
-  saturatedFat: number;
+  saturated_fat: number;
   glucides: number;
   sugar: number;
-  fibresAlimentaires: number;
+  fibres_alimentaires: number;
   proteines: number;
   salt: number;
   sodium: number;

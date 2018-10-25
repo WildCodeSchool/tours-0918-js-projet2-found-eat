@@ -15,16 +15,16 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ContactComponent } from './contact/contact.component'
-import { Ingredients } from './ingredients.pipe';
 import { ImagePreloadDirective } from './image-preload.directive';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
 import { LoginService } from './services/login.service';
-import { ImagePreloadDirective } from './image-preload.directive';
+;
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { TypeheadComponent } from './typehead/typehead.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
 	declarations: [
@@ -43,7 +43,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
 		SlideshowUpdateComponent,
 		AcceuilComponent,
 		TypeheadComponent,
-		ProductPageComponent
+		ProductPageComponent,
+		NotFoundComponent,
+		
 	],
 	imports: [
 		BrowserModule,
@@ -52,6 +54,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 		AppRoutingModule,
 	],
 	providers: [
+		LoginService
 	],
 	bootstrap: [AppComponent]
 

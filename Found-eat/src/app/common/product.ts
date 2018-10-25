@@ -11,7 +11,7 @@ export class Product {
   categorie: string[];
   labels: string[];
   country: string;
-  ingredient: string;
+  ingredients: string;
   allergenes: string[];
   nova: number;
   nutriscore: string;

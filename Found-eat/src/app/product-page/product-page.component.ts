@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsService } from '../services/products.service';
+import {ProductService} from '../common/product.service';
 
 @Component({
 	selector: 'app-product-page',
@@ -11,15 +11,16 @@ export class ProductPageComponent implements OnInit {
 
 	product: any;
 
-	constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
+	constructor(private route: ActivatedRoute, private productService : ProductService) { }
 
 	ngOnInit() {
 		this.route.params.subscribe(data => {
 			const productName = this.route.snapshot.params['name'];
-			for (const product of this.productsService.products) {
-				if (productName === product.product_name) {
+			for (const product of this.productService.products) {
+				if (productName === product.productName) {
 					this.product = product;
 					window.scrollTo(0, 0);
+					console.log(this.product);
 				}
 			}
 		});

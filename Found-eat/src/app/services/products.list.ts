@@ -2,7 +2,7 @@ export default
 
   // Produit 1
 
-  products = [
+  [
 
   {
     "id": '1',

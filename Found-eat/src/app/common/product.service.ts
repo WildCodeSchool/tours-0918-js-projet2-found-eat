@@ -1,6 +1,6 @@
 import { NutritionalValue } from './nutritional-value';
 import { Product } from './product';
-import  productsStub  from '../services/products.list';
+import productsStub from '../services/products.list';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -45,15 +45,15 @@ export class ProductService {
         const nutr = new NutritionalValue();
 
 
-        nutr.energy = x.energy;
-        nutr.lipides = x.lipides;
-        nutr.saturated_fat = x.saturated_fat;
-        nutr.glucides = x.glucides;
-        nutr.sugar = x.sugar;
-        nutr.fibres_alimentaires = x.fibres_alimentaires;
-        nutr.proteines = x.proteines;
-        nutr.salt = x.salt;
-        nutr.sodium = x.sodium;
+        nutr.energy = x.nutritional_value.energy;
+        nutr.lipides = x.nutritional_value.lipides;
+        nutr.saturated_fat = x.nutritional_value.saturated_fat;
+        nutr.glucides = x.nutritional_value.glucides;
+        nutr.sugar = x.nutritional_value.sugar;
+        nutr.fibres_alimentaires = x.nutritional_value.fibres_alimentaires;
+        nutr.proteines = x.nutritional_value.proteines;
+        nutr.salt = x.nutritional_value.salt;
+        nutr.sodium = x.nutritional_value.sodium;
 
         product.nutritional_value = nutr;
         product.image = x.image;
@@ -127,6 +127,10 @@ export class ProductService {
     } else {
       return false;
     }
+  }
+
+  fourLasts() {
+    return this.products.slice(this.products.length - 4, this.products.length).reverse();
   }
 
 

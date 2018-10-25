@@ -7,15 +7,15 @@ export class Product {
   brand: string;
   quantity: string;
   nutritional_value: NutritionalValue;
-  packaging: string[];
-  categorie: string[];
-  labels: string[];
+  packaging: string; // array
+  categorie: string; // array
+  labels: string; // array
   country: string;
   ingredients: string;
-  allergenes: string[];
+  allergenes: string; // array
   nova: number;
   nutriscore: string;
   image: string;
-  keywords: string[];
+  keywords: string; // array
 
 }

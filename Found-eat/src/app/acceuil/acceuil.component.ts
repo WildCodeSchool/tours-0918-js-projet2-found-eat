@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ProductService } from '../common/product.service';
 
 @Component({
   selector: 'app-acceuil',
@@ -10,12 +11,11 @@ export class AcceuilComponent implements OnInit {
 
   products: any[];
 
-  constructor(private service: NgbModal) { }
+  constructor(private service: NgbModal, private productService: ProductService) { }
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.products = JSON.parse(localStorage['products']);
-    this.products = this.products.slice(0, 4);
+    this.products = this.productService.fourLasts();
   }
 
   openMedia(content: any) {

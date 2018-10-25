@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
-import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
-import {ProductService} from '../common/product.service';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+import { ProductService } from '../common/product.service';
 import { Router } from '@angular/router';
 
 
@@ -14,10 +14,10 @@ export class TypeheadComponent implements OnInit {
 
   products: any[];
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit() {
-	this.products = this.productService.getProductsNames();
+    this.products = this.productService.getProductsNames();
   }
 
   getProduct(input) {

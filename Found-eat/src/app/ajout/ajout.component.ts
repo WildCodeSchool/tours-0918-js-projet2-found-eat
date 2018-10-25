@@ -1,9 +1,8 @@
 
 import { ProductService } from './../common/product.service';
 import { Product } from './../common/product';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NutritionalValue } from '../common/nutritional-value';
-
 
 @Component({
   selector: 'app-ajout',
@@ -16,7 +15,7 @@ export class AjoutComponent implements OnInit {
   url = '';
   product: Product;
 
-  constructor( private service: ProductService ) {}
+  constructor(private service: ProductService) { }
 
   ngOnInit() {
     this.product = new Product();

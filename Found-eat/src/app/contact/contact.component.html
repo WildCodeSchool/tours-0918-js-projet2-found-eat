@@ -1,42 +1,42 @@
-
 <div id="contact-form" class="d-flex justify-content-center">
-    
-    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <div>
-            <h1 class="label">Vous avez une question?</h1> 
-            <h4 class="label">Contactez-nous!</h4> 
-        </div>
-        <div>
-            <label for="name">
-                <span>Nom: *</span> 
-                <input required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Votre Nom" autofocus="autofocus"/>
-            </label> 
-        </div>
-        <div>
-            <label for="email">
-                <span>Email: *</span>
-                <input type="email" id="email" name="email" value="" placeholder="Votre Email" />
-            </label>  
-        </div>
-        <div>		          
-            <label for="subject">
-                <span>Objet: </span>
-                <select id="subject" name="subject">   
-                    <option>Fiche Produit</option>
-                    <option>Valeurs Nutritionnelles</option>  
-                    <option>Suggestion Site</option>
-                </select>
-            </label>
-        </div>
-        <div>		          
-            <label for="message">
-                <span>Message: *</span> 
-                <textarea id="message" name="message" placeholder="Écrivez votre message..."></textarea> 
-            </label>  
-        </div>
-        <div>		           
-            <button name="submit" type="submit" id="submit" >Envoyer</button> 
-        </div>
-    </form>
-    
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div>
+      <h1 class="label">Vous avez une question?</h1>
+      <h4 class="label">Contactez-nous!</h4>
+    </div>
+    <div>
+      <label for="name">
+        <span>Nom: *</span>
+        <input required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Votre Nom"
+          autofocus="autofocus" />
+      </label>
+    </div>
+    <div>
+      <label for="email">
+        <span>Email: *</span>
+        <input type="email" id="email" name="email" value="" placeholder="Votre Email" />
+      </label>
+    </div>
+    <div>
+      <label for="subject">
+        <span>Objet: </span>
+        <select id="subject" name="subject">
+          <option>Fiche Produit</option>
+          <option>Valeurs Nutritionnelles</option>
+          <option>Suggestion Site</option>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label for="message">
+        <span>Message: *</span>
+        <textarea id="message" name="message" placeholder="Écrivez votre message..."></textarea>
+      </label>
+    </div>
+    <div>
+      <button name="submit" type="submit" id="submit">Envoyer</button>
+    </div>
+  </form>
+
 </div>

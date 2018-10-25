@@ -1,90 +1,90 @@
-.container{
-    margin-top:70px;
+.container {
+  margin-top: 70px;
 }
 
-.row
-{
-width: 100%
+.row {
+  width: 100%
 }
 
 
-h1{
-    color:#444444;
-    font-size: 20px;
-    margin: 0 0 8px 0;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-bottom:20px; 
+h1 {
+  color: #444444;
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 /* Style of header for formula */
-.subOne{
-    color:white;
-    font-size: 18px;
-    margin: 0 0 8px 0;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-top:20px;
-    font-weight:600; 
+.subOne {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 /* Style of header for presentation */
-.subTwo{
-    color:#444444;
-    font-size: 18px;
-    margin: 0 0 8px 0;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-top:20px; 
-    font-weight: 600;
+.subTwo {
+  color: #444444;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-weight: 600;
 }
 
 
 
-.formulaire{
-    background-color: black;
-    font-weight:600;
-    opacity:0.2;
-    color:white;
+.formulaire {
+  background-color: black;
+  font-weight: 600;
+  opacity: 0.2;
+  color: white;
 }
 
-.présentation{
-    background-color: white;
-    
+.présentation {
+  background-color: white;
+
 }
 
-.btn.btn-primary{
-    background: #f0ad4e none repeat scroll 0 0;
-    border-color: #f0ad4e;
-    opacity: 0.8 ;
-    color: #ffffff;
-    font-size:16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    width: 25%;
-    height: 50px;
-    line-height:50px;
-    padding: 0;
-    margin:10px;
-    
-    transition: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-.btn.btn-primary:hover{
-    opacity:1;
+.btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  opacity: 0.8;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 25%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  margin: 10px;
+
+  transition: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 
-.bg-light{
-    width:50%;
-    height:200px;
+.btn.btn-primary:hover {
+  opacity: 1;
 }
 
-p{
-    margin-top:10px;
+.bg-light {
+  width: 50%;
+  height: 200px;
 }
 
-input{
-    margin:2px;
+p {
+  margin-top: 10px;
+}
+
+input {
+  margin: 2px;
 }

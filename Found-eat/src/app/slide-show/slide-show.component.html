@@ -1,9 +1,9 @@
 <ngb-carousel #carousel="ngbCarousel" *ngIf="images">
-	<ng-template ngbSlide *ngFor="let image of images, let i = index">
-		<img [src]="image" alt="Random first slide">
-		<div class="carousel-caption">
-			<h3>{{i+1}} slide label</h3>
-			<p>	<button (click)="carousel.next()">Next</button></p>
-		</div>
-	</ng-template>
+  <ng-template ngbSlide *ngFor="let image of images, let i = index">
+    <img [src]="image" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>{{i+1}} slide label</h3>
+      <p> <button (click)="carousel.next()">Next</button></p>
+    </div>
+  </ng-template>
 </ngb-carousel>

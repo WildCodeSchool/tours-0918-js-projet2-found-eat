@@ -9,11 +9,7 @@
     <!-- infos goes here -->
 
     <div class="text-center pb-4">
-      <img 
-      src="{{mediaInput.image}}"
-      default="https://via.placeholder.com/150x150"
-      class="img"
-      >
+      <img src="{{mediaInput.image}}" default="https://via.placeholder.com/150x150" class="img">
     </div>
 
 
@@ -90,20 +86,15 @@
   </table>
 
   </div>
-  <p *ngIf='!productsService.isSet(mediaInput) && productsService.isComparatorSet()'
-  class="text-danger text-center">Le comparateur est déjà complet</p>
+  <p *ngIf='!productsService.isSet(mediaInput) && productsService.isComparatorSet()' class="text-danger text-center">Le
+    comparateur est déjà complet</p>
 
-
-  <p *ngIf='productsService.isSet(mediaInput)'
-  class="text-danger text-center">Ce produit à déjà été ajouté au comparateur</p>
+  <p *ngIf='productsService.isSet(mediaInput)' class="text-danger text-center">Ce produit à déjà été ajouté au
+    comparateur</p>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="modalInput.dismiss()">Fermer</button>
-    <button *ngIf="!productsService.isSet(mediaInput) && !productsService.isComparatorSet()"
-    type="button" 
-    class="btn btn-comparer text-center" 
-    [disabled]="this.productsService.isSet(mediaInput)" 
-    (click)="this.productsService.getItem(mediaInput)"
-    >Comparer</button>
+    <button *ngIf="!productsService.isSet(mediaInput) && !productsService.isComparatorSet()" type="button" class="btn btn-comparer text-center"
+      [disabled]="this.productsService.isSet(mediaInput)" (click)="this.productsService.getItem(mediaInput)">Comparer</button>
 
     <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.dismiss()">Supprimer</button>
   </div>

@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-	email: string;
-	password: string;
+  email: string;
+  password: string;
 
   constructor(private loginService: LoginService, private router: Router) { }
 
@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-  	if (this.email === 'admin@mail.com' && this.password === 'admin') {
-  		this.loginService.login();
+    if (this.email === 'admin@mail.com' && this.password === 'admin') {
+      this.loginService.login();
       this.router.navigate(['acceuil']);
-  	}
+    }
   }
 
 }

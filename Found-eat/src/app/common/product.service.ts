@@ -1,10 +1,7 @@
 import { NutritionalValue } from './nutritional-value';
-
 import { Product } from './product';
 import productsStub from '../services/products.list';
 import { Injectable } from '@angular/core';
-
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +11,6 @@ export class ProductService {
   products: Product[];
 
   constructor() {
-
-
 
     if (!localStorage.products) {
 
@@ -68,11 +63,17 @@ export class ProductService {
     }
   }
 
-
+  /**
+   * Retourne une liste de produit
+   */
   get(): Product[] {
     return this.products;
   }
 
+  /**
+   * Ajoute un nouveau produit
+   * @param product
+   */
   add(product: Product) {
     console.log('b');
     product.id = this.products.length.toString();
@@ -81,18 +82,16 @@ export class ProductService {
 
   }
 
-
-
-
   // delete(product) {
   //   const index = this.products.findIndex(x => x.id === Product.id);
   //   this.products.splice(index, 1);
   //   this.saveToLocalStorage(this.products);
   // }
 
-
-
-
+  /**
+   * parse un objet en string et le sauvegarde dans le local storage
+   * @param products
+   */
   saveToLocalStorage(products) {
     const data = JSON.stringify(products);
     localStorage.setItem('products', data);

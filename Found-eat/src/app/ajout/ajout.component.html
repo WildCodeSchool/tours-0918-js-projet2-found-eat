@@ -13,14 +13,12 @@
       </div>
     </form>
 
-
     <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
     <div class="form-group">
       <form>
 
         <label for="exampleFormControlInput1">Nom du produit</label> <!-- nom du produit -->
         <input type="text" class="form-control" id="NProd" placeholder="name" [(ngModel)]="product.productName" name="nom">
-
 
         <div class="form-group">
           <label for="exampleFormControlSelect1">Catégorie de produits </label> <!-- catégorie -->
@@ -39,7 +37,6 @@
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="product.ingredient"
             name="ingrédient"></textarea>
         </div>
-
 
         <div class="row">
 
@@ -122,12 +119,9 @@
 
     <div class="symbole">
       <!-- Symbole de qualité -->
-
-
     </div>
 
   </div>
-
 
   <div class="présentation col-6 ">
     <h1>Vue du produit</h1>

@@ -12,5 +12,5 @@ export class SlideshowUpdateComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
 }

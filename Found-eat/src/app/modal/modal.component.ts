@@ -2,35 +2,34 @@ import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { ProductsService } from '../services/products.service';
 
-
 @Component({
-	selector: 'app-modal',
-	templateUrl: './modal.component.html',
-	styleUrls: ['./modal.component.css']
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
 
-	@Input()
-	mediaInput: any;
+  @Input()
+  mediaInput: any;
 
-	@Input()
-	modalInput: any;
+  @Input()
+  modalInput: any;
 
-	constructor(private loginService: LoginService, private productsService: ProductsService) { }
+  constructor(private loginService: LoginService, private productsService: ProductsService) { }
 
-	ngOnInit() {
-	}
+  ngOnInit() {
+  }
 
-	getItem() {
+  getItem() {
 
-		if (localStorage['product1'] === JSON.stringify(this.mediaInput) || localStorage['product2'] === JSON.stringify(this.mediaInput)) {
-			alert('Same product selected');
-		} else if (!localStorage['product1']) {
-			localStorage.setItem('product1', JSON.stringify(this.mediaInput));
-		} else if (localStorage['product1'] && localStorage['product2']) {
-			alert('Comparator already set');
-		} else if (!localStorage['product2']) {
-			localStorage.setItem('product2', JSON.stringify(this.mediaInput));
-		}
-	}
+    if (localStorage['product1'] === JSON.stringify(this.mediaInput) || localStorage['product2'] === JSON.stringify(this.mediaInput)) {
+      alert('Same product selected');
+    } else if (!localStorage['product1']) {
+      localStorage.setItem('product1', JSON.stringify(this.mediaInput));
+    } else if (localStorage['product1'] && localStorage['product2']) {
+      alert('Comparator already set');
+    } else if (!localStorage['product2']) {
+      localStorage.setItem('product2', JSON.stringify(this.mediaInput));
+    }
+  }
 }

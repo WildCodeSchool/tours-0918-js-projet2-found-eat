@@ -14,8 +14,8 @@
 
 
     <p *ngIf="mediaInput.ingredients">Ingrédients : {{ mediaInput.ingredients }}</p>
-    <p *ngIf="mediaInput.allergenes && mediaInput.allergenes.length > 1">Allergenes : {{ mediaInput.allergenes.join(',
-      ') }}</p>
+    <!-- <p *ngIf="mediaInput.allergenes && mediaInput.allergenes.length > 1">Allergenes : {{ mediaInput.allergenes.join(',
+      ') }}</p> -->
     <p *ngIf="mediaInput.allergenes && mediaInput.allergenes.length == 1">Allergenes : {{ mediaInput.allergenes }}</p>
 
 
@@ -36,8 +36,8 @@
 
         <tr>
           <td>Acide gras saturé :</td>
-          <td *ngIf="mediaInput.nutritional_value.saturated_fat">{{ mediaInput.nutritional_value.saturated_fat }}g</td>
-          <td *ngIf="!mediaInput.nutritional_value.saturated_fat">Valeur non renseignée</td>
+          <td *ngIf="mediaInput.nutritional_value.saturatedFat">{{ mediaInput.nutritional_value.saturatedFat }}g</td>
+          <td *ngIf="!mediaInput.nutritional_value.saturatedFat">Valeur non renseignée</td>
         </tr>
 
         <tr>
@@ -54,9 +54,9 @@
 
         <tr>
           <td>Fibres alimentaires :</td>
-          <td *ngIf="mediaInput.nutritional_value.fibres_alimentaires">{{
-            mediaInput.nutritional_value.fibres_alimentaires }}g</td>
-          <td *ngIf="!mediaInput.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+          <td *ngIf="mediaInput.nutritional_value.fibresAlimentaires">{{
+            mediaInput.nutritional_value.fibresAlimentaires }}g</td>
+          <td *ngIf="!mediaInput.nutritional_value.fibresAlimentaires">Valeur non renseignée</td>
         </tr>
 
         <tr>

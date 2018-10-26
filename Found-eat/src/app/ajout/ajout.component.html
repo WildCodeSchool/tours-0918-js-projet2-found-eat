@@ -33,8 +33,8 @@
             name="quantité">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Ingrédient</label><!-- ingrédient -->
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="product.ingredient"
+          <label for="exampleFormControlTextarea1">Ingrédients :</label><!-- ingrédient -->
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="product.ingredients"
             name="ingrédient"></textarea>
         </div>
 
@@ -64,9 +64,9 @@
           <input type="text" class="form-control" placeholder="allergnes" [(ngModel)]="product.allergenes" name="Allergenes">
         </div>
 
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Nova" [(ngModel)]="product.nova" name="nova">
+        <div class="row">_a
+          <div class="col_a
+            <input type="_aname="nova">
           </div>
           <div class="col">
             <input type="text" class="form-control" placeholder="Nutriscore" [(ngModel)]="product.nutriscore" name="nutriscore">
@@ -136,7 +136,7 @@
     <p>Emballage: {{ product.packaging }}</p>
     <p>Label: {{ product.labels }}</p>
     <p>Origine: {{ product.country }}</p>
-    <p>Ingrèdient: {{ product.ingredient }}</p>
+    <p>Ingrèdient: {{ product.ingredients }}</p>
     <p>Allergenes {{ product.allergenes }}</p>
     <p>Nova : {{ product.nova }}</p>
     <p>Nutriscore: {{ product.nutriscore }}</p>
@@ -151,5 +151,6 @@
     <p>Sel: {{ product.nutritional_value.salt}}</p>
     <p>Sodium: {{ product.nutritional_value.sodium }}</p>
   </div>
+
 
 </div>

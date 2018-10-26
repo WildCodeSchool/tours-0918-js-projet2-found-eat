@@ -15,25 +15,18 @@ export class ProductService {
     if (!localStorage.products) {
 
       this.products = productsStub;
-      this.saveToLocalStorage(this.products);
 
-    } else {
-
-      const data = JSON.parse(localStorage.products);
-      // this.products = data;
-
-      this.products = data.map(x => {
+      this.products = productsStub.map(x => {
 
         const product = new Product();
 
 
-        // product.Nutritionalvalue = x.Nutritionalvalue;
         product.id = x.id;
         product.productName = x.product_name;
         product.brand = x.brand;
         product.quantity = x.quantity;
         product.packaging = x.packaging;
-        product.categorie = x.catégorie;
+        product.categorie = x.categories;
         product.labels = x.labels;
         product.country = x.country;
         product.ingredients = x.ingredients;
@@ -47,10 +40,10 @@ export class ProductService {
 
         nutr.energy = x.nutritional_value.energy;
         nutr.lipides = x.nutritional_value.lipides;
-        nutr.saturated_fat = x.nutritional_value.saturated_fat;
+        nutr.saturatedFat = x.nutritional_value.saturated_fat;
         nutr.glucides = x.nutritional_value.glucides;
         nutr.sugar = x.nutritional_value.sugar;
-        nutr.fibres_alimentaires = x.nutritional_value.fibres_alimentaires;
+        nutr.fibresAlimentaires = x.nutritional_value.fibres_alimentaires;
         nutr.proteines = x.nutritional_value.proteines;
         nutr.salt = x.nutritional_value.salt;
         nutr.sodium = x.nutritional_value.sodium;
@@ -59,6 +52,12 @@ export class ProductService {
         product.image = x.image;
         return product;
       });
+
+      this.saveToLocalStorage(this.products);
+
+    } else {
+
+      this.products = JSON.parse(localStorage.products);
 
     }
   }

@@ -44,9 +44,9 @@
 
           <tr>
             <td>Acide gras saturé :</td>
-            <td *ngIf="product1.nutritional_value.saturated_fat" [ngClass]="+product1.nutritional_value.saturated_fat > +product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'">{{
-              product1.nutritional_value.saturated_fat }}g</td>
-            <td *ngIf="!product1.nutritional_value.saturated_fat">Valeur non renseignée</td>
+            <td *ngIf="product1.nutritional_value.saturatedFat" [ngClass]="+product1.nutritional_value.saturatedFat > +product2.nutritional_value.saturatedFat? 'text-danger' : 'text-success'">{{
+              product1.nutritional_value.saturatedFat }}g</td>
+            <td *ngIf="!product1.nutritional_value.saturatedFat">Valeur non renseignée</td>
           </tr>
 
           <tr>
@@ -65,9 +65,9 @@
 
           <tr>
             <td>Fibres alimentaires :</td>
-            <td *ngIf="product1.nutritional_value.fibres_alimentaires" [ngClass]="+product1.nutritional_value.fibres_alimentaires < +product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'">{{
-              product1.nutritional_value.fibres_alimentaires }}g</td>
-            <td *ngIf="!product1.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+            <td *ngIf="product1.nutritional_value.fibresAlimentaires" [ngClass]="+product1.nutritional_value.fibresAlimentaires < +product2.nutritional_value.fibresAlimentaires? 'text-danger' : 'text-success'">{{
+              product1.nutritional_value.fibresAlimentaires }}g</td>
+            <td *ngIf="!product1.nutritional_value.fibresAlimentaires">Valeur non renseignée</td>
           </tr>
 
           <tr>
@@ -132,9 +132,9 @@
 
           <tr>
             <td>Acide gras saturé :</td>
-            <td *ngIf="product2.nutritional_value.saturated_fat" [ngClass]="+product1.nutritional_value.saturated_fat < +product2.nutritional_value.saturated_fat? 'text-danger' : 'text-success'">{{
-              product2.nutritional_value.saturated_fat }}g</td>
-            <td *ngIf="!product2.nutritional_value.saturated_fat">Valeur non renseignée</td>
+            <td *ngIf="product2.nutritional_value.saturatedFat" [ngClass]="+product1.nutritional_value.saturatedFat < +product2.nutritional_value.saturatedFat? 'text-danger' : 'text-success'">{{
+              product2.nutritional_value.saturatedFat }}g</td>
+            <td *ngIf="!product2.nutritional_value.saturatedFat">Valeur non renseignée</td>
           </tr>
 
           <tr>
@@ -153,9 +153,9 @@
 
           <tr>
             <td>Fibres alimentaires :</td>
-            <td *ngIf="product2.nutritional_value.fibres_alimentaires" [ngClass]="+product1.nutritional_value.fibres_alimentaires > +product2.nutritional_value.fibres_alimentaires? 'text-danger' : 'text-success'">{{
-              product2.nutritional_value.fibres_alimentaires }}g</td>
-            <td *ngIf="!product2.nutritional_value.fibres_alimentaires">Valeur non renseignée</td>
+            <td *ngIf="product2.nutritional_value.fibresAlimentaires" [ngClass]="+product1.nutritional_value.fibresAlimentaires > +product2.nutritional_value.fibresAlimentaires? 'text-danger' : 'text-success'">{{
+              product2.nutritional_value.fibresAlimentaires }}g</td>
+            <td *ngIf="!product2.nutritional_value.fibresAlimentaires">Valeur non renseignée</td>
           </tr>
 
           <tr>

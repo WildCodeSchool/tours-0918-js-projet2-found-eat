@@ -26,6 +26,9 @@ export class SidebarComponent implements OnInit {
     this.isAuth = false;
   }
 
+      /**
+   * ferme la sidebar
+   */
   collapse() {
     this.notifyCollapse.emit(false);
   }

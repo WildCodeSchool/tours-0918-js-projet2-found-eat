@@ -18,6 +18,9 @@ export class LoginComponent implements OnInit {
 
   }
 
+      /**
+   * Authentification
+   */
   login() {
     if (this.email === 'admin@mail.com' && this.password === 'admin') {
       this.loginService.login();

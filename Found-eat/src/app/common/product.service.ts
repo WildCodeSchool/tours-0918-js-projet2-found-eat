@@ -80,7 +80,10 @@ export class ProductService {
     this.saveToLocalStorage(this.products);
 
   }
-// recherche
+
+  /**
+   * liste les produits
+   */
   getProductsNames() {
     let list = [];
     for (let i = 0; i < this.products.length; i++) {
@@ -89,6 +92,9 @@ export class ProductService {
     return list;
   }
 
+    /**
+   * liste les catégories
+   */
   getCategories() {
     let list = [];
     for (let i = 0; i < this.products.length; i++) {
@@ -98,7 +104,10 @@ export class ProductService {
 
     return list;
   }
-  // mettre un produit dans le comparateur
+
+  /**
+   * mettre un produit dans le comparateur
+   */
   getItem(value) {
 
     if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
@@ -112,8 +121,9 @@ export class ProductService {
     }
   }
 
-  // Pour savoir si le produit n'est pas dans le comparateur
-
+  /**
+   * Pour savoir si le produit n'est pas dans le comparateur
+   */
   isSet(value) {
     if (localStorage['product1'] === JSON.stringify(value) || localStorage['product2'] === JSON.stringify(value)) {
       return true;
@@ -122,8 +132,9 @@ export class ProductService {
     }
   }
 
-//  Pour savoir si le comparateur est remplie
-
+    /**
+   * Vérifie si le comparateur est rempli
+   */
   isComparatorSet() {
     if (localStorage['product1'] && localStorage['product2']) {
       return true;
@@ -131,18 +142,22 @@ export class ProductService {
       return false;
     }
   }
-// afficher les 4 derniers produits
+
+  
+  /**
+   * Affiche les 4 derniers articles
+   */
   fourLasts() {
     return this.products.slice(this.products.length - 4, this.products.length).reverse();
   }
 
 
 
-  delete(product: Product) {
-    const index = this.products.findIndex(x => x.id === Product.id);
-    this.products.splice(index, 1);
-    this.saveToLocalStorage(this.products);
-  }
+  // delete(product: Product) {
+  //   const index = this.products.findIndex(x => x.id === Product.id);
+  //   this.products.splice(index, 1);
+  //   this.saveToLocalStorage(this.products);
+  // }
 
   /**
    * parse un objet en string et le sauvegarde dans le local storage

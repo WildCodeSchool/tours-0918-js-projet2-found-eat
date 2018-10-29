@@ -12,7 +12,7 @@ import { NutritionalValue } from '../common/nutritional-value';
 export class AjoutComponent implements OnInit {
 
   image: any;
-  url = '';
+  url: any = '';
   product: Product;
 
   constructor(private service: ProductService) { }
@@ -34,6 +34,9 @@ export class AjoutComponent implements OnInit {
   //   }
   // }
 
+  /**
+   * ajoute le produit
+   */
   add() {
     console.log('a');
     this.service.add(this.product);

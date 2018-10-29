@@ -20,11 +20,17 @@ export class TypeheadComponent implements OnInit {
     this.products = this.productService.getProductsNames();
   }
 
+      /**
+   * redirige vers la page produit
+   */
   getProduct(input) {
     const inputValue = input.value;
     this.router.navigate([`produit/${inputValue}`]);
   }
 
+      /**
+   * recherche
+   */
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(200),

@@ -18,6 +18,9 @@ export class GalleryComponent implements OnInit {
 
   constructor(private service: NgbModal, private route: ActivatedRoute, private router: Router, private productsService: ProductService) { }
 
+      /**
+   * ouvre la modal
+   */
   openMedia(content: any) {
     this.service.open(content).result
 
@@ -30,6 +33,9 @@ export class GalleryComponent implements OnInit {
       });
   }
 
+  /**
+   * affiche les 8 éléments de la page suivante
+   */
   changePage() {
     this.showProducts = this.products.slice((this.page - 1) * 8, 8 * this.page);
     this.router.navigate([`gallery/${this.page}`]);

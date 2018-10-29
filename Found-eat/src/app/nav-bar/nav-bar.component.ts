@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../common/login.service';
+import { ProductService } from '../common/product.service';
 
 @Component({
 	selector: 'app-nav-bar',
@@ -9,12 +10,12 @@ import { LoginService } from '../common/login.service';
 
 export class NavBarComponent implements OnInit {
 	isCollapsed: boolean;
-
-	constructor(private loginService: LoginService) {
+	constructor(private loginService: LoginService, public productService: ProductService) {
 		this.isCollapsed = false;
 	}
 
 	ngOnInit() {
+	
 	}
 
 	/**

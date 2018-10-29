@@ -88,3 +88,9 @@ form {
     font-size: 20px;
   }
 }
+
+.requis{
+  color: #f80404;
+  position: relative;
+  bottom: 15px;
+}

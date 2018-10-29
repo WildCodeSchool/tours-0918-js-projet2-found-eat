@@ -1,42 +1,52 @@
+
 <div id="contact-form" class="d-flex justify-content-center">
-
-  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <div>
-      <h1 class="label">Vous avez une question?</h1>
-      <h4 class="label">Contactez-nous!</h4>
-    </div>
-    <div>
-      <label for="name">
-        <span>Nom: *</span>
-        <input required="required" [(ngModel)]="name" #n="ngModel" type="text" name="name" placeholder="Votre Nom"
-          autofocus="autofocus" />
-      </label>
-    </div>
-    <div>
-      <label for="email">
-        <span>Email: *</span>
-        <input type="email" id="email" name="email" value="" placeholder="Votre Email" />
-      </label>
-    </div>
-    <div>
-      <label for="subject">
-        <span>Objet: </span>
-        <select id="subject" name="subject">
-          <option>Fiche Produit</option>
-          <option>Valeurs Nutritionnelles</option>
-          <option>Suggestion Site</option>
-        </select>
-      </label>
-    </div>
-    <div>
-      <label for="message">
-        <span>Message: *</span>
-        <textarea id="message" name="message" placeholder="Écrivez votre message..."></textarea>
-      </label>
-    </div>
-    <div>
-      <button name="submit" type="submit" id="submit">Envoyer</button>
-    </div>
-  </form>
-
+    
+    <form (ngSubmit)="f.valid && onSubmit()" #f="ngForm">
+        <div>
+            <h1 class="label">Vous avez une question?</h1> 
+            <h4 class="label">Contactez-nous!</h4> 
+        </div>
+        <div>
+            <label for="name">
+                <span>Nom: *</span> 
+                <input type="text" name="name" placeholder="Votre Nom" autofocus="autofocus" [(ngModel)]="model.Name" #Name="ngModel" required>
+            </label> 
+        </div>
+        <div *ngIf="Name.errors && f.submitted">
+            <span class="requis" *ngIf="Name.errors.required">Champ requis</span>
+          </div>
+        <div>
+            <label for="email">
+                <span>Email: *</span>
+                <input type="email" id="email" name="email" value="" placeholder="Votre Email" [(ngModel)]="model.email" #email="ngModel" required email />
+            </label>  
+        </div>
+        <div *ngIf="email.errors && f.submitted">
+            <span class="requis" *ngIf="email.errors.required">Champ requis</span>
+            <span class="requis" *ngIf="email.errors.email">Veuillez entrer un email valide</span>
+          </div>
+        <div>		          
+            <label for="subject">
+                <span>Objet: </span>
+                <select id="subject" name="subject">   
+                    <option>Fiche Produit</option>
+                    <option>Valeurs Nutritionnelles</option>  
+                    <option>Suggestion Site</option>
+                </select>
+            </label>
+        </div>
+        <div>		          
+            <label for="message">
+                <span>Message: *</span> 
+                <textarea id="message" name="message" placeholder="Écrivez votre message..." [(ngModel)]="message.email" #message="ngModel" required></textarea> 
+            </label>  
+        </div>
+        <div *ngIf="message.errors && f.submitted">
+            <span class="requis" *ngIf="message.errors.required">Champ requis</span>
+          </div>
+        <div>		           
+            <button name="submit" type="submit" id="submit" >Envoyer</button> 
+        </div>
+    </form>
+    
 </div>

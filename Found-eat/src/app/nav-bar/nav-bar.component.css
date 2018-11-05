@@ -1,39 +1,28 @@
 .nbar {
   width: 100%;
-
-
   background-color: #0D4E37;
-
   z-index: 0;
-
   padding-bottom: 70px;
 }
 
-.icon
-{
-padding-right: 2px;
+.icon {
+  padding-right: 3px;
 }
 
-nav{
+nav {
   background-color: #0D4E37;
 }
-
-
-
 
 @media screen and (max-width:1024px) {
 
   .hamberger-sidebar {
     display: block;
-
-
   }
 
   .hamberger-sidebar.collapse.show {
     transform: translateX(0%);
     transition-duration: 1s;
   }
-
 
   h3 {
     margin-top: 6%;
@@ -43,10 +32,8 @@ nav{
   }
 
   .hamberger-sidebar-body {
-
     padding-top: 55%;
     font-size: 15px;
-
   }
 }
 
@@ -54,11 +41,21 @@ nav{
   ul li a {
     font-size: 0.9em;
   }
+}
+
+.test {
+  color: #F3AB2A;
+}
+
+.logo {
+  position: fixed;
+  width: 70px;
 
 }
 
-
-
-.test{
-  color: #F3AB2A;
+.btn{
+  background-color: #0D4E37;
+  color: #ffffff;
+  position: relative;
+  right: 10px;
 }

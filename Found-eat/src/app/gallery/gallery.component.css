@@ -1,20 +1,38 @@
-.card{
-	height: 100%;
+.card {
+  height: 100%;
 }
 
-.col-cards{
-	margin-top: 1em;
+.col-cards {
+  margin-top: 1em;
 }
 
-.card-img-top{
-	height: 200px;
+.card-img-top {
+  height: 200px;
 }
 
-.card img{
-	max-height: 200px;
-	max-width: 85%;
+.card img {
+  max-height: 200px;
+  max-width: 85%;
 }
 
-ngb-pagination{
-	margin-top: 1em;
+ngb-pagination {
+  margin-top: 1em;
+}
+
+.btn {
+  background-color: #145A24;
+}
+
+ngb-pagination ::ng-deep ul>li>a {
+  color: #145A24 !important;
+}
+
+ngb-pagination ::ng-deep ul>li.active>a {
+  background-color: #145A24 !important;
+  color: white !important;
+  border: none !important;
+}
+
+ngb-pagination ::ng-deep a span {
+  color: #145A24 !important;
 }

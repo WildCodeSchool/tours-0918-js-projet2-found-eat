@@ -1,0 +1,156 @@
+<h1 class=" text-alingn-center "> Ajout et Modification </h1>
+
+<div class="row">
+
+  <div class="formulaire col-6">
+    <h2> tableau de bord </h2>
+
+    <form>
+      <div class="form-group">
+
+        <!-- <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="onSelecfile($event)" [(ngModel)]="image" name="image" > -->
+        <input type="text" class="form-control" name="image" [(ngModel)]="product.image">
+      </div>
+    </form>
+
+    <!-- Le formulaire en lui même. il aura un Titre = Nom du produit. il aura la possibilié de rechercher un produit -->
+    <div class="form-group">
+      <form>
+
+        <label for="exampleFormControlInput1">Nom du produit</label> <!-- nom du produit -->
+        <input type="text" class="form-control" id="NProd" placeholder="name" [(ngModel)]="product.productName" name="nom">
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Catégorie de produits </label> <!-- catégorie -->
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Catégorie" [(ngModel)]="product.categorie" name="catégorie">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Quantité</label> <!-- nom du produit -->
+          <input type="email" class="form-control" id="Qua" placeholder="kilogramme ou litre" [(ngModel)]="product.quantity"
+            name="quantité">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Ingrédients :</label><!-- ingrédient -->
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="product.ingredients"
+            name="ingrédient"></textarea>
+        </div>
+
+        <div class="row">
+
+          <!-- Information du produit -->
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Marques" [(ngModel)]="product.brand" name="Brand">
+          </div>
+
+          <div class="col">
+            <input type="text" class="form-control" placeholder="packaging" [(ngModel)]="product.packaging" name="packaging">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Labels" [(ngModel)]="product.labels" name="Labels">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="country" [(ngModel)]="product.country" name="country">
+          </div>
+        </div>
+
+
+        <div class="col">
+          <input type="text" class="form-control" placeholder="allergnes" [(ngModel)]="product.allergenes" name="Allergenes">
+        </div>
+
+        <div class="row">_a
+          <div class="col_a
+            <input type="_aname="nova">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nutriscore" [(ngModel)]="product.nutriscore" name="nutriscore">
+          </div>
+        </div>
+
+        <div class="row">
+          <h2>Valeur Nutritive: </h2>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Energie" [(ngModel)]="product.nutritional_value.energy"
+              name="Energie">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Lipides" [(ngModel)]="product.nutritional_value.lipides"
+              name="Lipides">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Acide Saturé " [(ngModel)]="product.nutritional_value.saturatedFat"
+              name="saturatedFat">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Glucides" [(ngModel)]="product.nutritional_value.glucides"
+              name="glucide">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Sucre" [(ngModel)]="product.nutritional_value.sugar"
+              name="Sugar">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Fibres Alimentaires" [(ngModel)]="product.nutritional_value.fibresAlimentaires"
+              name="Fibres">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Protéine" [(ngModel)]="product.nutritional_value.proteines"
+              name="pretéines">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Sel" [(ngModel)]="product.nutritional_value.salt" name="Salt">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Sodium" [(ngModel)]="product.nutritional_value.sodium"
+              name="Sodium">
+          </div>
+        </div>
+
+      </form>
+
+      <button class='btn btn-success' (click)="add()"> Sauvegarder </button>
+    </div>
+
+    <div class="symbole">
+      <!-- Symbole de qualité -->
+    </div>
+
+  </div>
+
+  <div class="presentation col-6 ">
+    <h1>Vue du produit</h1>
+    <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
+    <h2>{{ product.productName }}</h2>
+    <img src="{{ product.image }}" height="200"><br />
+
+
+    <p>Catègorie: {{ product.categorie }}</p>
+    <p>Marque : {{ product.brand }}</p>
+    <p>Quantité : {{ product.quantity }}</p>
+    <p>Emballage: {{ product.packaging }}</p>
+    <p>Label: {{ product.labels }}</p>
+    <p>Origine: {{ product.country }}</p>
+    <p>Ingrèdient: {{ product.ingredients }}</p>
+    <p>Allergenes {{ product.allergenes }}</p>
+    <p>Nova : {{ product.nova }}</p>
+    <p>Nutriscore: {{ product.nutriscore }}</p>
+
+    <p>Valeur énergitique: {{ product.nutritional_value.energy }}</p>
+    <p> Lipides: {{ product.nutritional_value.lipides }}</p>
+    <p>Acide Saturé: {{product.nutritional_value.saturatedFat}}</p>
+    <p>Glucides: {{ product.nutritional_value.glucides }}</p>
+    <p>Sucre: {{ product.nutritional_value.sugar }}</p>
+    <p>Fibres Alimentaires: {{product.nutritional_value.fibresAlimentaires}}</p>
+    <p>Proteines: {{product.nutritional_value.proteines}}</p>
+    <p>Sel: {{ product.nutritional_value.salt}}</p>
+    <p>Sodium: {{ product.nutritional_value.sodium }}</p>
+  </div>
+
+
+</div>

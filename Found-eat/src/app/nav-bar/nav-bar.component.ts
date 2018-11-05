@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
+import { LoginService } from '../common/login.service';
+import { ProductService } from '../common/product.service';
 
 @Component({
 	selector: 'app-nav-bar',
@@ -10,18 +10,24 @@ import { LoginService } from '../services/login.service';
 
 export class NavBarComponent implements OnInit {
 	isCollapsed: boolean;
-
-	constructor(private route: ActivatedRoute, private router: Router, private loginService: LoginService) {
+	constructor(private loginService: LoginService, public productService: ProductService) {
 		this.isCollapsed = false;
 	}
 
 	ngOnInit() {
+	
 	}
 
+	/**
+   * ferme la sidebar
+   */
 	onCollapse($event) {
 		this.isCollapsed = $event;
 	}
 
+	/**
+   * Déconnecte l'utilisateur
+   */
 	logout() {
 		this.loginService.logout();
 	}

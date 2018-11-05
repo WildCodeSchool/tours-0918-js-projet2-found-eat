@@ -1,17 +1,22 @@
 /* Jumbotron specs */
 
-.jumbotron{
-    background-color: #2125295c;
-    margin-bottom: -2rem;
-    padding: 0.5em 0.6em ;
+.jumbotron {
+  background-color: #2125295c;
+  margin-bottom: -2rem;
+  padding: 0.5em 0.6em;
 }
 
 /* Image specificaions ** Note all images are the same size!! ** recheck if images different size */
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
-#img-ctn{
-	max-height: 350px;
+#img-ctn {
+  max-height: 350px;
+}
+
+.btn {
+  background-color: #145A24;
+  border: none;
 }

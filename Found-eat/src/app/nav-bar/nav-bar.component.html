@@ -1,17 +1,14 @@
 <div class="nbar ">
   <nav class=" navbar navbar-expand-lg navbar-light p-3 mb-5 fixed-top">
 
-
-    <a class="navbar-brand d-flex pr-5 mr-auto ">logo</a><!-- utilisation de flex taille et margin pour que le logo soit toute droite -->
-
-
+    <a class="navbar-brand d-flex pr-5 mr-auto "></a><!-- utilisation de flex taille et margin pour que le logo soit toute droite -->
+    <img src="../../assets/235d6dec-87f7-4ec2-9ea9-892d103e10df.png" alt="logo" class="logo" />
 
     <button class="navbar-toggler" type="button" (click)="isCollapsed =!isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="navbar-collapse w-100 mx-auto d-none d-lg-block" id="navbarSupportedContent">
-
 
 
       <ul class="navbar-nav mx-auto w-80 justify-content-center ">
@@ -22,30 +19,38 @@
         </li>
 
         <li class="nav-item active">
-          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning"><i
-              class=""></i>Produits</a>
+          <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery" routerLinkActive="text-warning">
+            <i class="icon fas fa-utensils"></i>Produits</a>
         </li>
-
 
         <li *ngIf="!loginService.isAuth" class="nav-item ">
           <a class="nav-link text-white font-weight-bold pr-4 " routerLink="comparateur" routerLinkActive="text-warning">
             <i class="icon fas fa-balance-scale "></i>Comparer</a>
         </li>
 
-
         <li *ngIf="!loginService.isAuth" class="nav-item">
           <a class="nav-link text-white font-weight-bold pr-4" routerLink="contact" routerLinkActive="text-warning"><i
               class="icon fas fa-envelope-open-text"></i>Contact</a>
         </li>
 
-
         <li class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-4" href="#"><i class="icon fas fa-search-plus"></i>Recherche
+          <a class="nav-link text-white font-weight-bold pr-4"><i class="icon fas fa-search-plus"></i>Recherche
             avancée</a>
         </li>
 
+        <li class="nav-item">
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn font-weight-bold pr-4" ngbDropdownToggle>Produits sélectionnés</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+             <div *ngFor="let product of productService.basketProducts">
+              <button class="dropdown-item">{{product.productName}}</button>
+             </div>
+          </div>
+          </div>
+        </li>
+
         <li *ngIf="loginService.isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-2" href="#"><i class="icon fas fa-folder-plus"></i>Ajouter</a>
+          <a class="nav-link text-white font-weight-bold pr-2" routerLink='ajouter'><i class="icon fas fa-folder-plus"></i>Ajouter</a>
         </li>
 
         <li *ngIf="loginService.isAuth" class="nav-item">
@@ -54,20 +59,13 @@
 
       </ul>
 
-
-
-
-
       <form class="d-flex form-inline d-sm-none d-none d-lg-block justify-content-end">
 
-        <input class="form-control  mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success " type="submit"> <i class="fas fa-search"></i></button>
+        <app-typehead></app-typehead>
 
       </form>
 
     </div>
-
-
   </nav>
 
   <app-sidebar [isCollapsed]="!isCollapsed" [isAuth]="isAuth" (notifyCollapse)="onCollapse($event)"></app-sidebar>

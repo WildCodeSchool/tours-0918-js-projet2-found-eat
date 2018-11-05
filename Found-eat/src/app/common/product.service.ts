@@ -11,6 +11,7 @@ export class ProductService {
 
   products: Product[];
   productToModify: any;
+  basketProducts: Product[] = [];
 
   constructor() {
 
@@ -57,12 +58,13 @@ export class ProductService {
 
       this.saveToLocalStorage(this.products);
 
-    } else {
+    } else if (localStorage['product1'] && localStorage['product2']) {
 
+      this.basketProducts.push(JSON.parse(localStorage['product1']),JSON.parse(localStorage['product2']));
       this.products = JSON.parse(localStorage.products);
-
     }
   }
+
 
   /**
    * Retourne une liste de produit
@@ -132,10 +134,12 @@ export class ProductService {
       alert('Same product selected');
     } else if (!localStorage['product1']) {
       localStorage.setItem('product1', JSON.stringify(value));
+      this.basketProducts.push(JSON.parse(localStorage.getItem('product1')));
     } else if (localStorage['product1'] && localStorage['product2']) {
       alert('Comparator already set');
     } else if (!localStorage['product2']) {
       localStorage.setItem('product2', JSON.stringify(value));
+      this.basketProducts.push(JSON.parse(localStorage.getItem('product2')));
     }
   }
 

@@ -7,19 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  name: string;
+  // declare user model
+model: any = {}
 
-  constructor() { }
+constructor() { }
 
-  ngOnInit() {
+ngOnInit() {
+  // init property model
+  this.model = new this.model();
+}
+
+/**
+ * submit form
+ */
+onSubmit() {
+  console.log(this.model);
+
   }
-
-      /**
-   * console.log du formulaire
-   */
-  onSubmit(form) {
-    console.log(this.name);
-    console.log(form);
-  }
-
 }

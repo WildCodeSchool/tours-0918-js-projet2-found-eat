@@ -52,3 +52,17 @@ nav {
   width: 70px;
 
 }
+
+.btn{
+  background-color: #0D4E37;
+  color: #ffffff;
+  position: relative;
+  right: 10px;
+}
+
+.cross{
+color:#ca0b0b;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 3px;
+}

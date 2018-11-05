@@ -6,7 +6,7 @@ export default
 
   {
     "id": '1',
-    "product_name": "Hachis Parmentier",
+    "product_name" : "Hachis Parmentier",
     "brand": "Picard",
     "quantity": "1kg",
     "packaging": [

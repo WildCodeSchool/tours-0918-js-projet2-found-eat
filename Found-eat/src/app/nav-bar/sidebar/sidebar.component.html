@@ -32,16 +32,10 @@
               <i class="fas fa-balance-scale"></i> Comparateur</a>
             </li>
 
-            <li class="nav-item ">
-              <a class="nav-link text-white font-weight-bold " href="#">
-                <i class="fas fa-search-plus"></i>
-              Recherche Avancée</a>
-            </li>
-
             <li class="nav-item">
                 <div class="container " class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
                     <div class="row">
-                  <button class="btn" [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4" ngbDropdownToggle>Produits sélectionnés <span class="badge badge-light">{{ this.productService.basketProducts.length }}</span></button>
+                  <button class="btn" [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4" ngbDropdownToggle><i class="fas fa-shopping-basket"></i> Produits sélectionnés <span class="badge badge-light">{{ this.productService.basketProducts.length }}</span></button>
                   <div class="dropdown-menu" ngbDropdownMenu>
                    <div class="cross" *ngFor="let product of productService.basketProducts; let i = index">
                     <h6 class="dropdown-item dropdown" >{{product.productName}}</h6>
@@ -63,7 +57,11 @@
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-            <a class="nav-link text-white font-weight-bold" routerLink=""><i class="fas fa-folder-plus">Ajouter</i></a>
+            <a class="nav-link text-white font-weight-bold" routerLink="ajouter"><i class="fas fa-folder-plus"> Ajouter</i></a>
+          </li>
+
+          <li *ngIf="loginService.isAuth" class="nav-item">
+            <a class="nav-link text-white font-weight-bold" routerLink="modification-carousel"><i class="fas fa-pencil-alt"> Modification Carousel</i></a>
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">

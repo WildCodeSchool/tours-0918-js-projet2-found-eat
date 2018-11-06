@@ -1,9 +1,30 @@
+.tip{
+ margin-top: 15px;
+
+  font-size: 40px;
+}
+.titre2{
+  background-color: rgba(255, 255, 255, 0.99);
+  border: 0px solid black;
+  border-radius: 3px;
+  opacity: 0.9  ;
+  filter: alpha(opacity=70);
+  font-size: 2em;
+  margin-top: 8px;
+}
+#page{
+background: url(../../assets/img/wedding-invitations-templates-best-of-healthy-italian-food-background-food-amp-drink-s-of-wedding-invitations-templates.jpeg) no-repeat;
+background-size: cover;
+}
+
 .container {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .row {
+
   width: 100%
+
 }
 
 
@@ -13,28 +34,31 @@ h1 {
   margin: 0 0 8px 0;
   text-align: center;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
 
 .formulaire {
-  background-color: black;
-  font-weight: 600;
-  opacity: 0.2;
-  color: white;
+  background-color: rgba(41, 44, 41, 0.722);
+
+
+  font-weight: Bold;
+  padding-left: 50px;
+  font-size: 1em;
+  opacity: 1;
+  color: rgb(255, 255, 255);
 }
 
 .presentation {
-  background-color: white;
-
+  background-color: rgba(237, 248, 237, 0.838);
 }
 
 .btn.btn-primary {
   background: #f0ad4e none repeat scroll 0 0;
   border-color: #f0ad4e;
   opacity: 0.8;
-  color: #ffffff;
+  color: green;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -64,5 +88,5 @@ p {
 }
 
 input {
-  margin: 2px;
+  margin: 1px;
 }

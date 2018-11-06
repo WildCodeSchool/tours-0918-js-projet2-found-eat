@@ -58,10 +58,13 @@ export class ProductService {
 
       this.saveToLocalStorage(this.products);
 
-    } else if (localStorage['product1'] && localStorage['product2']) {
+    } else {
+      this.products = JSON.parse(localStorage.products);
+    }
+
+    if (localStorage['product1'] && localStorage['product2']) {
 
       this.basketProducts.push(JSON.parse(localStorage['product1']),JSON.parse(localStorage['product2']));
-      this.products = JSON.parse(localStorage.products);
     }
   }
 

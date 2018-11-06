@@ -44,6 +44,9 @@ export class ComparateurComponent implements OnInit, OnDestroy {
 		}
 	}
 
+      /**
+   * réinitialise le comparateur
+   */
   resetComparator() {
     window.scrollTo(0, 0);  // Retour sur le haut de la page
     // On supprime les produits selectionnés du localStorage
@@ -57,7 +60,9 @@ export class ComparateurComponent implements OnInit, OnDestroy {
     this.rebourd();
   }
 
-  // Fonction pour le compte à rebourd et la redirection
+    /**
+   * Fonction pour le compte à rebourd et la redirection
+   */
   rebourd() {
     const counter = interval(1000);
     this.timerSubscription = counter.subscribe(

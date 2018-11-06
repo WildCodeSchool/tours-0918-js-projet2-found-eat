@@ -16,5 +16,8 @@ export class SlideshowUpdateComponent implements OnInit {
   this.images = this.service.images;
   }
 
+  update() {
+    this.service.update();
+  }
   
 }

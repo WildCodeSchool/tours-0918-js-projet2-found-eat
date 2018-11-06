@@ -34,9 +34,22 @@
     </div>
     <!-- Save button -->
     <div class="form-group col-3 text-center">
-      <button type="save" class="btn btn-warning align-items-center"(click)="update()">Sauvegarder</button>
+      <button type="save" class="btn btn-warning align-items-center"(click)="update()" (click)="openVerticallyCentered(content)">Sauvegarder</button>
       </div>
 
+  <!-- Modal Pop-up -->
 
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"> Sauvegarde </h4>
+    </div>
+    <div class="modal-body">Vos modifications ont été enregistrées! 
+    </div>
+    <div class="modal-footer">
+      <a class="nav-link" type="button" class="btn btn-warning" (click)="modal.close('Close click')">Fermer</a>
+    </div>
+  </ng-template>
+
+<!-- Modal Pop-up end -->
 
 

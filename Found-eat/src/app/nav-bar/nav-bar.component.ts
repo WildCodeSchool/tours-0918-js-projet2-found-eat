@@ -9,6 +9,7 @@ import { ProductService } from '../common/product.service';
 })
 
 export class NavBarComponent implements OnInit {
+	
 	isCollapsed: boolean;
 	constructor(private loginService: LoginService, public productService: ProductService) {
 		this.isCollapsed = false;
@@ -32,4 +33,22 @@ export class NavBarComponent implements OnInit {
 		this.loginService.logout();
 	}
 
+remove(product, index){
+// 	if (localStorage['product1']){
+// 		localStorage.removeItem('product1');
+// 	}
+// else if(localStorage['product2']){
+// 		localStorage.removeItem('product2');
+// 	}
+
+const productOne = JSON.parse(localStorage['product1']);
+
+if (product.id == productOne.id) {
+		localStorage.removeItem('product1');
+} else {
+	localStorage.removeItem('product2');
+}
+this.productService.basketProducts.splice(index, 1);
+
+}	
 }

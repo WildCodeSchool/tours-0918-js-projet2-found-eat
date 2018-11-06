@@ -116,12 +116,12 @@ export class ProductService {
       alert('Same product selected');
     } else if (!localStorage['product1']) {
       localStorage.setItem('product1', JSON.stringify(value));
-      this.basketProducts.push(localStorage['product1'])
+      this.basketProducts.push(JSON.parse(localStorage.getItem('product1')));
     } else if (localStorage['product1'] && localStorage['product2']) {
       alert('Comparator already set');
     } else if (!localStorage['product2']) {
       localStorage.setItem('product2', JSON.stringify(value));
-      this.basketProducts.push(localStorage['product2'])
+      this.basketProducts.push(JSON.parse(localStorage.getItem('product2')));
     }
   }
 

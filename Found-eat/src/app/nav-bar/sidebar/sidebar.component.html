@@ -2,7 +2,7 @@
 
 
   <div class="hamberger-sidebar-header ">
-    
+
   </div>
   <div class="row w-20 offset-2 p-rigth-100">
 
@@ -11,65 +11,61 @@
       <nav class="navbar  navbar-light  ">
         <ul class="navbar-nav mr-auto navbar-light" *ngIf="!isAuth">
           <li class="nav-item active">
-            <a class="nav-link text-white font-weight-bold"
-            routerLink="acceuil" 
-            routerLinkActive="text-warning"
-            (click)="collapse()"
-            ><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-white font-weight-bold" routerLink="acceuil" routerLinkActive="text-warning"
+              (click)="collapse()"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery/1" routerLinkActive="text-warning" (click)="collapse()">
+            <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery/1" routerLinkActive="text-warning"
+              (click)="collapse()">
               <i class="fas fa-utensils"></i> Produits </a>
-            </li>
+          </li>
 
-            <li *ngIf="!loginService.isAuth" class="nav-item ">
-              <a class="nav-link text-white font-weight-bold" 
-              routerLink="comparateur"
-              routerLinkActive="text-warning"
-              (click)="collapse()"
-              >
+          <li *ngIf="!loginService.isAuth" class="nav-item ">
+            <a class="nav-link text-white font-weight-bold" routerLink="comparateur" routerLinkActive="text-warning"
+              (click)="collapse()">
               <i class="fas fa-balance-scale"></i> Comparateur</a>
-            </li>
+          </li>
 
-            <li class="nav-item">
-                <div class="container " class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-                    <div class="row">
-                  <button class="btn" [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4" ngbDropdownToggle><i class="fas fa-shopping-basket"></i> Produits sélectionnés <span class="badge badge-light">{{ this.productService.basketProducts.length }}</span></button>
-                  <div class="dropdown-menu" ngbDropdownMenu>
-                   <div class="cross" *ngFor="let product of productService.basketProducts; let i = index">
-                    <h6 class="dropdown-item dropdown" >{{product.productName}}</h6>
-                    <i class="far fa-times-circle" (click)="remove(product, i)"></i>
-                    </div>
-                  </div>
+          <li class="nav-item">
+            <div class="container " class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+              <div class="row">
+                <button class="btn" [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4"
+                  ngbDropdownToggle><i class="fas fa-shopping-basket"></i> Produits sélectionnés <span class="badge badge-light">{{
+                    this.productService.basketProducts.length }}</span></button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                  <div class="cross" *ngFor="let product of productService.basketProducts; let i = index">
+                    <h6 class="dropdown-item dropdown">{{product.productName}}</h6>
+                    <i class="far fa-times-circle" (click)="remove(product)"></i>
                   </div>
                 </div>
-              </li>
+              </div>
+            </div>
+          </li>
 
-            <li *ngIf="!loginService.isAuth" class="nav-item ">
-              <a class="nav-link text-white font-weight-bold"
-              (click)="collapse()"
-              routerLink="contact"
-              routerLinkActive="text-warning"
-              ><i class="fas fa-envelope-open-text"></i>
-            Contact</a>
+          <li *ngIf="!loginService.isAuth" class="nav-item ">
+            <a class="nav-link text-white font-weight-bold" (click)="collapse()" routerLink="contact" routerLinkActive="text-warning"><i
+                class="fas fa-envelope-open-text"></i>
+              Contact</a>
             <!-- (click)="isCollapsed =!isCollapsed" -->
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-            <a class="nav-link text-white font-weight-bold" routerLink="ajouter" (click)="collapse()"><i class="fas fa-folder-plus"></i> Ajouter</a>
+            <a class="nav-link text-white font-weight-bold" routerLink="ajouter" (click)="collapse()"><i class="fas fa-folder-plus"></i>
+              Ajouter</a>
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-            <a class="nav-link text-white font-weight-bold" routerLink="modification-carousel" (click)="collapse()"><i class="fas fa-pencil-alt"></i> Modification Carousel</a>
+            <a class="nav-link text-white font-weight-bold" routerLink="modification-carousel" (click)="collapse()"><i
+                class="fas fa-pencil-alt"></i> Modification Carousel</a>
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-          <button class="btn btn-warning" (click)="loginService.logout()" (click)="collapse()">Déconnexion</button>
-        </li>
+            <button class="btn btn-warning" (click)="loginService.logout()" (click)="collapse()">Déconnexion</button>
+          </li>
 
           <li class="nav-item ">
-              <app-typehead></app-typehead>
+            <app-typehead></app-typehead>
           </li>
 
         </ul>

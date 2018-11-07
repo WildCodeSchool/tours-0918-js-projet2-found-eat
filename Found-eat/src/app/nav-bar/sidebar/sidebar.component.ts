@@ -27,32 +27,24 @@ export class SidebarComponent implements OnInit {
     this.isAuth = false;
   }
 
-      /**
-   * ferme la sidebar
-   */
+  /**
+* ferme la sidebar
+*/
   collapse() {
     this.notifyCollapse.emit(false);
   }
 
 
-  remove(product, index){
+  remove(product) {
     // 	if (localStorage['product1']){
     // 		localStorage.removeItem('product1');
     // 	}
     // else if(localStorage['product2']){
     // 		localStorage.removeItem('product2');
     // 	}
-    
-    const productOne = JSON.parse(localStorage['product1']);
-    
-    if (product.id == productOne.id) {
-        localStorage.removeItem('product1');
-    } else {
-      localStorage.removeItem('product2');
-    }
-    this.productService.basketProducts.splice(index, 1);
-    
-    }	
+
+    this.productService.removeItem(product);
+  }
 }
 
 

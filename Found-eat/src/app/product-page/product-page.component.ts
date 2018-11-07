@@ -11,7 +11,7 @@ export class ProductPageComponent implements OnInit {
 
 	product: any;
 
-	constructor(private route: ActivatedRoute, private productService : ProductService) { }
+	constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
 	ngOnInit() {
 		this.route.params.subscribe(data => {

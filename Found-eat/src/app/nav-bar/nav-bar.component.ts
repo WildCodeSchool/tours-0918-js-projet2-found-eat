@@ -29,7 +29,7 @@ export class NavBarComponent implements OnInit {
 	/**
    * Déconnecte l'utilisateur
    */
-	logout() {
+ 	logout() {
 		this.loginService.logout();
 	}
 

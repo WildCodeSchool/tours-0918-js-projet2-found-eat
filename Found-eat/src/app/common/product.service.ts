@@ -3,12 +3,14 @@ import { Product } from './product';
 import productsStub from '../common/products.list';
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
   products: Product[];
+  productToModify: any;
   basketProducts: Product[] = [];
 
   constructor() {
@@ -57,7 +59,7 @@ export class ProductService {
       this.saveToLocalStorage(this.products);
 
     } else if (localStorage['product1'] && localStorage['product2']) {
-      
+
       this.basketProducts.push(JSON.parse(localStorage['product1']),JSON.parse(localStorage['product2']));
       this.products = JSON.parse(localStorage.products);
     }
@@ -72,16 +74,32 @@ export class ProductService {
   }
 
   /**
+     * apelle d'un id
+     */
+  getbyId(product) {
+    this.productToModify = product;
+
+  }
+
+  /**
    * Ajoute un nouveau produit
    * @param product
    */
   add(product: Product) {
-    console.log('b');
-    product.id = this.products.length.toString();
-    this.products.push(product);
-    this.saveToLocalStorage(this.products);
+    if (!product.id) {
+      product.id = this.products.length.toString();
+      this.products.push(product);
+      this.saveToLocalStorage(this.products);
+    } else {
+      // const index = this.products.find[productName];
+      // this.products[index] = product;
 
+      this.saveToLocalStorage(this.products);
+   }
   }
+
+
+
 
   /**
    * liste les produits
@@ -94,9 +112,9 @@ export class ProductService {
     return list;
   }
 
-    /**
-   * liste les catégories
-   */
+  /**
+ * liste les catégories
+ */
   getCategories() {
     let list = [];
     for (let i = 0; i < this.products.length; i++) {
@@ -136,9 +154,9 @@ export class ProductService {
     }
   }
 
-    /**
-   * Vérifie si le comparateur est rempli
-   */
+  /**
+ * Vérifie si le comparateur est rempli
+ */
   isComparatorSet() {
     if (localStorage['product1'] && localStorage['product2']) {
       return true;
@@ -147,7 +165,7 @@ export class ProductService {
     }
   }
 
-  
+
   /**
    * Affiche les 4 derniers articles
    */
@@ -155,13 +173,17 @@ export class ProductService {
     return this.products.slice(this.products.length - 4, this.products.length).reverse();
   }
 
+  /**
+     * Supprimer un article
+     * @param product
+     */
 
-
-  // delete(product: Product) {
-  //   const index = this.products.findIndex(x => x.id === Product.id);
-  //   this.products.splice(index, 1);
-  //   this.saveToLocalStorage(this.products);
-  // }
+  delete(product) {
+    const index = this.products.findIndex(x => x.id === product.id);
+    console.log(index);
+    this.products.splice(index, 1);
+    this.saveToLocalStorage(this.products);
+  }
 
   /**
    * parse un objet en string et le sauvegarde dans le local storage

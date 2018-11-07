@@ -25,7 +25,8 @@ const appRoutes: Routes = [
 	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
 	{ path: 'produit/:name', component: ProductPageComponent },
-	{ path: '404', component: NotFoundComponent },
+  { path: '404', component: NotFoundComponent },
+  { path: 'product/:id', component : AjoutComponent},
 	{ path: 'ajouter', component: AjoutComponent },
 	{ path: '**', redirectTo: '404' }];
 

@@ -66,3 +66,14 @@ margin-left: auto;
 margin-right: auto;
 margin-bottom: 3px;
 }
+
+.dropdown-menu{
+  background-color: #ffffff;
+  padding: 0;
+}
+
+.dropdown{
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}

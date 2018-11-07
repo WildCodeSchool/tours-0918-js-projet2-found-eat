@@ -44,7 +44,7 @@
             <div class="dropdown-menu" ngbDropdownMenu>
              <div class="container" *ngFor="let product of productService.basketProducts; let i = index">
                <div class="row">
-              <h5 class="dropdown-item" >{{product.productName}}</h5>
+              <h5 class="dropdown-item dropdown" >{{product.productName}}</h5>
               <i class="far fa-times-circle cross" (click)="remove(product, i)"></i>
               </div>
             </div>

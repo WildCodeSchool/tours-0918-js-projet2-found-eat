@@ -19,7 +19,7 @@
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery/1" routerLinkActive="text-warning">
+            <a class="nav-link text-white font-weight-bold pr-4 " routerLink="gallery/1" routerLinkActive="text-warning" (click)="collapse()">
               <i class="fas fa-utensils"></i> Produits </a>
             </li>
 
@@ -57,15 +57,15 @@
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-            <a class="nav-link text-white font-weight-bold" routerLink="ajouter"><i class="fas fa-folder-plus"> Ajouter</i></a>
+            <a class="nav-link text-white font-weight-bold" routerLink="ajouter" (click)="collapse()"><i class="fas fa-folder-plus"></i> Ajouter</a>
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-            <a class="nav-link text-white font-weight-bold" routerLink="modification-carousel"><i class="fas fa-pencil-alt"> Modification Carousel</i></a>
+            <a class="nav-link text-white font-weight-bold" routerLink="modification-carousel" (click)="collapse()"><i class="fas fa-pencil-alt"></i> Modification Carousel</a>
           </li>
 
           <li *ngIf="loginService.isAuth" class="nav-item">
-          <button class="btn btn-warning" (click)="loginService.logout()">Déconnexion</button>
+          <button class="btn btn-warning" (click)="loginService.logout()" (click)="collapse()">Déconnexion</button>
         </li>
 
           <li class="nav-item ">

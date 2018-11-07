@@ -14,6 +14,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AjoutComponent } from './ajout/ajout.component';
+import { SlideshowUpdateComponent } from './slideshow-update/slideshow-update.component';
 
 
 const appRoutes: Routes = [
@@ -25,8 +26,10 @@ const appRoutes: Routes = [
 	{ path: '', redirectTo: 'acceuil', pathMatch: 'full' },
 	{ path: 'contact', component: ContactComponent},
 	{ path: 'produit/:name', component: ProductPageComponent },
-	{ path: '404', component: NotFoundComponent },
+  { path: '404', component: NotFoundComponent },
+  { path: 'product/:id', component : AjoutComponent},
 	{ path: 'ajouter', component: AjoutComponent },
+	{ path: 'modification-carousel', component: SlideshowUpdateComponent },
 	{ path: '**', redirectTo: '404' }];
 
 @NgModule({

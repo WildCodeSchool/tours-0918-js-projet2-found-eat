@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
+import { ProductService } from '../common/product.service';
 
 @Component({
   selector: 'app-comparateur',
@@ -15,7 +16,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
   timerSubscription: Subscription;
   message: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private productService:ProductService) { }
 
   ngOnInit() {
 
@@ -58,6 +59,7 @@ export class ComparateurComponent implements OnInit, OnDestroy {
     this.message = 'Vous allez être redirigé';
     // redirection
     this.rebourd();
+    this.productService.resetBasket()
   }
 
     /**

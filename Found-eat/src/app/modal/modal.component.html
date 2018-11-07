@@ -90,6 +90,8 @@
     <button *ngIf="!productsService.isSet(mediaInput) && !productsService.isComparatorSet()" type="button" class="btn btn-comparer text-center"
       [disabled]="this.productsService.isSet(mediaInput)" (click)="this.productsService.getItem(mediaInput)">Comparer</button>
 
-    <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.dismiss()">Supprimer</button>
+      <button *ngIf="loginService.isAuth" class="btn btn-warning" (click)= "getbyId(mediaInput); modalInput.dismiss()">Modifier</button>
+
+    <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.close(mediaInput)">Supprimer</button>
   </div>
 </div>

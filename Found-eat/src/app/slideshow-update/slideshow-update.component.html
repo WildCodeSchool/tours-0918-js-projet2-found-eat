@@ -1,114 +1,55 @@
+<!-- Slideshow Preview -->
+
+<app-carousel></app-carousel>
+
+<!-- Modification Panel -->
+
 <div class="container">
-  <div class="row my-1">
-<!-- Choice 1 for slideshow -->
-    <div class="choice1 col-xs-12 col-md-4 ">
-        <div class="col-12">
-            <form class="card card-sm">
-                <div class="card-body row no-gutters align-items-center">
-                    <div class="col">
-                        <input class="form-control form-control-borderless" type="search" placeholder="Rechercher">
-                    </div>
-                    <div class="col-auto">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-          <div class="bg-light mx-auto">
-            <img [src]="url" height="200"><br />
+  <div class="d-flex justify-content-around row my-1">
+    <!-- Choice for slideshow -->
+    <div *ngFor="let image of images" class="choice1 col-xs-12 col-md-3 ">
+      <div class="col-12">
+        <form>
+          <div class="form-group align-items-center">
+            <label>URL de l'image:</label>
+            <input [(ngModel)]="image.src" class="form-control form-control-borderless" type="text" name="source">
+            <small id="urlHelp" class="form-text text-muted"> Image recommandé en 1200x600.</small>
           </div>
-
-        <div class="col-12">
-          <form class="d-flex justify-content-center">
-            <input class="form-control" type="text" placeholder="Titre">
-          </form>
+          <div class="form-group align-items-center">
+            <div class="bg-light mx-auto">
+              <img class="img-fluid" src="{{ image.src }}" height="200"><br />
+            </div>
+          </div>
+          <div class="form-group align-items-center">
+            <label>Titre:</label>
+            <input [(ngModel)]="image.name" class="form-control" type="text" name="name">
+          </div>
           <div class="form-group">
-              <label for="FormControlTextArea"></label>
-              <textarea maxlength="50" class="form-control" id="TextArea" placeholder="Message" rows="4"></textarea>
-            </div>
-        </div>
-        <div class="buttonPanel d-flex justify-content-around">
-        <button type="save" class="btn btn-primary ">Valider</button>
-        <button type="reset" class="btn btn-primary">Effacer</button>
-      </div>
-      </div>
-    
-      
-
-
-
-<!-- Choice 2 for slideshow -->
-
-<div class="choice2 col-xs-12 col-md-4">
-    <div class="col-12">
-        <form class="card card-sm">
-            <div class="card-body row no-gutters align-items-center">
-                <div class="col">
-                    <input class="form-control form-control-borderless" type="search" placeholder="Rechercher">
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </div>
-            </div>
+            <label for="FormControlTextArea">Commentaire:</label>
+            <textarea [(ngModel)]="image.description" maxlength="50" class="form-control" id="TextArea" name="description"
+              rows="4"></textarea>
+          </div>
         </form>
+      </div>
     </div>
-
-      <div class="bg-light mx-auto">
-        <img [src]="url" height="200"><br />
+    <!-- Save button -->
+    <div class="form-group col-3 text-center">
+      <button type="save" class="btn btn-warning align-items-center"(click)="update()" (click)="openVerticallyCentered(content)">Sauvegarder</button>
       </div>
 
-    <div class="col-12">
-      <form class="d-flex justify-content-center">
-        <input class="form-control" type="text" placeholder="Titre">
-      </form>
-      <div class="form-group">
-          <label for="FormControlTextArea"></label>
-          <textarea maxlength="50" class="form-control" id="TextArea" placeholder="Message" rows="4"></textarea>
-        </div>
+  <!-- Modal Pop-up -->
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"> Sauvegarde </h4>
     </div>
-    <div class="buttonPanel d-flex justify-content-around">
-    <button type="save" class="btn btn-primary ">Valider</button>
-    <button type="reset" class="btn btn-primary">Effacer</button>
-  </div>
-  </div>
-<!-- Choice 3 for slideshow -->
-
-<div class="choice3 col-xs-12 col-md-4">
-    <div class="col-12">
-        <form class="card card-sm">
-            <div class="card-body row no-gutters align-items-center">
-                <div class="col">
-                    <input class="form-control form-control-borderless" type="search" placeholder="Rechercher">
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </div>
-            </div>
-        </form>
+    <div class="modal-body">Vos modifications ont été enregistrées! 
     </div>
-
-      <div class="bg-light mx-auto">
-        <img [src]="url" height="200"><br />
-      </div>
-
-    <div class="col-12">
-      <form class="d-flex justify-content-center">
-        <input class="form-control" type="text" placeholder="Titre">
-      </form>
-      <div class="form-group">
-          <label for="FormControlTextArea"></label>
-          <textarea maxlength="50" class="form-control" id="TextArea" placeholder="Message" rows="4"></textarea>
-        </div>
+    <div class="modal-footer">
+      <a class="nav-link" type="button" class="btn btn-warning" (click)="modal.close('Close click')">Fermer</a>
     </div>
-    <div class="buttonPanel d-flex justify-content-around">
-    <button type="save" class="btn btn-primary ">Valider</button>
-    <button type="reset" class="btn btn-primary">Effacer</button>
-  </div>
-  </div>  
+  </ng-template>
 
+<!-- Modal Pop-up end -->
 
-
-  </div>
-</div>
 

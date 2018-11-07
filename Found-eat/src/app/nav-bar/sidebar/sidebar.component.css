@@ -2,7 +2,7 @@
 .hamberger-sidebar {
   display: none;
   position: fixed;
-  width: 280px;
+  width: 350px;
   min-height: 450px;
   top: 0;
   left: 0;
@@ -62,6 +62,24 @@ h3 {
   }
 }
 
+.cross{
+  text-align: center;
+  color:#ca0b0b;
+}
 
 
+.btn{
+  background-color: #0D4E37;
+  color:#ffffff;
+}
 
+.dropdown{
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.dropdown-menu{
+  background-color: #ffffff;
+  padding: 0;
+}

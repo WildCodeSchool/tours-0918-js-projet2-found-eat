@@ -1,3 +1,4 @@
+import { LoginService } from './../common/login.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {ProductService} from '../common/product.service';
@@ -11,7 +12,7 @@ export class ProductPageComponent implements OnInit {
 
 	product: any;
 
-	constructor(private route: ActivatedRoute, private productService : ProductService) { }
+	constructor(private route: ActivatedRoute, private productService: ProductService, private loginService: LoginService) { }
 
 	ngOnInit() {
 		this.route.params.subscribe(data => {

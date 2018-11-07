@@ -1,10 +1,20 @@
-img{
-	max-height: 350px;
-	max-width: 85%;
-	padding-bottom: 2em;
+.container-fluid {
+  background-image: url(../../assets/img/wedding-invitations-templates-best-of-healthy-italian-food-background-food-amp-drink-s-of-wedding-invitations-templates.jpeg);
+  background-size: cover;
+  /* height: 110%; */
+}
+
+img {
+  max-height: 350px;
+  max-width: 85%;
+  padding-bottom: 2em;
 }
 
 .btn {
-	background-color: #145A24;
-	color: white;
+  background-color: #145A24;
+  color: white;
+}
+
+#produit {
+background-color: rgba(237, 248, 237, 0.838);
 }

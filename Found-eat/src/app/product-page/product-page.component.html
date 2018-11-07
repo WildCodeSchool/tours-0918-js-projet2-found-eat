@@ -90,6 +90,11 @@
     (click)="this.productService.getItem(product)"
     >Comparer</button>
 
+    <button *ngIf="loginService.isAuth" class="btn btn-warning" (click)= "getbyId(mediaInput); modalInput.dismiss()">Modifier</button>
+
+    <button *ngIf="loginService.isAuth" type="button" class="btn btn-danger" (click)="modalInput.close(mediaInput)">Supprimer</button>
+
+
     <p *ngIf='!productService.isSet(product) && productService.isComparatorSet()'
     class="text-danger text-center">Le comparateur est déjà complet</p>
 

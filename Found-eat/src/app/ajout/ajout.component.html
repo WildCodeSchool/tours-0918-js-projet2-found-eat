@@ -41,7 +41,7 @@
         <div class="row">
 
           <!-- Information du produit -->
-          <div class="col-3">
+          <div class="col-3 ">
             <input type="text" class="form-control" placeholder="Marques" [(ngModel)]="product.brand" name="Brand">
           </div>
 
@@ -120,7 +120,7 @@
   <div class="presentation col-6 ">
     <h1  class=" titre2 ">Vue du produit</h1>
     <!-- Lié au formulaire, La présentation du produit c'est à dire la fiche du produit se complétera en même temps que le formulaire. -->
-    <h2>{{ product.productName }}</h2>
+    <h2 class="text-center">{{ product.productName }}</h2>
     <div class="text-center pb-3">
       <img src="{{ product.image }}" height="200">
     </div>

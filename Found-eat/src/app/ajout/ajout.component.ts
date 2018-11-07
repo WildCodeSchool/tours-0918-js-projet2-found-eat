@@ -15,7 +15,7 @@ export class AjoutComponent implements OnInit, OnDestroy {
   id: any;
   image: any;
   url: any = '';
-  product: Product;
+  product: Product = new Product();
 
   private sub: any;
 
@@ -36,7 +36,7 @@ export class AjoutComponent implements OnInit, OnDestroy {
       }
     });
 
-    }
+  }
 
 
   ngOnDestroy() {
@@ -64,29 +64,27 @@ export class AjoutComponent implements OnInit, OnDestroy {
   /**
    * ajoute le produit
    */
-  add () {
+  add() {
 
-    if (this.service.productToModify) {
-       const productIndex = this.service.products.indexOf(this.service.productToModify);
-       console.log(productIndex);
+    // if (this.service.productToModify) {
+    //   const productIndex = this.service.products.indexOf(this.service.productToModify);
+    //   console.log(productIndex);
 
-      this.service.products.splice(productIndex, 1);
-      this.service.products.splice(productIndex, 0, this.product);
+    //   this.service.products.splice(productIndex, 1);
+    //   this.service.products.splice(productIndex, 0, this.product);
 
-      localStorage.setItem('products', JSON.stringify(this.service.products));
-
-
+    //   localStorage.setItem('products', JSON.stringify(this.service.products));
 
 
-    } else {
-    this.service.add(this.product);
-    this.product = new Product();
-   }
+
+      this.service.add(this.product);
+      this.product = new Product();
+      this.product.nutritional_value = new NutritionalValue();
+
+    }
 
 
 
 
 
   }
-
-}

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { NutritionalValue } from './nutritional-value';
 import { Product } from './product';
 import productsStub from '../common/products.list';
@@ -13,7 +14,7 @@ export class ProductService {
   productToModify: any;
   basketProducts: Product[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
 
     if (!localStorage.products) {
 
@@ -90,19 +91,26 @@ export class ProductService {
    */
   add(product: Product) {
     if (!product.id) {
-      product.id = this.products.length.toString();
+      product.id = Math.random().toString(36).substr(2, 9);
       this.products.push(product);
       this.saveToLocalStorage(this.products);
-    } else {
-      // const index = this.products.find[productName];
-      // this.products[index] = product;
+    }
+    if (this.productToModify) {
+      const productIndex = this.products.indexOf(this.productToModify);
+      console.log(productIndex);
 
-      this.saveToLocalStorage(this.products);
-   }
+      this.products.splice(productIndex, 1);
+      this.products.splice(productIndex, 0, product);
+
+      localStorage.setItem('products', JSON.stringify(this.products));
+      this.router.navigate(['produit/', product.productName]);
+
   }
+}
 
 
-
+  // const index = this.products.find[productName];
+      // this.products[index] = product;
 
   /**
    * liste les produits

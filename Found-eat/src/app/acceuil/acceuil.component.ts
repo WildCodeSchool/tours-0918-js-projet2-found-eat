@@ -22,7 +22,8 @@ export class AcceuilComponent implements OnInit {
     this.service.open(content).result
 
       .then(resultat => {
-        console.log(resultat);
+        this.productService.delete(resultat);
+        this.products = this.productService.fourLasts();
       })
 
       .catch(error => {

@@ -34,24 +34,28 @@
         </li>
 
         <li class="nav-item">
-         <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4" ngbDropdownToggle><i class="fas fa-shopping-basket"></i> Produits sélectionnés <span class="badge badge-light">{{ this.productService.basketProducts.length }}</span></button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button [disabled]="this.productService.basketProducts.length == 0" class="btn font-weight-bold pr-4"
+              ngbDropdownToggle><i class="fas fa-shopping-basket"></i> Produits sélectionnés <span class="badge badge-light">{{
+                this.productService.basketProducts.length }}</span></button>
             <div class="dropdown-menu" ngbDropdownMenu>
-             <div class="container" *ngFor="let product of productService.basketProducts; let i = index">
-               <div class="row">
-              <h5 class="dropdown-item dropdown" >{{product.productName}}</h5>
-              <i class="far fa-times-circle cross" (click)="remove(product, i)"></i>
+              <div class="container" *ngFor="let product of productService.basketProducts; let i = index">
+                <div class="row">
+                  <h5 class="dropdown-item dropdown">{{product.productName}}</h5>
+                  <i class="far fa-times-circle cross" (click)="remove(product)"></i>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </li>
 
         <li *ngIf="loginService.isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-2" routerLink='ajouter'><i class="icon fas fa-folder-plus"></i> Ajouter</a>
+          <a class="nav-link text-white font-weight-bold pr-2" routerLink='ajouter'><i class="icon fas fa-folder-plus"></i>
+            Ajouter</a>
         </li>
         <li *ngIf="loginService.isAuth" class="nav-item">
-          <a class="nav-link text-white font-weight-bold pr-4" routerLink='modification-carousel'><i class="fas fa-pencil-alt"></i> Modification Carousel</a>
+          <a class="nav-link text-white font-weight-bold pr-4" routerLink='modification-carousel'><i class="fas fa-pencil-alt"></i>
+            Modification Carousel</a>
         </li>
 
         <li *ngIf="loginService.isAuth" class="nav-item">

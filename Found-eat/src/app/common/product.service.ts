@@ -65,7 +65,7 @@ export class ProductService {
 
     if (localStorage['product1'] && localStorage['product2']) {
 
-      this.basketProducts.push(JSON.parse(localStorage['product1']),JSON.parse(localStorage['product2']));
+      this.basketProducts.push(JSON.parse(localStorage['product1']), JSON.parse(localStorage['product2']));
     }
   }
 
@@ -98,19 +98,17 @@ export class ProductService {
     if (this.productToModify) {
       const productIndex = this.products.indexOf(this.productToModify);
       console.log(productIndex);
-
       this.products.splice(productIndex, 1);
       this.products.splice(productIndex, 0, product);
-
       localStorage.setItem('products', JSON.stringify(this.products));
       this.router.navigate(['produit/', product.productName]);
 
-  }
-}
 
+    }
+  }
 
   // const index = this.products.find[productName];
-      // this.products[index] = product;
+  // this.products[index] = product;
 
   /**
    * liste les produits
@@ -154,6 +152,20 @@ export class ProductService {
     }
   }
 
+  removeItem(produit) {
+    const index = this.basketProducts.findIndex(p => p.id == produit.id);
+    const prod1 = JSON.parse(localStorage.getItem('product1'));
+    const prod2 = JSON.parse(localStorage.getItem('product2'));
+
+    if (prod1 && prod1.id == produit.id) {
+      localStorage.removeItem('product1');
+    }
+    else if (prod2 && prod2.id == produit.id) {
+      localStorage.removeItem('product2');
+    }
+    this.basketProducts.splice(index, 1);
+  }
+
   /**
    * Pour savoir si le produit n'est pas dans le comparateur
    */
@@ -191,7 +203,6 @@ export class ProductService {
 
   delete(product) {
     const index = this.products.findIndex(x => x.id === product.id);
-    console.log(index);
     this.products.splice(index, 1);
     this.saveToLocalStorage(this.products);
   }

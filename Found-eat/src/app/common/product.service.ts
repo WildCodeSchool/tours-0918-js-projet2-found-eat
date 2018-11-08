@@ -166,6 +166,9 @@ export class ProductService {
     this.basketProducts.splice(index, 1);
   }
 
+  resetBasket(){
+    this.basketProducts.splice(0,2)
+  }
   /**
    * Pour savoir si le produit n'est pas dans le comparateur
    */

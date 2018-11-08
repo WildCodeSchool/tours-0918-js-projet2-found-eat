@@ -1,6 +1,6 @@
 export class LoginService {
 
-	isAuth = true;
+	isAuth = false;
 
 	login() {
 		this.isAuth = true;
